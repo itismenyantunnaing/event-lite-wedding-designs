@@ -385,6 +385,15 @@ button {
 .gallery-photo img {
   object-fit: cover;
 }
+
+.gallery-preload {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 .gallery-arrow {
   display: grid;
   width: 34px;

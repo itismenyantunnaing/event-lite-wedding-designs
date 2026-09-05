@@ -19,7 +19,7 @@ export default function Home() {
         <div className="date" aria-label="September 12, 2026">
           <span>12</span><span className="date-rule">Saturday</span><span>09</span><span>2026</span>
         </div>
-        <Image className="hero-art" src="/doodles/dinner-table.png" alt="A hand-drawn wedding table for two" width={1536} height={1024} priority unoptimized />
+        <Image className="hero-art" src="/doodles-optimized/dinner-table.webp" alt="A hand-drawn wedding table for two" width={1536} height={1024} sizes="(max-width: 599px) 88vw, 520px" priority />
         <p className="quote">“The best thing to <span>hold onto in life</span>  is each other.”</p>
       </section>
 
@@ -50,7 +50,7 @@ export default function Home() {
             {schedule.map((item) => (
               <li key={item.time} className={`schedule-item schedule-${item.icon}`}>
                 <div className="schedule-card">
-                  <Image src={`/doodles/schedule-${item.icon}.png`} alt="" width={320} height={260} unoptimized />
+                  <Image src={`/doodles-optimized/schedule-${item.icon}.webp`} alt="" width={320} height={260} sizes="140px" />
                   <div className="schedule-copy"><strong>{item.time}</strong><span>{item.title}</span></div>
                 </div>
               </li>
@@ -60,7 +60,7 @@ export default function Home() {
       </section>
 
       <section className="section details">
-        <Image className="details-art" src="/doodles/gifts-only.png" alt="Hand-drawn flowers, gifts and envelopes" width={485} height={934} unoptimized />
+        <Image className="details-art" src="/doodles-optimized/gifts-only.webp" alt="Hand-drawn flowers, gifts and envelopes" width={485} height={934} sizes="(max-width: 599px) 72vw, 360px" />
         <div className="detail-copy gifts-copy">
           <p className="section-kicker">A little note</p>
           <h2>Your presence is our present</h2>
