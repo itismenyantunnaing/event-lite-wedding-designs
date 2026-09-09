@@ -16,8 +16,8 @@ const hind = Hind({
 });
 
 export const metadata: Metadata = {
-  title: "Olivia & James — Wedding Invitation",
-  description: "Join Olivia and James as they celebrate their wedding day.",
+  title: "Wedding Invitation Designs — Event Elite",
+  description: "Explore Event Elite's mobile wedding invitation design collection.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
