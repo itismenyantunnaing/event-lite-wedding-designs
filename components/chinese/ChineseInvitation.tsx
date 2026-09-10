@@ -22,6 +22,14 @@ export default function ChineseInvitation() {
   return (
     <main className="chinese-theme">
       <section className="cn-hero">
+        <Image
+          className="cn-hero-background"
+          src="/chinese/hero-frame-background.webp"
+          alt=""
+          fill
+          sizes="(min-width: 600px) 430px, 100vw"
+          priority
+        />
         <p className="cn-eyebrow">Together with their families</p>
         <span className="cn-title-ornament" aria-hidden="true">
           ❀

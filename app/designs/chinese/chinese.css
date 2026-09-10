@@ -704,7 +704,14 @@
   padding: 48% 58px 12px;
   justify-content: flex-start;
   overflow: hidden;
-  background: var(--cn-paper) url("/chinese/hero-frame-background.webp") center top / contain no-repeat;
+  background: var(--cn-paper);
+}
+
+.cn-hero-background {
+  z-index: 0;
+  object-fit: contain;
+  object-position: center top;
+  pointer-events: none;
 }
 
 .cn-hero-frame {
