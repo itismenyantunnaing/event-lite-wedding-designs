@@ -1,11 +1,12 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import ChineseInvitation from "../../../components/chinese/ChineseInvitation";
+import "./chinese.css";
+
+export const metadata: Metadata = {
+  title: "Chinese Celebration — Event Elite",
+  description: "Explore Event Elite's Chinese wedding invitation design.",
+};
 
 export default function ChineseDesignPage() {
-  return (
-    <main className="coming-soon-page coming-soon-chinese">
-      <p>Event Elite design collection</p><span aria-hidden="true">02</span>
-      <h1>Chinese Celebration</h1><p>This wedding invitation direction will be designed next.</p>
-      <Link href="/">Back to designs</Link>
-    </main>
-  );
+  return <ChineseInvitation />;
 }

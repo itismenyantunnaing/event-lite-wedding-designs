@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const designs = [
   { href: "/designs/european", number: "01", name: "European Vintage Garden", description: "Ivory paper, romantic serif type, and hand-drawn blue details.", status: "View design", available: true, className: "catalogue-card-european" },
-  { href: "/designs/chinese", number: "02", name: "Chinese Celebration", description: "A dedicated Chinese wedding direction, to be designed next.", status: "Coming soon", available: false, className: "catalogue-card-chinese" },
+  { href: "/designs/chinese", number: "02", name: "Chinese Celebration", description: "Warm ivory paper, ceremonial red details, and joyful Chinese wedding illustrations.", status: "View design", available: true, className: "catalogue-card-chinese" },
   { href: "/designs/myanmar", number: "03", name: "Myanmar Traditional", description: "A culturally rooted Myanmar wedding direction for a future release.", status: "Coming soon", available: false, className: "catalogue-card-myanmar" },
 ];
 
