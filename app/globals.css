@@ -100,7 +100,7 @@ h1 i {
 }
 .invitation {
   max-width: 290px;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   margin: 30px auto;
   font-family: var(--font-hind), sans-serif;
 }
@@ -184,7 +184,9 @@ button {
   border-radius: 100px;
   color: white;
   background: var(--wine);
-  font: 700 0.7rem var(--font-hind), sans-serif;
+  font:
+    700 0.7rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.13em;
   text-decoration: none;
   text-transform: uppercase;
@@ -218,7 +220,8 @@ button {
   stroke-dasharray: 0.45 6;
   opacity: 0.72;
 }
-.schedule-path text {
+.schedule-path text,
+.cn-schedule-path text {
   fill: var(--wine);
   font-size: 20px;
   text-anchor: middle;
@@ -328,7 +331,7 @@ button {
 
 .gallery {
   padding-inline: 20px;
-  background: #efe5d7;
+  /* background: #efe5d7; */
 }
 .gallery h2 {
   margin-bottom: 42px;
@@ -343,18 +346,6 @@ button {
 .gallery-frame {
   position: relative;
   padding: 14px;
-}
-.gallery-frame::before {
-  content: "♡";
-  position: absolute;
-  z-index: 2;
-  top: -13px;
-  left: calc(50% - 11px);
-  width: 22px;
-  color: var(--ink);
-  background: #efe5d7;
-  font-size: 1rem;
-  line-height: 22px;
 }
 .gallery-border {
   position: absolute;
@@ -404,7 +395,9 @@ button {
   border-radius: 50%;
   color: var(--ink);
   background: var(--paper);
-  font: 1.1rem var(--font-hind), sans-serif;
+  font:
+    1.1rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0;
   cursor: pointer;
 }
@@ -417,11 +410,14 @@ button {
 .gallery-count {
   margin: 25px 0 0;
   color: var(--wine);
-  font: 700 0.68rem var(--font-hind), sans-serif;
+  font:
+    700 0.68rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.18em;
 }
 
 .countdown {
+  background: #efe5d7;
   padding-inline: 18px;
 }
 .countdown h2 {
@@ -465,13 +461,15 @@ button {
   display: block;
   overflow: hidden;
   color: var(--ink);
-  font: 700 0.56rem var(--font-hind), sans-serif;
+  font:
+    700 0.56rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .rsvp {
-  background: #efe5d7;
+  /* background: #efe5d7; */
 }
 .rsvp-panel {
   max-width: 390px;
@@ -491,7 +489,9 @@ button {
   border-radius: 100px;
   color: var(--ink);
   background: transparent;
-  font: 700 0.65rem var(--font-hind), sans-serif;
+  font:
+    700 0.65rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -518,7 +518,9 @@ button {
 }
 .tab-intro strong {
   color: var(--wine);
-  font: 700 0.65rem var(--font-hind), sans-serif;
+  font:
+    700 0.65rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -547,7 +549,9 @@ button {
   outline: 0;
   color: var(--ink);
   background: transparent;
-  font: 1rem var(--font-hind), sans-serif;
+  font:
+    1rem var(--font-hind),
+    sans-serif;
 }
 .rsvp-form textarea {
   resize: vertical;
@@ -599,9 +603,16 @@ button {
 }
 
 @media (max-width: 370px) {
-  .two-columns { grid-template-columns: 1fr; gap: 0; }
-  .choice-grid { grid-template-columns: 1fr; }
-  .side-options label:last-child { grid-column: auto; }
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .choice-grid {
+    grid-template-columns: 1fr;
+  }
+  .side-options label:last-child {
+    grid-column: auto;
+  }
 }
 
 .site-footer {
@@ -618,7 +629,9 @@ button {
 }
 .site-footer p {
   margin: 0;
-  font: 0.65rem var(--font-hind), sans-serif;
+  font:
+    0.65rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -637,7 +650,11 @@ button {
   padding: 64px 22px 30px;
   color: #233f56;
   background:
-    radial-gradient(circle at 10% 5%, rgba(165, 50, 62, 0.1), transparent 26rem),
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(165, 50, 62, 0.1),
+      transparent 26rem
+    ),
     linear-gradient(180deg, #faf6ee 0%, #f2eadf 100%);
 }
 .catalogue-header {
@@ -648,7 +665,9 @@ button {
 .catalogue-eyebrow,
 .catalogue-card-copy > p:first-child {
   color: var(--wine);
-  font: 700 0.68rem var(--font-hind), sans-serif;
+  font:
+    700 0.68rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -695,13 +714,23 @@ button {
   border: 1px solid currentColor;
   border-radius: 50%;
 }
-.catalogue-card-art::before { transform: translate(-58%, -28%); }
-.catalogue-card-art::after { transform: translate(58%, 28%); }
-.catalogue-card-art span {
-  font: italic 4.5rem var(--font-instrument-serif), serif;
+.catalogue-card-art::before {
+  transform: translate(-58%, -28%);
 }
-.catalogue-card-chinese .catalogue-card-art { background: #9e2831; }
-.catalogue-card-myanmar .catalogue-card-art { background: #a67c32; }
+.catalogue-card-art::after {
+  transform: translate(58%, 28%);
+}
+.catalogue-card-art span {
+  font:
+    italic 4.5rem var(--font-instrument-serif),
+    serif;
+}
+.catalogue-card-chinese .catalogue-card-art {
+  background: #9e2831;
+}
+.catalogue-card-myanmar .catalogue-card-art {
+  background: #a67c32;
+}
 .catalogue-card-copy {
   padding: 26px 24px 28px;
 }
@@ -716,7 +745,9 @@ button {
 .catalogue-card-copy a,
 .coming-soon-page a {
   color: var(--wine);
-  font: 700 0.72rem var(--font-hind), sans-serif;
+  font:
+    700 0.72rem var(--font-hind),
+    sans-serif;
   letter-spacing: 0.13em;
   text-decoration: none;
   text-transform: uppercase;
@@ -747,7 +778,9 @@ button {
 }
 .coming-soon-page > span {
   color: rgba(165, 50, 62, 0.2);
-  font: italic 6rem var(--font-instrument-serif), serif;
+  font:
+    italic 6rem var(--font-instrument-serif),
+    serif;
   line-height: 1;
 }
 .coming-soon-page h1 {
@@ -764,6 +797,10 @@ button {
 }
 
 @media (min-width: 700px) {
-  .catalogue-page { padding: 90px 34px 36px; }
-  .catalogue-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .catalogue-page {
+    padding: 90px 34px 36px;
+  }
+  .catalogue-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
