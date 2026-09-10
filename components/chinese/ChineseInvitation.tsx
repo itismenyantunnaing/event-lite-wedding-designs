@@ -22,18 +22,9 @@ export default function ChineseInvitation() {
   return (
     <main className="chinese-theme">
       <section className="cn-hero">
-        <div className="cn-hero-frame" aria-hidden="true">
-          <span className="cn-lattice cn-lattice-left" />
-          <span className="cn-lattice cn-lattice-right" />
-          <span className="cn-blossom cn-blossom-left">❀</span>
-          <span className="cn-blossom cn-blossom-right">❀</span>
-        </div>
-        <div className="cn-hero-seal" aria-hidden="true">
-          囍
-        </div>
         <p className="cn-eyebrow">Together with their families</p>
         <span className="cn-title-ornament" aria-hidden="true">
-          ◇
+          ❀
         </span>
         <h1>
           {couple.partnerOne}
@@ -41,22 +32,22 @@ export default function ChineseInvitation() {
           {couple.partnerTwo}
         </h1>
         <p className="cn-invitation">{chineseDemo.invitation}</p>
+        <span className="cn-title-ornament cn-title-ornament-second" aria-hidden="true">
+          ❀
+        </span>
         <div className="cn-date" aria-label={date.label}>
           <span>{date.day}</span>
-          <div>
-            <b>{date.month}</b>
-            <small>{date.weekday}</small>
-          </div>
+          <b>· {date.month} ·</b>
           <span>{date.year}</span>
         </div>
         <p className="cn-venue-name">{venue.name}</p>
         <Image
           className="cn-hero-couple"
-          src="/chinese/hero-couple-transparent.webp"
+          src="/chinese/hero-couple-characters.webp"
           alt="Hand-drawn Chinese newlywed couple"
-          width={1000}
-          height={1211}
-          sizes="280px"
+          width={794}
+          height={960}
+          sizes="205px"
           priority
         />
       </section>
@@ -127,7 +118,7 @@ export default function ChineseInvitation() {
                     alt=""
                     width={1000}
                     height={1000}
-                    sizes="130px"
+                    sizes="160px"
                   />
                   <div className="cn-schedule-copy">
                     <strong>{item.time}</strong>
