@@ -613,7 +613,7 @@
     serif;
   letter-spacing: 0.04em;
   transform: translateY(-7px);
-  padding-block-end: 8px;
+  padding-block-end: 16px;
   margin-inline: auto;
 }
 
@@ -885,7 +885,7 @@
   font-size: clamp(3.4rem, 17vw, 4.7rem);
 }
 .chinese-theme .cn-hero h1 i{
-  color: var(--cn-ink);
+  color: var(--cn-dark-red);
 }
 
 .cn-invitation,
