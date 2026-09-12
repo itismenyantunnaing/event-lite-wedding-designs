@@ -72,7 +72,9 @@ export default function ChineseGalleryCountdown() {
         <div className="cn-countdown-grid" aria-label={`${remaining.days} days, ${remaining.hours} hours, ${remaining.minutes} minutes and ${remaining.seconds} seconds remaining`}>
           {Object.entries(remaining).map(([label, value]) => (
             <div className="cn-countdown-item" key={label}>
-              <div className="cn-countdown-seal"><strong>{String(value).padStart(2, "0")}</strong></div>
+              <div className="cn-countdown-lantern" aria-hidden="true">
+                <strong>{String(value).padStart(2, "0")}</strong>
+              </div>
               <span>{label}</span>
             </div>
           ))}

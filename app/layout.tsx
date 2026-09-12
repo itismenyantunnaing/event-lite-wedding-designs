@@ -1,12 +1,23 @@
 import type { Metadata } from "next";
-import { Hind, Instrument_Serif } from "next/font/google";
+import { Hind } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: "400",
-  style: ["normal", "italic"],
-  subsets: ["latin"],
+const trovical = localFont({
+  variable: "--font-trovical",
+  display: "swap",
+  src: [
+    {
+      path: "./fonts/trovical-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/trovical-italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
 });
 
 const hind = Hind({
@@ -23,7 +34,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${instrumentSerif.variable} ${hind.variable}`}>{children}</body>
+      <body className={`${trovical.variable} ${hind.variable}`}>{children}</body>
     </html>
   );
 }
