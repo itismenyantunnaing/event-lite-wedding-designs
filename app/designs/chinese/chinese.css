@@ -40,7 +40,7 @@
   margin-bottom: 20px;
   color: var(--cn-dark-red);
   font:
-    400 clamp(2.55rem, 12vw, 3.35rem)/0.94 var(--font-trovical),
+    400 clamp(2.55rem, 12vw, 3.35rem)/0.94 var(--font-instrument-serif),
     serif;
   letter-spacing: -0.01em;
 }
@@ -205,9 +205,9 @@
   margin: 19px 0 12px;
   color: var(--cn-dark-red);
   font:
-    400 clamp(3.8rem, 19vw, 5.1rem)/0.82 var(--font-trovical),
+    400 clamp(3.8rem, 19vw, 5.1rem)/0.82 var(--font-instrument-serif),
     serif;
-  letter-spacing: 0.025em;
+  letter-spacing: -0.015em;
 }
 
 .chinese-theme .cn-hero h1 i {
@@ -234,7 +234,7 @@
 
 .cn-date > span {
   font:
-    400 1.5rem var(--font-trovical),
+    400 1.5rem var(--font-instrument-serif),
     serif;
 }
 
@@ -386,7 +386,7 @@
   z-index: 1;
   color: rgba(169, 39, 39, 0.16);
   font:
-    400 2.6rem var(--font-trovical),
+    400 2.6rem var(--font-instrument-serif),
     serif;
   transform: translateX(-50%);
 }
@@ -400,7 +400,7 @@
 .cn-schedule-copy strong {
   color: var(--cn-red);
   font:
-    400 1.25rem var(--font-trovical),
+    400 1.25rem var(--font-instrument-serif),
     serif;
 }
 
@@ -609,7 +609,7 @@
   z-index: 1;
   color: var(--cn-paper);
   font:
-    400 1.8rem var(--font-trovical),
+    400 1.8rem var(--font-instrument-serif),
     serif;
   letter-spacing: 0.04em;
   transform: translateY(-7px);

@@ -56,7 +56,7 @@ h2 {
 }
 h1,
 h2 {
-  font-family: var(--font-trovical), serif;
+  font-family: var(--font-instrument-serif), serif;
 }
 p {
   font-size: 1rem;
@@ -86,7 +86,7 @@ h1 {
   margin: 22px 0 16px;
   font-size: clamp(4.2rem, 21vw, 6.4rem);
   font-weight: 500;
-  letter-spacing: 0.025em;
+  letter-spacing: -0.015em;
   line-height: 0.68;
 }
 
@@ -141,7 +141,7 @@ h1 i {
 .quote {
   max-width: 320px;
   margin: 12px auto 0;
-  font-family: var(--font-trovical), serif;
+  font-family: var(--font-instrument-serif), serif;
   font-size: 0.86rem;
 }
 .quote span {
@@ -722,7 +722,7 @@ button {
 }
 .catalogue-card-art span {
   font:
-    italic 4.5rem var(--font-trovical),
+    italic 4.5rem var(--font-instrument-serif),
     serif;
 }
 .catalogue-card-chinese .catalogue-card-art {
@@ -779,7 +779,7 @@ button {
 .coming-soon-page > span {
   color: rgba(165, 50, 62, 0.2);
   font:
-    italic 6rem var(--font-trovical),
+    italic 6rem var(--font-instrument-serif),
     serif;
   line-height: 1;
 }
