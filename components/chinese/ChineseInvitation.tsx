@@ -31,22 +31,30 @@ export default function ChineseInvitation() {
           priority
         />
         <p className="cn-eyebrow">Together with their families</p>
-        <span className="cn-title-ornament" aria-hidden="true">
-          ❀
-        </span>
         <h1>
           {couple.partnerOne}
           <i>&amp;</i>
           {couple.partnerTwo}
         </h1>
         <p className="cn-invitation">{chineseDemo.invitation}</p>
-        <span className="cn-title-ornament cn-title-ornament-second" aria-hidden="true">
+        <div className="cn-date" aria-label={date.label}>
+          <span
+          className="cn-title-ornament"
+          aria-hidden="true"
+        >
           ❀
         </span>
-        <div className="cn-date" aria-label={date.label}>
           <span>{date.day}</span>
-          <b>· {date.month} ·</b>
+          <span>•</span>
+          <span>{date.month}</span>
+          <span>•</span>
           <span>{date.year}</span>
+          <span
+          className="cn-title-ornament"
+          aria-hidden="true"
+        >
+          ❀
+        </span>
         </div>
         <p className="cn-venue-name">{venue.name}</p>
         <Image
@@ -55,7 +63,7 @@ export default function ChineseInvitation() {
           alt="Hand-drawn Chinese newlywed couple"
           width={794}
           height={960}
-          sizes="205px"
+          sizes="250px"
           priority
         />
       </section>

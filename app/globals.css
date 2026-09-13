@@ -624,6 +624,7 @@ button {
   display: block;
   width: 64px;
   height: 64px;
+  border-radius: 50%;
   margin: 0 auto 18px;
   object-fit: contain;
 }

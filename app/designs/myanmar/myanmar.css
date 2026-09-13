@@ -1,0 +1,1199 @@
+.myanmar-theme {
+  --paper: #f7f0e3;
+  --paper-deep: #efe4d3;
+  --ink: #392f28;
+  --maroon: #84352f;
+  --green: #425f49;
+  --gold: #b17b2d;
+  min-height: 100svh;
+  overflow: hidden;
+  color: var(--ink);
+  background:
+    radial-gradient(
+      circle at 16% 9%,
+      rgba(177, 123, 45, 0.07) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 79% 37%,
+      rgba(66, 95, 73, 0.05) 0 1px,
+      transparent 1.5px
+    ),
+    var(--paper);
+  background-size:
+    27px 27px,
+    31px 31px,
+    auto;
+}
+.myanmar-theme h1,
+.myanmar-theme h2,
+.myanmar-theme p {
+  margin-top: 0;
+}
+.myanmar-theme h2 {
+  margin-bottom: 20px;
+  color: var(--maroon);
+  font:
+    400 clamp(2.55rem, 12vw, 3.35rem)/0.94 var(--font-instrument-serif),
+    serif;
+  letter-spacing: -0.01em;
+}
+.myanmar-theme p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+.mm-section {
+  position: relative;
+  padding: 82px 26px;
+  text-align: center;
+}
+.mm-section:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 46px;
+  height: 1px;
+  background: var(--gold);
+  transform: translateX(-50%);
+}
+.mm-kicker,
+.mm-eyebrow {
+  margin-bottom: 13px;
+  color: var(--green);
+  font:
+    700 0.68rem var(--font-hind),
+    sans-serif !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.mm-hero {
+  position: relative;
+  display: flex;
+  height: 100svh;
+  min-height: 0;
+  padding-block-end: 78%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  text-align: center;
+  background: var(--paper);
+}
+.mm-hero-background {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center bottom;
+  pointer-events: none;
+}
+.mm-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.mm-eyebrow {
+  margin-bottom: 8px;
+  font-size: 0.6rem;
+}
+.mm-title-ornament {
+  display: block;
+  color: var(--gold);
+  font-size: 0.78rem;
+  line-height: 1;
+}
+.mm-title-ornament-second {
+  margin-top: -3px;
+}
+.mm-hero-couple-name {
+  color: var(--maroon);
+  font:
+    400 clamp(3.6rem, 18vw, 5rem)/0.82 var(--font-instrument-serif),
+    serif;
+  letter-spacing: -0.015em;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+.mm-hero-couple-name i {
+  color: var(--gold);
+  font-size: 0.42em;
+  font-weight: 400;
+}
+.mm-invitation {
+  max-width: 260px;
+  margin: 0 auto 8px;
+  font-size: 0.74rem !important;
+}
+.mm-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-block: 8px;
+  color: var(--maroon);
+}
+.mm-date span {
+  font:
+    700 0.85rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.mm-venue-name {
+  margin: 0;
+  color: var(--green);
+  font:
+    700 0.58rem var(--font-hind),
+    sans-serif !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.mm-hero-couple {
+  position: relative;
+  z-index: 1;
+  width: min(49vw, 245px);
+  height: auto;
+  margin-top: 5px;
+  filter: drop-shadow(0 12px 20px rgba(57, 47, 40, 0.08));
+}
+.mm-welcome > p:not(.mm-kicker) {
+  max-width: 330px;
+  margin-inline: auto;
+}
+.mm-doodle-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 230px;
+  margin: 34px auto -8px;
+  color: var(--gold);
+}
+.mm-doodle-divider i {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--maroon), transparent);
+}
+.mm-doodle-divider span {
+  font-size: 0.8rem;
+}
+.mm-venue {
+  background: rgba(239, 228, 211, 0.78);
+}
+.mm-venue h2 {
+  max-width: 330px;
+  margin-inline: auto;
+}
+.mm-small {
+  max-width: 310px;
+  margin: 26px auto !important;
+  font-size: 0.82rem !important;
+}
+.mm-button,
+.myanmar-theme .rsvp-submit {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid var(--maroon);
+  border-radius: 100px;
+  color: var(--paper);
+  background: var(--maroon);
+  font:
+    700 0.67rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.mm-schedule {
+  padding-inline: 20px;
+}
+.mm-schedule h2 {
+  margin-bottom: 42px;
+}
+.mm-schedule-route {
+  position: relative;
+  width: min(100%, 390px);
+  height: 720px;
+  margin: auto;
+}
+.mm-schedule-path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.mm-schedule-path path {
+  fill: none;
+  stroke: rgba(132, 53, 47, 0.45);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+}
+.mm-schedule-path text {
+  fill: var(--maroon);
+  font-size: 15px;
+}
+.mm-schedule ol {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mm-schedule li {
+  position: absolute;
+  width: 170px;
+}
+.mm-schedule li:nth-child(1) {
+  top: 8px;
+  left: 7px;
+}
+.mm-schedule li:nth-child(2) {
+  top: 178px;
+  right: 2px;
+}
+.mm-schedule li:nth-child(3) {
+  top: 350px;
+  left: 4px;
+}
+.mm-schedule li:nth-child(4) {
+  right: 3px;
+  bottom: 0;
+}
+.mm-schedule-card img {
+  display: block;
+  width: 155px;
+  height: 134px;
+  margin: auto;
+  object-fit: contain;
+}
+.mm-schedule-card > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: -3px;
+}
+.mm-schedule-card strong {
+  color: var(--maroon);
+  font:
+    400 1.25rem var(--font-instrument-serif),
+    serif;
+}
+.mm-schedule-card span {
+  font-size: 0.78rem;
+}
+.mm-details {
+  max-height: 1060px;
+  padding-inline: 28px;
+}
+.mm-gifts-art {
+  display: block;
+  width: min(100%, 350px);
+  height: auto;
+  margin: 0 auto 4px;
+}
+.mm-details article {
+  position: relative;
+  z-index: 2;
+  padding: 22px 16px;
+  margin-bottom: 100px;
+  background: rgba(247, 240, 227, 0.88);
+}
+.mm-details article:last-child {
+  margin-bottom: 0;
+}
+.mm-details article h2 {
+  margin-bottom: 35px;
+  font-size: 2rem;
+}
+.mm-swatches {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+.mm-swatches i {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  background: var(--maroon);
+  box-shadow: 0 0 0 1px rgba(57, 47, 40, 0.14);
+}
+.mm-swatches i:nth-child(2) {
+  background: #b17b2d;
+}
+.mm-swatches i:nth-child(3) {
+  background: #e9ddc7;
+}
+.mm-swatches i:nth-child(4) {
+  background: #425f49;
+}
+.mm-swatches i:nth-child(5) {
+  background: #b1846a;
+}
+.mm-gallery h2 {
+  margin-bottom: 34px;
+}
+.mm-gallery-control {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  align-items: center;
+  max-width: 420px;
+  margin: auto;
+}
+.mm-gallery-control > button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--maroon);
+  border-radius: 50%;
+  color: var(--maroon);
+  background: var(--paper);
+  cursor: pointer;
+}
+.mm-gallery-control > button:last-child {
+  justify-self: end;
+}
+.mm-gallery-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+}
+.mm-gallery-frame {
+  z-index: 2;
+  object-fit: fill;
+  pointer-events: none;
+}
+.mm-gallery-photo {
+  position: absolute;
+  inset: 7% 8%;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 2%;
+  background: #ddcdb8;
+}
+.mm-gallery-photo img {
+  object-fit: cover;
+}
+.mm-gallery-count {
+  margin: 23px 0 0;
+  color: var(--green);
+  font:
+    700 0.68rem var(--font-hind),
+    sans-serif !important;
+  letter-spacing: 0.18em;
+}
+.mm-countdown {
+  background: rgba(239, 228, 211, 0.62);
+}
+.mm-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3px;
+  max-width: 430px;
+  margin: 36px auto 0;
+}
+.mm-medallion {
+  position: relative;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+  place-items: center;
+}
+.mm-medallion img {
+  object-fit: contain;
+  filter: hue-rotate(60deg) saturate(0.65);
+}
+.mm-medallion strong {
+  position: relative;
+  z-index: 2;
+  color: var(--maroon);
+  font:
+    400 clamp(1.35rem, 7vw, 2.4rem) var(--font-instrument-serif),
+    serif;
+}
+.mm-countdown small {
+  display: block;
+  margin-top: 7px;
+  font:
+    700 clamp(0.48rem, 2vw, 0.63rem) var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.mm-rsvp {
+  background: var(--paper);
+}
+.mm-rsvp > h2 {
+  max-width: 350px;
+  margin-inline: auto;
+}
+.myanmar-theme .rsvp-panel {
+  max-width: 430px;
+  margin: 36px auto 0;
+  text-align: left;
+}
+.myanmar-theme .guest-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(132, 53, 47, 0.2);
+}
+.myanmar-theme .guest-tabs button {
+  padding: 12px 6px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--ink);
+  background: transparent;
+  font:
+    600 0.7rem var(--font-hind),
+    sans-serif;
+  text-transform: uppercase;
+}
+.myanmar-theme .guest-tabs button.active {
+  border-color: var(--maroon);
+  color: var(--maroon);
+}
+.myanmar-theme .rsvp-form,
+.myanmar-theme .rsvp-form label {
+  display: grid;
+  gap: 7px;
+}
+.myanmar-theme .rsvp-form {
+  gap: 20px;
+}
+.myanmar-theme .rsvp-form label,
+.myanmar-theme .rsvp-form legend {
+  font:
+    600 0.72rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.06em;
+}
+.myanmar-theme .rsvp-form input,
+.myanmar-theme .rsvp-form textarea {
+  width: 100%;
+  padding: 12px 2px;
+  border: 0;
+  border-bottom: 1px solid rgba(132, 53, 47, 0.28);
+  border-radius: 0;
+  color: var(--ink);
+  background: transparent;
+  font:
+    400 0.9rem var(--font-hind),
+    sans-serif;
+}
+.myanmar-theme .rsvp-form fieldset {
+  padding: 0;
+  border: 0;
+}
+.myanmar-theme .choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.myanmar-theme .choice-grid label {
+  display: flex;
+  align-items: center;
+}
+.myanmar-theme .choice-grid input {
+  width: auto;
+}
+.myanmar-theme .rsvp-submit {
+  margin-top: 8px;
+  justify-self: center;
+}
+.mm-footer {
+  padding: 52px 24px 36px;
+  text-align: center;
+}
+.mm-footer .agency-logo {
+  width: 58px;
+  height: 58px;
+  margin: 4px auto 16px;
+}
+.mm-footer p {
+  margin: 0;
+  color: rgba(57, 47, 40, 0.72);
+  font:
+    600 0.59rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.12em;
+}
+@media (min-width: 600px) {
+  .myanmar-theme {
+    width: 430px;
+    max-width: 430px;
+    margin: auto;
+    box-shadow: 0 0 70px rgba(57, 47, 40, 0.14);
+  }
+  .mm-section {
+    padding-inline: 48px;
+  }
+  .mm-hero {
+    padding-top: 140px;
+  }
+  .mm-gallery-photo {
+    inset: 7%;
+  }
+  .mm-hero-couple {
+    width: 230px;
+  }
+}
+
+/* Richer Myanmar palette and corrected schedule artwork route. */
+.myanmar-theme {
+  --paper: #fff8ee;
+  --paper-deep: #f3e2d2;
+  --ink: #302623;
+  --maroon: #8d3040;
+  --green: #155b57;
+  --gold: #c38b36;
+  --coral: #c96758;
+  background:
+    radial-gradient(
+      circle at 16% 9%,
+      rgba(195, 139, 54, 0.09) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 79% 37%,
+      rgba(21, 91, 87, 0.06) 0 1px,
+      transparent 1.5px
+    ),
+    var(--paper);
+  background-size:
+    27px 27px,
+    31px 31px,
+    auto;
+}
+.mm-section:after {
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--maroon), var(--gold), var(--green));
+}
+.mm-hero {
+  background: linear-gradient(180deg, #fffaf3 0%, var(--paper) 100%);
+}
+.mm-venue,
+.mm-countdown {
+  background: linear-gradient(
+    145deg,
+    rgba(243, 226, 210, 0.9),
+    rgba(255, 248, 238, 0.94)
+  );
+}
+.mm-schedule {
+  padding-inline: 18px;
+  background: linear-gradient(180deg, var(--paper), #fffaf4 48%, var(--paper));
+}
+.mm-schedule-route {
+  height: 760px;
+}
+.mm-schedule-path {
+  z-index: 0;
+}
+.mm-schedule-path path {
+  stroke: color-mix(in srgb, var(--coral) 60%, var(--gold));
+  stroke-width: 2;
+  stroke-dasharray: 3 8;
+  stroke-linecap: round;
+}
+.mm-schedule-path circle {
+  fill: var(--maroon);
+  stroke: var(--paper);
+  stroke-width: 3;
+}
+.mm-schedule ol {
+  z-index: 1;
+}
+.mm-schedule li {
+  width: 178px;
+}
+.mm-schedule li:nth-child(1) {
+  top: 6px;
+  left: 0;
+}
+.mm-schedule li:nth-child(2) {
+  top: 190px;
+  right: 0;
+}
+.mm-schedule li:nth-child(3) {
+  top: 378px;
+  left: 0;
+}
+.mm-schedule li:nth-child(4) {
+  right: 0;
+  bottom: 0;
+}
+.mm-schedule-card {
+  position: relative;
+}
+.mm-schedule-card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 14px;
+  left: 50%;
+  width: 128px;
+  height: 108px;
+  border-radius: 48% 52% 45% 55%;
+  background: radial-gradient(
+    circle,
+    rgba(195, 139, 54, 0.13),
+    rgba(201, 103, 88, 0.05) 58%,
+    transparent 70%
+  );
+  transform: translateX(-50%) rotate(-4deg);
+}
+.mm-schedule li:nth-child(even) .mm-schedule-card:before {
+  transform: translateX(-50%) rotate(5deg);
+}
+.mm-schedule-card img {
+  width: 170px;
+  height: 146px;
+  object-position: center bottom;
+  filter: drop-shadow(0 9px 14px rgba(48, 38, 35, 0.08));
+}
+.mm-schedule-card > div {
+  min-height: 48px;
+  margin-top: -1px;
+  justify-content: flex-start;
+}
+.mm-schedule-card strong {
+  font-size: 1.32rem;
+}
+.mm-schedule-card span {
+  color: var(--ink);
+  font-size: 0.76rem;
+  line-height: 1.25;
+}
+.mm-welcome {
+  background: #fff8ee;
+}
+.mm-venue {
+  background: linear-gradient(145deg, #e7f0eb, #f4eee1);
+}
+.mm-schedule {
+  background:
+    radial-gradient(
+      circle at 18% 10%,
+      rgba(195, 139, 54, 0.1) 0 1px,
+      transparent 1.6px
+    ),
+    linear-gradient(180deg, #fff5e9, #f7e7dc 52%, #fff6ec);
+  background-size:
+    25px 25px,
+    auto;
+}
+.mm-gallery {
+  background: linear-gradient(160deg, #e8f1ed, #fff8ee 72%);
+}
+.mm-countdown {
+  color: var(--paper);
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255, 255, 255, 0.08) 0 1px,
+      transparent 1.7px
+    ),
+    linear-gradient(145deg, #155b57, #284d49);
+  background-size:
+    24px 24px,
+    auto;
+}
+.mm-countdown h2 {
+  color: var(--paper);
+}
+.mm-countdown .mm-kicker {
+  color: #efc978;
+}
+.mm-countdown small {
+  color: rgba(255, 248, 238, 0.86);
+}
+.mm-countdown .mm-medallion strong {
+  color: var(--paper);
+}
+.mm-countdown:after {
+  background: linear-gradient(90deg, transparent, #efc978, transparent);
+}
+.mm-rsvp {
+  background: #fff8ee;
+}
+
+/* Apply the Myanmar palette consistently to every interactive and text surface. */
+.myanmar-theme h1,
+.myanmar-theme h2 {
+  color: var(--maroon);
+}
+.myanmar-theme p {
+  color: var(--ink);
+}
+.mm-kicker,
+.mm-eyebrow,
+.mm-venue-name,
+.mm-gallery-count {
+  color: var(--green);
+}
+.mm-title-ornament,
+.mm-hero h1 i,
+.mm-doodle-divider {
+  color: var(--gold);
+}
+.mm-date,
+.mm-schedule-card strong {
+  color: var(--maroon);
+}
+.mm-button,
+.myanmar-theme .rsvp-submit {
+  border-color: var(--gold);
+  color: #fffaf2;
+  background: var(--maroon);
+  box-shadow: 0 8px 20px rgba(141, 48, 64, 0.18);
+}
+.mm-button:hover,
+.myanmar-theme .rsvp-submit:hover {
+  background: #742535;
+}
+.mm-button:focus-visible,
+.myanmar-theme .rsvp-submit:focus-visible,
+.mm-gallery-control > button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.mm-gallery-control > button {
+  border-color: var(--gold);
+  color: var(--maroon);
+  background: #fffaf2;
+  box-shadow: 0 5px 14px rgba(21, 91, 87, 0.1);
+}
+.mm-gallery-photo {
+  background: var(--paper-deep);
+}
+.mm-countdown h2,
+.mm-countdown p {
+  color: var(--paper);
+}
+.myanmar-theme .guest-tabs {
+  border-bottom-color: rgba(141, 48, 64, 0.24);
+}
+.myanmar-theme .guest-tabs button {
+  color: var(--green);
+}
+.myanmar-theme .guest-tabs button.active {
+  border-color: var(--maroon);
+  color: var(--maroon);
+}
+.myanmar-theme .rsvp-form input,
+.myanmar-theme .rsvp-form textarea {
+  border-bottom-color: rgba(141, 48, 64, 0.34);
+  color: var(--ink);
+}
+.myanmar-theme .rsvp-form input:focus,
+.myanmar-theme .rsvp-form textarea:focus {
+  border-bottom-color: var(--gold);
+  outline: 0;
+}
+.myanmar-theme .rsvp-form input[type="radio"] {
+  accent-color: var(--maroon);
+}
+.myanmar-theme .choice-grid label {
+  border-color: rgba(21, 91, 87, 0.25);
+}
+.mm-footer {
+  color: var(--paper);
+  background: linear-gradient(145deg, #742535, var(--maroon));
+}
+.mm-footer p {
+  color: rgba(255, 248, 238, 0.82);
+}
+.mm-footer .agency-logo {
+  /* border: 2px solid var(--gold); */
+  border-radius: 50%;
+  filter: none;
+  /* box-shadow: 0 0 0 4px rgba(255, 248, 238, 0.1); */
+}
+
+/* Final three-color Myanmar system: ivory, peacock green, and pagoda gold. */
+.myanmar-theme {
+  --paper: #f8f0e2;
+  --paper-deep: #f8f0e2;
+  --ink: #1e5a4d;
+  --maroon: #1e5a4d;
+  --green: #1e5a4d;
+  --gold: #c8923a;
+  --coral: #c8923a;
+  color: var(--green);
+  background:
+    radial-gradient(
+      circle at 16% 9%,
+      rgba(200, 146, 58, 0.1) 0 1px,
+      transparent 1.5px
+    ),
+    var(--paper);
+  background-size:
+    27px 27px,
+    auto;
+}
+.myanmar-theme h1,
+.myanmar-theme h2,
+.myanmar-theme p,
+.mm-date,
+.mm-schedule-card strong,
+.mm-schedule-card span {
+  color: var(--green);
+}
+.mm-kicker,
+.mm-eyebrow,
+.mm-venue-name,
+.mm-gallery-count {
+  color: var(--gold);
+}
+.mm-title-ornament,
+.mm-hero h1 i,
+.mm-doodle-divider {
+  color: var(--gold);
+}
+.mm-section:after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.mm-hero,
+.mm-welcome,
+.mm-venue,
+.mm-schedule,
+/* .mm-details, */
+.mm-gallery,
+.mm-countdown,
+.mm-rsvp,
+.mm-footer {
+  background-color: var(--paper);
+}
+.mm-details {
+  background-color: var(--paper);
+}
+.mm-hero {
+  background: var(--paper);
+}
+.mm-welcome {
+  background: var(--paper);
+}
+.mm-venue {
+  background:
+    linear-gradient(rgba(200, 146, 58, 0.08), rgba(200, 146, 58, 0.08)),
+    var(--paper);
+}
+.mm-schedule {
+  background:
+    radial-gradient(
+      circle at 18% 10%,
+      rgba(200, 146, 58, 0.11) 0 1px,
+      transparent 1.6px
+    ),
+    var(--paper);
+  background-size:
+    25px 25px,
+    auto;
+}
+.mm-gallery {
+  background: var(--paper);
+}
+.mm-countdown {
+  color: var(--green);
+  background:
+    linear-gradient(rgba(30, 90, 77, 0.06), rgba(30, 90, 77, 0.06)),
+    var(--paper);
+}
+.mm-countdown h2,
+.mm-countdown p,
+.mm-countdown small,
+.mm-countdown .mm-medallion strong {
+  color: var(--green);
+}
+.mm-countdown .mm-kicker {
+  color: var(--gold);
+}
+.mm-countdown:after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.mm-rsvp {
+  background: var(--paper);
+}
+.mm-button,
+.myanmar-theme .rsvp-submit {
+  border-color: var(--gold);
+  color: var(--paper);
+  background: var(--green);
+  box-shadow: 0 8px 20px rgba(30, 90, 77, 0.18);
+}
+.mm-button:hover,
+.myanmar-theme .rsvp-submit:hover {
+  background: var(--green);
+}
+.mm-gallery-control > button {
+  border-color: var(--gold);
+  color: var(--green);
+  background: var(--paper);
+  box-shadow: 0 5px 14px rgba(30, 90, 77, 0.1);
+}
+.mm-gallery-photo {
+  background: var(--paper);
+}
+.myanmar-theme .guest-tabs {
+  border-bottom-color: rgba(30, 90, 77, 0.24);
+}
+.myanmar-theme .guest-tabs button,
+.myanmar-theme .guest-tabs button.active {
+  color: var(--green);
+}
+.myanmar-theme .guest-tabs button.active {
+  border-color: var(--gold);
+}
+.myanmar-theme .rsvp-form input,
+.myanmar-theme .rsvp-form textarea {
+  border-bottom-color: rgba(30, 90, 77, 0.34);
+  color: var(--green);
+}
+.myanmar-theme .rsvp-form input:focus,
+.myanmar-theme .rsvp-form textarea:focus {
+  border-bottom-color: var(--gold);
+}
+.myanmar-theme .rsvp-form input[type="radio"] {
+  accent-color: var(--green);
+}
+.myanmar-theme .choice-grid label {
+  border-color: rgba(30, 90, 77, 0.25);
+}
+.mm-schedule-path path {
+  stroke: var(--gold);
+}
+.mm-schedule-path circle {
+  fill: var(--green);
+  stroke: var(--paper);
+}
+.mm-schedule-card:before {
+  background: radial-gradient(
+    circle,
+    rgba(200, 146, 58, 0.13),
+    rgba(200, 146, 58, 0.04) 58%,
+    transparent 70%
+  );
+}
+.mm-footer {
+  color: var(--green);
+  background: var(--paper);
+}
+.mm-footer p {
+  color: var(--green);
+}
+.mm-footer .agency-logo {
+  /* border-color: var(--gold); */
+  box-shadow: 0 0 0 4px rgba(200, 146, 58, 0.1);
+}
+
+/* Match the Chinese RSVP tab treatment exactly, recolored in peacock green. */
+.myanmar-theme .guest-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4px;
+  margin-bottom: 28px;
+  border: 1px solid var(--green);
+  border-radius: 100px;
+}
+.myanmar-theme .guest-tabs button {
+  margin: 0;
+  padding: 11px 8px;
+  border: 0;
+  border-radius: 100px;
+  color: var(--green);
+  background: transparent;
+}
+.myanmar-theme .guest-tabs button.active {
+  border: 0;
+  color: var(--paper);
+  background: var(--green);
+}
+
+/* Use the Chinese schedule's responsive grid and route geometry exactly. */
+.mm-schedule-route {
+  position: relative;
+  width: auto;
+  max-width: 390px;
+  height: auto;
+  margin: 0 auto;
+}
+.mm-schedule-path {
+  position: absolute;
+  inset: -12px 0 auto;
+  z-index: 0;
+  width: 100%;
+  height: calc(100% + 24px);
+  overflow: visible;
+  pointer-events: none;
+}
+.mm-schedule-path path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 0.5 6;
+  opacity: 0.72;
+}
+.mm-schedule-path text {
+  fill: var(--green);
+  font-size: 15px;
+}
+.mm-schedule-route ol {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mm-schedule-route li {
+  position: static;
+  display: grid;
+  width: auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 196px;
+}
+.mm-schedule-route li:nth-child(1),
+.mm-schedule-route li:nth-child(2),
+.mm-schedule-route li:nth-child(3),
+.mm-schedule-route li:nth-child(4) {
+  inset: auto;
+}
+.mm-schedule-card {
+  display: flex;
+  width: 158px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.mm-schedule-route li:nth-child(odd) .mm-schedule-card {
+  grid-column: 2;
+  justify-self: end;
+}
+.mm-schedule-route li:nth-child(even) .mm-schedule-card {
+  grid-column: 1;
+  justify-self: start;
+}
+.mm-schedule-card:before {
+  display: none;
+}
+.mm-schedule-card img {
+  width: 142px;
+  height: 138px;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+.mm-schedule-card > div {
+  display: flex;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.mm-schedule-card strong {
+  font-size: 1.18rem;
+}
+.mm-schedule-card span {
+  font-size: 0.76rem;
+}
+@media (max-width: 370px) {
+  .mm-schedule-card {
+    width: 144px;
+  }
+}
+
+/* Larger gallery presentation with the same Chinese-layout controls. */
+.mm-gallery {
+  padding-inline: 12px;
+}
+.mm-gallery-control {
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  gap: 2px;
+  max-width: 520px;
+}
+.mm-gallery-control > button {
+  width: 38px;
+  height: 38px;
+}
+.mm-gallery-stage {
+  aspect-ratio: 3/4;
+}
+.mm-gallery-photo {
+  inset: 6.5% 7%;
+}
+
+/* Pagoda gold is the shared accent for every section subheading. */
+.myanmar-theme .mm-kicker,
+.myanmar-theme .mm-eyebrow {
+  color: var(--gold);
+}
+
+/* Countdown numbers sit above a low Myanmar lacquer pedestal. */
+.mm-countdown-grid {
+  gap: 7px;
+  margin-top: 36px;
+}
+.mm-countdown-unit {
+  display: grid;
+  min-height: 94px;
+  grid-template-rows: 1fr 46px;
+  align-items: end;
+  justify-items: center;
+}
+.mm-countdown-unit strong {
+  position: relative;
+  z-index: 2;
+  color: var(--green);
+  font:
+    400 clamp(1.55rem, 7vw, 2.4rem) var(--font-instrument-serif),
+    serif;
+  line-height: 1;
+}
+.mm-countdown-base {
+  display: block;
+  width: 100%;
+  height: 46px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+.mm-countdown small {
+  margin-top: 5px;
+  color: var(--green);
+}
+@media (min-width: 600px) {
+  .mm-gallery {
+    padding-inline: 26px;
+  }
+}
+
+/* Keep the complete illustrated frame visible and give the couple more breathing room. */
+.mm-hero {
+  height: 100vh;
+  min-height: 100vh;
+}
+.mm-hero-background {
+  object-fit: contain;
+  object-position: center top;
+}
+.mm-hero-couple {
+  width: clamp(104px, 29vw, 140px);
+  margin-top: 12px;
+}
+@media (min-width: 600px) {
+  .mm-hero-couple {
+    width: 140px;
+  }
+}

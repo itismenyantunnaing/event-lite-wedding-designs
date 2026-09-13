@@ -1,11 +1,12 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import MyanmarInvitation from "../../../components/myanmar/MyanmarInvitation";
+import "./myanmar.css";
+
+export const metadata: Metadata = {
+  title: "Myanmar Celebration — Event Elite",
+  description: "Explore Event Elite's Myanmar traditional wedding invitation design.",
+};
 
 export default function MyanmarDesignPage() {
-  return (
-    <main className="coming-soon-page coming-soon-myanmar">
-      <p>Event Elite design collection</p><span aria-hidden="true">03</span>
-      <h1>Myanmar Traditional</h1><p>This wedding invitation direction is reserved for a future release.</p>
-      <Link href="/">Back to designs</Link>
-    </main>
-  );
+  return <MyanmarInvitation />;
 }
