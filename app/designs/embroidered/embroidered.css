@@ -1,0 +1,540 @@
+.embroidered-theme {
+  --embroidered-ink: #5f675f;
+  --embroidered-blush: #b7807f;
+  --embroidered-paper: #f4eee3;
+  --embroidered-section-background: #f8f3ea;
+  --ink: var(--embroidered-ink);
+  --wine: var(--embroidered-blush);
+  --line: rgba(95, 103, 95, 0.28);
+  width: 100%;
+  color: var(--embroidered-ink);
+  background: var(--embroidered-section-background);
+}
+
+.embroidered-theme > section:not(.embroidered-hero),
+.embroidered-theme > footer {
+  background-color: var(--embroidered-section-background);
+}
+
+.embroidered-hero {
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 253, 248, 0.48), rgba(255, 253, 248, 0.48)),
+    url("/embroidered/linen-texture.png") center / 360px 360px repeat,
+    #eee5d6;
+}
+
+@supports (height: 100svh) {
+  .embroidered-hero {
+    height: 100svh;
+    max-height: 100svh;
+  }
+}
+
+.embroidered-hero-curtain,
+.embroidered-hero-scene {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.embroidered-hero-curtain {
+  top: -4px;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%) scaleX(1.05);
+  transform-origin: top center;
+}
+
+.embroidered-hero-scene {
+  bottom: 0;
+  z-index: 1;
+}
+
+.embroidered-hero-copy {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0 6px;
+  text-align: center;
+  transform: translate(-50%, -70%);
+}
+
+.embroidered-hero-copy h1 {
+  display: flex;
+  flex-direction: column;
+  width: min(74%, 320px);
+  margin: 0;
+  color: #5d675f;
+  font-size: clamp(3rem, 14vw, 4.7rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.74;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.embroidered-hero-copy h1 i {
+  margin: 9px 0 4px;
+  color: var(--embroidered-blush);
+  font-size: 0.52em;
+  font-weight: 400;
+}
+
+.embroidered-hero-copy p {
+  margin: 22px 0 0;
+  color: #766f66;
+  font-family: var(--font-hind), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  text-transform: uppercase;
+}
+
+@media (max-height: 720px), (max-width: 599px) and (min-aspect-ratio: 1 / 2) {
+  .embroidered-hero-scene {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+
+  .embroidered-hero-copy {
+    top: 38%;
+  }
+
+  .embroidered-hero-copy h1 {
+    font-size: clamp(2.7rem, 13vw, 3.65rem);
+  }
+}
+
+.embroidered-story {
+  position: relative;
+  min-height: 650px;
+  padding: 24px 8px 18px;
+  text-align: center;
+  background: var(--embroidered-section-background);
+}
+
+.embroidered-story-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.embroidered-story-copy {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  width: min(46%, 198px);
+  transform: translateX(-50%);
+}
+
+.embroidered-story-copy h2 {
+  margin-bottom: 17px;
+  color: #59625b;
+  font-size: clamp(2.35rem, 10.5vw, 3.2rem);
+}
+
+.embroidered-story-copy i {
+  display: block;
+  width: 42px;
+  height: 1px;
+  margin: 0 auto 22px;
+  background: rgba(183, 128, 127, 0.72);
+}
+
+.embroidered-story-copy p {
+  margin: 0;
+  color: #73766f;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(0.68rem, 3.2vw, 0.9rem);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.embroidered-schedule {
+  position: relative;
+  padding: 88px 16px 96px;
+  text-align: center;
+  background: var(--embroidered-section-background);
+}
+
+.embroidered-schedule h2 {
+  margin: 0 auto 54px;
+  color: #59625b;
+  font-size: clamp(2.65rem, 12vw, 3.65rem);
+}
+
+.embroidered-schedule-route {
+  position: relative;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.embroidered-schedule-axis {
+  position: absolute;
+  left: 46%;
+  z-index: 2;
+  width: 1.5px;
+  height: 100%;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(96, 112, 78, 0.82) 0 3px,
+    transparent 3px 11px
+  );
+  pointer-events: none;
+}
+
+.embroidered-schedule-pearl {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  border: 1px solid rgba(171, 150, 126, 0.26);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 28%, #ffffff 0 10%, transparent 11%),
+    radial-gradient(
+      circle at 42% 38%,
+      #fffefa 0,
+      #f6efe5 42%,
+      #d9cbbc 76%,
+      #ad9d90 100%
+    );
+  box-shadow:
+    0 5px 10px rgba(104, 89, 73, 0.16),
+    inset -3px -4px 6px rgba(129, 112, 95, 0.12),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.82);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.embroidered-schedule ol {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.embroidered-schedule li {
+  display: grid;
+  grid-template-columns: calc(45% - 1px) 2px calc(55% - 1px);
+  align-items: center;
+}
+
+.embroidered-schedule-art {
+  grid-column: 1;
+  justify-self: center;
+  width: 80%;
+}
+
+.embroidered-schedule-art img {
+  display: block;
+  width: 100%;
+  height: 112px;
+  object-fit: contain;
+  filter: drop-shadow(0 7px 7px rgba(95, 83, 66, 0.09));
+}
+
+.embroidered-schedule-arrival {
+  width: 94%;
+}
+
+.embroidered-schedule-cake,
+.embroidered-schedule-farewell {
+  width: 70%;
+}
+
+.embroidered-schedule-copy {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 28px;
+  text-align: left;
+}
+
+.embroidered-schedule-copy strong {
+  color: #59625b;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(1.1rem, 4.8vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.embroidered-schedule-copy span {
+  margin-top: 12px;
+  color: #727871;
+  font-family: var(--font-hind), sans-serif;
+  font-size: clamp(0.66rem, 2.8vw, 0.78rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (max-width: 360px) {
+  .embroidered-schedule {
+    padding-inline: 10px;
+  }
+
+  .embroidered-schedule li {
+    grid-template-columns: calc(38% - 1px) 2px calc(62% - 1px);
+  }
+
+  .embroidered-schedule-copy {
+    padding-left: 20px;
+  }
+}
+
+.embroidered-dress-code {
+  padding: 88px 22px 80px;
+  text-align: center;
+  background: var(--embroidered-section-background);
+}
+
+.embroidered-kicker {
+  margin-bottom: 13px;
+  color: var(--embroidered-blush);
+  font-family: var(--font-hind), sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.embroidered-dress-code h2 {
+  margin-bottom: 24px;
+  color: #59625b;
+  font-size: clamp(2.8rem, 13vw, 4rem);
+}
+
+.embroidered-dress-copy {
+  max-width: 340px;
+  margin: 0 auto 42px;
+  color: #6f716b;
+}
+
+.embroidered-dress-art {
+  display: block;
+  width: min(100%, 430px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.embroidered-swatches {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.embroidered-swatches i {
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.76);
+  border-radius: 50%;
+  background: #1f2422;
+  box-shadow: 0 0 0 1px rgba(95, 103, 95, 0.14);
+}
+
+.embroidered-swatches i:nth-child(2) {
+  background: #a9af8c;
+}
+.embroidered-swatches i:nth-child(3) {
+  background: #9b5f70;
+}
+.embroidered-swatches i:nth-child(4) {
+  background: #c87d79;
+}
+.embroidered-swatches i:nth-child(5) {
+  background: #d8c5a7;
+}
+
+.embroidered-rsvp {
+  padding: 88px 24px 96px;
+  text-align: center;
+  background: var(--embroidered-section-background);
+}
+
+.embroidered-rsvp h2 {
+  max-width: 350px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  color: #59625b;
+  font-size: clamp(2.35rem, 10.5vw, 3.2rem);
+}
+
+.embroidered-rsvp .rsvp-panel {
+  margin-top: 40px;
+}
+
+.embroidered-theme .guest-tabs {
+  border-color: var(--embroidered-ink);
+}
+
+.embroidered-theme .guest-tabs button {
+  color: var(--embroidered-ink);
+}
+
+.embroidered-theme .guest-tabs button.active {
+  color: #fffaf3;
+  background: var(--embroidered-blush);
+}
+
+.embroidered-theme .rsvp-form input,
+.embroidered-theme .rsvp-form textarea {
+  border-bottom-color: var(--embroidered-ink);
+  color: var(--embroidered-ink);
+}
+
+.embroidered-theme .rsvp-form input::placeholder,
+.embroidered-theme .rsvp-form textarea::placeholder {
+  color: rgba(95, 103, 95, 0.55);
+}
+
+.embroidered-theme .choice-grid label {
+  border-color: rgba(95, 103, 95, 0.28);
+}
+
+.embroidered-theme .rsvp-form input[type="radio"] {
+  accent-color: var(--embroidered-blush);
+}
+
+.embroidered-theme .rsvp-submit {
+  color: #fffaf3;
+  background: var(--embroidered-blush);
+}
+
+.embroidered-countdown {
+  padding: 88px 18px 92px;
+  text-align: center;
+  background: var(--embroidered-section-background);
+}
+
+.embroidered-countdown-ornament {
+  display: block;
+  width: calc(100% + 36px);
+  height: auto;
+  margin: -54px -18px 38px;
+}
+
+.embroidered-countdown h2 {
+  margin: 0 auto 46px;
+  color: #59625b;
+  font-size: clamp(2.35rem, 10.5vw, 3.2rem);
+}
+
+.embroidered-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.embroidered-countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.embroidered-countdown-flower {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url("/embroidered/countdown-flower-pearl.png") center / contain
+    no-repeat;
+  filter: drop-shadow(0 7px 7px rgba(95, 83, 66, 0.12));
+}
+
+.embroidered-countdown-flower strong {
+  color: #556159;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(1.45rem, 6.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.embroidered-countdown-item span {
+  margin-top: 11px;
+  color: #88706d;
+  font-family: var(--font-hind), sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 340px) {
+  .embroidered-countdown-grid {
+    gap: 2px;
+  }
+
+  .embroidered-countdown-item span {
+    margin-top: 8px;
+    font-size: 0.5rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+.embroidered-footer {
+  padding: 52px 24px 34px;
+  text-align: center;
+  background: var(--embroidered-section-background);
+}
+
+.embroidered-footer a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--embroidered-blush);
+  font:
+    700 0.7rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.embroidered-footer p {
+  margin: 0;
+  color: rgba(95, 103, 95, 0.7);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+}
+
+@media (min-width: 600px) {
+  .embroidered-theme {
+    width: 430px;
+    margin: 0 auto;
+    box-shadow: 0 0 60px rgba(52, 43, 34, 0.16);
+  }
+}

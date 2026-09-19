@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const designs = [
-  { href: "/designs/european", number: "01", name: "European Vintage Garden", description: "Ivory paper, romantic serif type, and hand-drawn blue details.", status: "View design", available: true, className: "catalogue-card-european" },
-  { href: "/designs/chinese", number: "02", name: "Chinese Celebration", description: "Warm ivory paper, ceremonial red details, and joyful Chinese wedding illustrations.", status: "View design", available: true, className: "catalogue-card-chinese" },
-  { href: "/designs/myanmar", number: "03", name: "Myanmar Traditional", description: "A culturally rooted Myanmar wedding direction for a future release.", status: "Coming soon", available: false, className: "catalogue-card-myanmar" },
+  { href: "/designs/european", name: "European Vintage Garden", className: "catalogue-card-european" },
+  { href: "/designs/chinese", name: "Chinese Celebration", className: "catalogue-card-chinese" },
+  { href: "/designs/myanmar", name: "Myanmar Heritage Celebration", className: "catalogue-card-myanmar" },
+  { href: "/designs/embroidered", name: "Embroidered Garden at Sedona", className: "catalogue-card-embroidered" },
 ];
 
 export default function DesignCatalogue() {
@@ -16,17 +17,18 @@ export default function DesignCatalogue() {
       </header>
       <section className="catalogue-grid" aria-label="Wedding invitation designs">
         {designs.map((design) => (
-          <article className={`catalogue-card ${design.className}`} key={design.href}>
-            <div className="catalogue-card-art" aria-hidden="true"><span>{design.number}</span></div>
-            <div className="catalogue-card-copy">
-              <p>{design.available ? "Available design" : "Future design"}</p>
-              <h2>{design.name}</h2>
-              <p>{design.description}</p>
-              <Link href={design.href} aria-label={`${design.status}: ${design.name}`}>
-                {design.status}<span aria-hidden="true"> →</span>
-              </Link>
-            </div>
-          </article>
+          <Link
+            className={`catalogue-card ${design.className}`}
+            href={design.href}
+            key={design.href}
+            aria-label={`View design: ${design.name}`}
+          >
+            <span className="catalogue-card-status">Available design</span>
+            <h2>{design.name}</h2>
+            <span className="catalogue-card-action">
+              View design <span aria-hidden="true">→</span>
+            </span>
+          </Link>
         ))}
       </section>
       <footer className="catalogue-footer">©2026 EVENT ELITE. ALL RIGHTS RESERVED.</footer>
