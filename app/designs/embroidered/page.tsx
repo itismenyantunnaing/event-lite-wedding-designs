@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import EmbroideredCountdown from "../../../components/embroidered/EmbroideredCountdown";
 import EmbroideredSchedule from "../../../components/embroidered/EmbroideredSchedule";
+import EmbroideredTextReveal from "../../../components/embroidered/EmbroideredTextReveal";
 import RSVPForm from "../../../components/shared/RSVPForm";
 import "./embroidered.css";
 
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function EmbroideredDesignPage() {
   return (
-    <main className="embroidered-theme">
+    <EmbroideredTextReveal>
       <section className="embroidered-hero" aria-label="Wedding invitation for Camille and Antoine">
         <Image
           className="embroidered-hero-curtain"
@@ -101,6 +102,6 @@ export default function EmbroideredDesignPage() {
         <Link href="/">Explore all designs</Link>
         <p>©2027 EVENT ELITE. ALL RIGHTS RESERVED.</p>
       </footer>
-    </main>
+    </EmbroideredTextReveal>
   );
 }
