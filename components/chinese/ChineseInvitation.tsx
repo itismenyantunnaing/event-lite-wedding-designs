@@ -3,6 +3,11 @@ import ChineseGalleryCountdown from "./ChineseGalleryCountdown";
 import RSVPForm from "../shared/RSVPForm";
 import { chineseDemo } from "../../data/chinese-demo";
 
+type ChineseInvitationProps = {
+  showHeroCharacters?: boolean;
+  scheduleOverride?: typeof chineseDemo.schedule;
+};
+
 function KnotDivider() {
   return (
     <Image
@@ -16,12 +21,16 @@ function KnotDivider() {
   );
 }
 
-export default function ChineseInvitation() {
-  const { couple, date, venue, schedule } = chineseDemo;
+export default function ChineseInvitation({
+  showHeroCharacters = false,
+  scheduleOverride,
+}: ChineseInvitationProps = {}) {
+  const { couple, date, venue } = chineseDemo;
+  const schedule = scheduleOverride ?? chineseDemo.schedule;
 
   return (
     <main className="chinese-theme">
-      <section className="cn-hero">
+      <section className={`cn-hero${showHeroCharacters ? "" : " cn-hero-without-characters"}`}>
         <Image
           className="cn-hero-background"
           src="/chinese/hero-frame-background.webp"
@@ -57,15 +66,17 @@ export default function ChineseInvitation() {
         </span>
         </div>
         <p className="cn-venue-name">{venue.name}</p>
-        <Image
-          className="cn-hero-couple"
-          src="/chinese/hero-couple-characters.webp"
-          alt="Hand-drawn Chinese newlywed couple"
-          width={794}
-          height={960}
-          sizes="250px"
-          priority
-        />
+        {showHeroCharacters && (
+          <Image
+            className="cn-hero-couple"
+            src="/chinese/hero-couple-characters.webp"
+            alt="Hand-drawn Chinese newlywed couple"
+            width={794}
+            height={960}
+            sizes="250px"
+            priority
+          />
+        )}
       </section>
 
       <section className="cn-section cn-welcome">

@@ -3,12 +3,21 @@ import RSVPForm from "../shared/RSVPForm";
 import MyanmarMoments from "./MyanmarMoments";
 import { myanmarDemo } from "../../data/myanmar-demo";
 
-export default function MyanmarInvitation() {
-  const { couple, date, venue, schedule } = myanmarDemo;
+type MyanmarInvitationProps = {
+  showHeroCharacters?: boolean;
+  scheduleOverride?: typeof myanmarDemo.schedule;
+};
+
+export default function MyanmarInvitation({
+  showHeroCharacters = false,
+  scheduleOverride,
+}: MyanmarInvitationProps = {}) {
+  const { couple, date, venue } = myanmarDemo;
+  const schedule = scheduleOverride ?? myanmarDemo.schedule;
 
   return (
     <main className="myanmar-theme">
-      <section className="mm-hero">
+      <section className={`mm-hero${showHeroCharacters ? "" : " mm-hero-without-characters"}`}>
         <Image
           className="mm-hero-background"
           src="/myanmar/doodle-hero-background-karaweik.webp"
@@ -40,15 +49,17 @@ export default function MyanmarInvitation() {
           </div>
           <p className="mm-venue-name">{venue.name}</p>
         </div>
-        <Image
-          className="mm-hero-couple"
-          src="/myanmar/doodle-hero-couple-reference-v2.png"
-          alt="Hand-drawn Myanmar newlywed couple in traditional attire"
-          width={1024}
-          height={1536}
-          sizes="(max-width: 599px) 29vw, 140px"
-          priority
-        />
+        {showHeroCharacters && (
+          <Image
+            className="mm-hero-couple"
+            src="/myanmar/doodle-hero-couple-reference-v2.png"
+            alt="Hand-drawn Myanmar newlywed couple in traditional attire"
+            width={1024}
+            height={1536}
+            sizes="(max-width: 599px) 29vw, 140px"
+            priority
+          />
+        )}
       </section>
 
       <section className="mm-section mm-welcome">

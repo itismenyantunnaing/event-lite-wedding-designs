@@ -1192,6 +1192,9 @@
   width: clamp(104px, 29vw, 140px);
   margin-top: 12px;
 }
+.mm-hero-without-characters {
+  padding-block-end: 122%;
+}
 @media (min-width: 600px) {
   .mm-hero-couple {
     width: 140px;

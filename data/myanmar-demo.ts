@@ -10,11 +10,18 @@ export const myanmarDemo = {
     mapUrl: "https://maps.app.goo.gl/JCvq3rmUJHe5CCTR6",
   },
   schedule: [
-    { time: "9:00 AM", title: "Family blessing", image: "/myanmar/doodle-blessing-family-clean.png" },
-    { time: "10:15 AM", title: "Garland ceremony", image: "/myanmar/doodle-garlands-consistent-v2.png" },
-    { time: "12:00 PM", title: "Wedding luncheon", image: "/myanmar/doodle-luncheon-consistent-v3.png" },
-    { time: "2:30 PM", title: "Toasts & celebration", image: "/myanmar/doodle-toast-consistent-v3.png" },
+    { time: "9:00 AM", title: "Family blessing", image: "/myanmar/schedule-blessing-still-life.png" },
+    { time: "10:15 AM", title: "Garland ceremony", image: "/myanmar/schedule-garlands-still-life.png" },
+    { time: "12:00 PM", title: "Wedding luncheon", image: "/myanmar/schedule-luncheon-still-life.png" },
+    { time: "2:30 PM", title: "Toasts & celebration", image: "/myanmar/schedule-toast-still-life.png" },
   ],
   giftNote: "Your presence and blessings are the greatest gifts. Should you wish to honor us further, a small envelope or keepsake would be received with heartfelt gratitude.",
   dressCode: "Traditional formal or garden formal. Ivory, sandalwood, muted greens, deep maroon, and touches of gold are warmly welcomed.",
 };
+
+export const myanmarBackupSchedule = [
+  { time: "9:00 AM", title: "Family blessing", image: "/myanmar/doodle-blessing-family-clean.png" },
+  { time: "10:15 AM", title: "Garland ceremony", image: "/myanmar/doodle-garlands-consistent-v2.png" },
+  { time: "12:00 PM", title: "Wedding luncheon", image: "/myanmar/doodle-luncheon-consistent-v3.png" },
+  { time: "2:30 PM", title: "Toasts & celebration", image: "/myanmar/doodle-toast-consistent-v3.png" },
+];

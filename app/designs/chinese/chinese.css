@@ -692,8 +692,8 @@
 .cn-hero {
   height: 100svh;
   min-height: 0;
-  padding: 0 58px 25%;
-  justify-content: flex-end;
+  padding: 45% 58px 0;
+  /* justify-content: flex-end; */
   overflow: hidden;
   background: var(--cn-paper);
 }
@@ -928,6 +928,10 @@
   margin: 4px auto 0;
   object-fit: contain;
   object-position: center bottom;
+}
+
+.cn-hero-without-characters {
+  padding-bottom: 42%;
 }
 
 /* The European-style winding route, recolored for the Chinese theme. */
