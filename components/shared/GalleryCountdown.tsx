@@ -6,11 +6,11 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowLeft02Icon, ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
 const photos = [
-  { src: "/gallery-optimized/pexels-nudethephotographer-37828118.webp", blur: "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAQCdASoQAAsABUB8JZQAAq3q5gAA/ud2BIhVRleTAmI7KzOuWN247fotSPg4ulW6nZZRIOAVpQ7Kup8fqvswQAA=" },
-  { src: "/gallery-optimized/pexels-rebornfilmes-36725399.webp", blur: "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABwAwCdASoQABgAPzmGulOvKKWisAgB4CcJYwCsABp4Lu/DloAA/uclN8bGnoAFRr/YehFxeIjDRU3i7a0d/Aa30yqs5GXVsAVPHlg7ZZ7huHXMvdZEkQJcOmjQ9rSVpo8c1TJuu5G7oAAA" },
-  { src: "/gallery-optimized/pexels-rebornfilmes-36725406.webp", blur: "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoQABgAPzmGuVOvKSWisAgB4CcJQBOmUABJ6iySbXOxHnWsAAD+5y9ux2FJjF2CiZMBtFBLxQ8TJtoBk3knU033I776mz6FuZnEPfLIDdUKQ2XHXeibmW0u3+Q3OCFsN4E1OxlEWgAAAA==" },
-  { src: "/gallery-optimized/pexels-rebornfilmes-36725417.webp", blur: "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADQAwCdASoQABgAPzmEuVOvKKWisAgB4CcJQBbZAwq2raCRF4ndwQAA/uc/Z3BJmB7nO7GVpLKoKl/H7uzIQw0BH6I3mG7RFuvfiHfGuARd3Bps8DAGFsRJublfWaFoe/VTgz8rRfSJdQ8s54XKCH3gRdqmKFm9I9D2DJxeCQAAAA==" },
-  { src: "/gallery-optimized/pexels-thisismcpeter-38703046.webp", blur: "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoQABgAPzmIvlSvKSajMAgB4CcJZQAAUU8Y4hC7bnWBFJyAAP7D2LxxR3jxaAYxKjn6oMgD0Jcp71O0HWLtIXuRPzZ+crWPwAA=" },
+  { src: "/european/gallery-optimized/pexels-nudethephotographer-37828118.webp", blur: "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAQCdASoQAAsABUB8JZQAAq3q5gAA/ud2BIhVRleTAmI7KzOuWN247fotSPg4ulW6nZZRIOAVpQ7Kup8fqvswQAA=" },
+  { src: "/european/gallery-optimized/pexels-rebornfilmes-36725399.webp", blur: "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABwAwCdASoQABgAPzmGulOvKKWisAgB4CcJYwCsABp4Lu/DloAA/uclN8bGnoAFRr/YehFxeIjDRU3i7a0d/Aa30yqs5GXVsAVPHlg7ZZ7huHXMvdZEkQJcOmjQ9rSVpo8c1TJuu5G7oAAA" },
+  { src: "/european/gallery-optimized/pexels-rebornfilmes-36725406.webp", blur: "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoQABgAPzmGuVOvKSWisAgB4CcJQBOmUABJ6iySbXOxHnWsAAD+5y9ux2FJjF2CiZMBtFBLxQ8TJtoBk3knU033I776mz6FuZnEPfLIDdUKQ2XHXeibmW0u3+Q3OCFsN4E1OxlEWgAAAA==" },
+  { src: "/european/gallery-optimized/pexels-rebornfilmes-36725417.webp", blur: "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADQAwCdASoQABgAPzmEuVOvKKWisAgB4CcJQBbZAwq2raCRF4ndwQAA/uc/Z3BJmB7nO7GVpLKoKl/H7uzIQw0BH6I3mG7RFuvfiHfGuARd3Bps8DAGFsRJublfWaFoe/VTgz8rRfSJdQ8s54XKCH3gRdqmKFm9I9D2DJxeCQAAAA==" },
+  { src: "/european/gallery-optimized/pexels-thisismcpeter-38703046.webp", blur: "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoQABgAPzmIvlSvKSajMAgB4CcJZQAAUU8Y4hC7bnWBFJyAAP7D2LxxR3jxaAYxKjn6oMgD0Jcp71O0HWLtIXuRPzZ+crWPwAA=" },
 ];
 
 const weddingTime = new Date("2026-09-12T15:00:00").getTime();

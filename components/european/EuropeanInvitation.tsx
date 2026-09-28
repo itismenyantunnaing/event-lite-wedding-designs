@@ -24,7 +24,7 @@ export default function EuropeanInvitation() {
         </div>
         <Image
           className="hero-art"
-          src="/doodles-optimized/dinner-table.webp"
+          src="/european/doodles-optimized/dinner-table.webp"
           alt="A hand-drawn wedding table for two"
           width={1536}
           height={1024}
@@ -89,7 +89,7 @@ export default function EuropeanInvitation() {
               >
                 <div className="schedule-card">
                   <Image
-                    src={`/doodles-optimized/schedule-${item.icon}.webp`}
+                    src={`/european/doodles-optimized/schedule-${item.icon}.webp`}
                     alt=""
                     width={320}
                     height={260}
@@ -109,7 +109,7 @@ export default function EuropeanInvitation() {
       <section className="section details">
         <Image
           className="details-art"
-          src="/doodles-optimized/gifts-only.webp"
+          src="/european/doodles-optimized/gifts-only.webp"
           alt="Hand-drawn flowers, gifts and envelopes"
           width={485}
           height={934}

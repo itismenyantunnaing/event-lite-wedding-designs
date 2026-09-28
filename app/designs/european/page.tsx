@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import EuropeanInvitation from "../../../components/european/EuropeanInvitation";
+import "./european.css";
 
 export const metadata: Metadata = {
   title: "European Vintage Garden — Event Elite",
