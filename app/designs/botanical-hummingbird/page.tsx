@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Cormorant_SC } from "next/font/google";
 import BotanicalHummingbirdInvitation from "../../../components/botanical-hummingbird/BotanicalHummingbirdInvitation";
 import "./botanical-hummingbird.css";
+
+const cormorantSC = Cormorant_SC({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-cormorant-sc",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "New Wedding Design — Event Elite",
@@ -8,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function BotanicalHummingbirdDesignPage() {
-  return <BotanicalHummingbirdInvitation />;
+  return <div className={cormorantSC.variable}><BotanicalHummingbirdInvitation /></div>;
 }

@@ -94,11 +94,15 @@ export default function BotanicalHummingbirdRSVPForm() {
           <div className="choice-grid attendance-options">
             <label>
               <input type="radio" name="attendance" value="yes" required />{" "}
-              Yes, I will be there
+              Yes
             </label>
             <label>
               <input type="radio" name="attendance" value="no" />{" "}
-              No, I can&apos;t make it
+              No
+            </label>
+            <label>
+              <input type="radio" name="attendance" value="maybe" />{" "}
+              Maybe
             </label>
           </div>
         </fieldset>
@@ -114,6 +118,7 @@ export default function BotanicalHummingbirdRSVPForm() {
         <button className="rsvp-submit" type="button">
           Send RSVP
         </button>
+        <p className="bh-rsvp-deadline">Kindly reply by 1 November 2026</p>
       </form>
     </div>
   );

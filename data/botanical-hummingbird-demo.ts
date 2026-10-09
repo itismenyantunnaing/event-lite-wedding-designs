@@ -4,8 +4,8 @@ export const botanicalHummingbirdDemo = {
   invitation: "request the honor of your presence as they begin their life together",
   introduction: "With the blessings of our parents and hearts full of gratitude, we invite you to share in a morning of timeless traditions, joyful promises, and a beautiful new beginning.",
   venue: {
-    name: "Lotte Hotel",
-    note: "Please arrive by 8:30 AM",
+    name: "Lotte Hotel Yangon Crystal Ballroom",
+    note: "Please arrive by 9:30 AM",
     mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Hotel+Yangon",
   },
   schedule: [

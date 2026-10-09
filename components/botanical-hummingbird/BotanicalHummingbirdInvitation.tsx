@@ -63,14 +63,14 @@ export default function BotanicalHummingbirdInvitation() {
             unoptimized
           />
           <div className="bh-schedule-copy">
-            <p className="bh-schedule-eyebrow">A day to remember</p>
+            <p className="mm-kicker bh-schedule-eyebrow">A day to remember</p>
             <h2>Wedding schedule</h2>
             <p className="bh-schedule-date">14 November 2026</p>
             <h3 className="bh-schedule-time">10:00 AM – 12:00 PM</h3>
             <p className="bh-schedule-description">
               Join us for our wedding ceremony and a joyful celebration with family and friends.
             </p>
-            <p className="bh-schedule-location">Lotte Hotel Yangon</p>
+            <p className="bh-schedule-location">Lotte Hotel Yangon Crystal Ballroom</p>
           </div>
         </div>
       </section>
@@ -108,7 +108,6 @@ export default function BotanicalHummingbirdInvitation() {
       <BotanicalHummingbirdMoments />
 
       <section className="mm-section mm-rsvp">
-        <p className="mm-kicker">Kindly reply by December 20</p>
         <h2>Will you celebrate with us?</h2>
         <BotanicalHummingbirdRSVPForm />
       </section>

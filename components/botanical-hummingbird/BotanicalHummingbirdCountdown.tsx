@@ -1,7 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
+
+const CountdownBird = memo(function CountdownBird() {
+  const [failed, setFailed] = useState(false);
+  const showFallback = useCallback(() => setFailed(true), []);
+
+  return (
+    <Image
+      src={failed
+        ? "/botanical-hummingbird/countdown-bird-reference-v1.png"
+        : "/botanical-hummingbird/countdown-bird-loop-transparent-v2.apng"}
+      alt=""
+      width={320}
+      height={346}
+      unoptimized
+      onError={failed ? undefined : showFallback}
+    />
+  );
+});
 
 const weddingTime = new Date("2026-11-14T09:00:00+06:30").getTime();
 function remaining() {
@@ -26,26 +44,10 @@ export default function BotanicalHummingbirdCountdown() {
     <section className="mm-section mm-countdown">
       <div className="bh-countdown-scene">
         <div className="bh-countdown-bird bh-countdown-bird-left" aria-hidden="true">
-          <video
-            src="/botanical-hummingbird/countdown-bird-loop-transparent-v1.webm"
-            poster="/botanical-hummingbird/countdown-bird-reference-v1.png"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-          />
+          <CountdownBird />
         </div>
         <div className="bh-countdown-bird bh-countdown-bird-right" aria-hidden="true">
-          <video
-            src="/botanical-hummingbird/countdown-bird-loop-transparent-v1.webm"
-            poster="/botanical-hummingbird/countdown-bird-reference-v1.png"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-          />
+          <CountdownBird />
         </div>
         <div className="bh-countdown-plaque">
           <Image
