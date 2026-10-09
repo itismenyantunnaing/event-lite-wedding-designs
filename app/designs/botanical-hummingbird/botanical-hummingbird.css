@@ -1529,13 +1529,22 @@
 }
 
 .bh-intro {
-  position: absolute;
+  /* Keep the opening viewport-sized independently of the landing artwork. */
+  position: fixed;
   inset: 0;
-  z-index: 5;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 100;
   overflow: hidden;
   background: var(--paper);
   opacity: 1;
   transition: opacity 850ms ease;
+}
+
+/* Avoid clipping the fixed intro or painting later sections over it. */
+.myanmar-theme .bh-hero:not([data-phase="open"]) {
+  overflow: visible;
+  z-index: 100;
 }
 
 .bh-hero[data-phase="revealing"] .bh-intro {
@@ -1550,7 +1559,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .bh-intro-video {
