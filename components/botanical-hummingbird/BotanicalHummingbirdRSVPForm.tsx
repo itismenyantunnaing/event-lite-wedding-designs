@@ -118,7 +118,7 @@ export default function BotanicalHummingbirdRSVPForm() {
         <button className="rsvp-submit" type="button">
           Send RSVP
         </button>
-        <p className="bh-rsvp-deadline">Kindly reply by 1 November 2026</p>
+        <p className="bh-rsvp-deadline">Kindly reply by 1st November 2026</p>
       </form>
     </div>
   );

@@ -33,7 +33,7 @@ export default function BotanicalHummingbirdInvitation() {
         <h2>{venue.name}</h2>
         <Image
           className="bh-venue-art"
-          src="/botanical-hummingbird/lotte-hotel-watercolor-v1.png"
+          src="/botanical-hummingbird/lotte-hotel-watercolor-v2-ivory.png"
           alt="Watercolor illustration of Lotte Hotel Yangon"
           width={1086}
           height={1448}

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 
 const CountdownBird = memo(function CountdownBird() {
   const [failed, setFailed] = useState(false);
@@ -32,7 +32,26 @@ function remaining() {
 }
 
 export default function BotanicalHummingbirdCountdown() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [entered, setEntered] = useState(false);
   const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0 });
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !("IntersectionObserver" in window)) {
+      setEntered(true);
+      return;
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      setEntered(true);
+      observer.disconnect();
+    }, { threshold: 0.25 });
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     setTime(remaining());
@@ -41,8 +60,8 @@ export default function BotanicalHummingbirdCountdown() {
   }, []);
 
   return (
-    <section className="mm-section mm-countdown">
-      <div className="bh-countdown-scene">
+    <section ref={sectionRef} className="mm-section mm-countdown">
+      <div className="bh-countdown-scene" data-entered={entered}>
         <div className="bh-countdown-bird bh-countdown-bird-left" aria-hidden="true">
           <CountdownBird />
         </div>
