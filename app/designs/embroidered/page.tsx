@@ -4,6 +4,7 @@ import Link from "next/link";
 import EmbroideredCountdown from "../../../components/embroidered/EmbroideredCountdown";
 import EmbroideredSchedule from "../../../components/embroidered/EmbroideredSchedule";
 import EmbroideredTextReveal from "../../../components/embroidered/EmbroideredTextReveal";
+import EmbroideredCurtain from "../../../components/embroidered/EmbroideredCurtain";
 import RSVPForm from "../../../components/shared/RSVPForm";
 import "./embroidered.css";
 
@@ -16,15 +17,7 @@ export default function EmbroideredDesignPage() {
   return (
     <EmbroideredTextReveal>
       <section className="embroidered-hero" aria-label="Wedding invitation for Camille and Antoine">
-        <Image
-          className="embroidered-hero-curtain"
-          src="/embroidered/hero-curtain-short.png"
-          alt="Ivory embroidered curtains with pearl trim"
-          width={1104}
-          height={1090}
-          sizes="(min-width: 600px) 430px, 100vw"
-          priority
-        />
+        <EmbroideredCurtain />
         <div className="embroidered-hero-copy">
           <h1>
             <span>Camille</span>

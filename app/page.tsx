@@ -5,6 +5,7 @@ const designs = [
   { href: "/designs/chinese", name: "Chinese Celebration", className: "catalogue-card-chinese" },
   { href: "/designs/myanmar", name: "Myanmar Heritage Celebration", className: "catalogue-card-myanmar" },
   { href: "/designs/embroidered", name: "Embroidered Garden at Sedona", className: "catalogue-card-embroidered" },
+  { href: "/designs/botanical-hummingbird", name: "New Wedding Design", className: "" },
 ];
 
 export default function DesignCatalogue() {
