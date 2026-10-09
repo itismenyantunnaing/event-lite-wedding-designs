@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_SC } from "next/font/google";
-import BotanicalHummingbirdInvitation from "../../../components/botanical-hummingbird/BotanicalHummingbirdInvitation";
-import "./botanical-hummingbird.css";
+import BotanicalHummingbirdInvitation from "../../../components/botanical-hummingbird-sample-2/BotanicalHummingbirdInvitation";
+import "./botanical-hummingbird-sample-2.css";
 
 const headingFont = Cormorant_SC({
   subsets: ["latin"],
@@ -11,7 +11,7 @@ const headingFont = Cormorant_SC({
 });
 
 export const metadata: Metadata = {
-  title: "Humming Bird and Lily of the Valley (Sample 1) — Event Elite",
+  title: "Humming Bird and Lily of the Valley (Sample 2) — Event Elite",
   description: "A new Event Elite mobile wedding invitation design.",
 };
 

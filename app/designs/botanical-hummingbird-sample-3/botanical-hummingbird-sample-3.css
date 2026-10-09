@@ -1,0 +1,1798 @@
+/* Keep the same local font and sizing as the former Next.js fallback. */
+@font-face {
+  font-family: "Cormorant SC Sample 3 Fallback";
+  src: local("Times New Roman");
+  ascent-override: 81.43%;
+  descent-override: 25.29%;
+  line-gap-override: 0%;
+  size-adjust: 113.48%;
+}
+
+.botanical-sample-3-theme {
+  --font-cormorant-sc: var(--font-cormorant-heading);
+  --font-cormorant-body: "Cormorant SC Sample 3 Fallback", "Times New Roman", serif;
+  --section-heading-size: clamp(1.75rem, 7.5vw, 2.1rem);
+  --font-instrument-serif: var(--font-cormorant-sc);
+  --font-hind: var(--font-cormorant-body);
+  font-family: var(--font-cormorant-body);
+  --paper: #f7f0e3;
+  --paper-deep: #efe4d3;
+  --ink: #392f28;
+  --maroon: #84352f;
+  --green: #425f49;
+  --gold: #b17b2d;
+  min-height: 100svh;
+  overflow: hidden;
+  color: var(--ink);
+  background:
+    radial-gradient(
+      circle at 16% 9%,
+      rgba(177, 123, 45, 0.07) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 79% 37%,
+      rgba(66, 95, 73, 0.05) 0 1px,
+      transparent 1.5px
+    ),
+    var(--paper);
+  background-size:
+    27px 27px,
+    31px 31px,
+    auto;
+}
+.botanical-sample-3-theme h1,
+.botanical-sample-3-theme h2,
+.botanical-sample-3-theme p {
+  margin-top: 0;
+}
+.botanical-sample-3-theme h2 {
+  margin-bottom: 20px;
+  color: var(--maroon);
+  font:
+    400 var(--section-heading-size)/1.1 var(--font-instrument-serif),
+    serif;
+  letter-spacing: -0.01em;
+}
+.botanical-sample-3-theme p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+.s3-mm-section {
+  position: relative;
+  padding: 82px 26px;
+  text-align: center;
+}
+.s3-mm-section:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 46px;
+  height: 1px;
+  background: var(--gold);
+  transform: translateX(-50%);
+}
+.s3-mm-kicker,
+.s3-mm-eyebrow {
+  margin-bottom: 13px;
+  color: var(--green);
+  font:
+    700 0.68rem var(--font-hind),
+    sans-serif !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.s3-mm-hero {
+  position: relative;
+  display: flex;
+  height: 100svh;
+  min-height: 0;
+  padding-block-end: 78%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  text-align: center;
+  background: var(--paper);
+}
+.s3-mm-hero-background {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center bottom;
+  pointer-events: none;
+}
+.s3-mm-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.s3-mm-eyebrow {
+  margin-bottom: 8px;
+  font-size: 0.6rem;
+}
+.s3-mm-title-ornament {
+  display: block;
+  color: var(--gold);
+  font-size: 0.78rem;
+  line-height: 1;
+}
+.s3-mm-title-ornament-second {
+  margin-top: -3px;
+}
+.s3-mm-hero-couple-name {
+  color: var(--maroon);
+  font:
+    400 clamp(3.6rem, 18vw, 5rem)/0.82 var(--font-instrument-serif),
+    serif;
+  letter-spacing: -0.015em;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+.s3-mm-hero-couple-name i {
+  color: var(--gold);
+  font-size: 0.42em;
+  font-weight: 400;
+}
+.s3-mm-invitation {
+  max-width: 260px;
+  margin: 0 auto 8px;
+  font-size: 0.74rem !important;
+}
+.s3-mm-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-block: 8px;
+  color: var(--maroon);
+}
+.s3-mm-date span {
+  font:
+    700 0.85rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.s3-mm-venue-name {
+  margin: 0;
+  color: var(--green);
+  font:
+    700 0.58rem var(--font-hind),
+    sans-serif !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.s3-mm-hero-couple {
+  position: relative;
+  z-index: 1;
+  width: min(49vw, 245px);
+  height: auto;
+  margin-top: 5px;
+  filter: drop-shadow(0 12px 20px rgba(57, 47, 40, 0.08));
+}
+.s3-mm-welcome > p:not(.s3-mm-kicker) {
+  max-width: 330px;
+  margin-inline: auto;
+}
+.s3-mm-welcome {
+  padding-top: 22px;
+}
+.s3-mm-welcome::after {
+  display: none;
+}
+.s3-bh-welcome-topper {
+  display: block;
+  width: calc(100% + 52px);
+  height: auto;
+  margin: 0 -26px 12px;
+}
+@media (min-width: 600px) {
+  .s3-bh-welcome-topper {
+    width: calc(100% + 96px);
+    margin-inline: -48px;
+  }
+}
+.s3-mm-doodle-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 230px;
+  margin: 34px auto -8px;
+  color: var(--gold);
+}
+.s3-mm-doodle-divider i {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--maroon), transparent);
+}
+.s3-mm-doodle-divider span {
+  font-size: 0.8rem;
+}
+.s3-mm-venue {
+  background: rgba(239, 228, 211, 0.78);
+}
+.s3-mm-venue h2 {
+  max-width: 330px;
+  margin-inline: auto;
+  margin-bottom: 0;
+}
+.s3-bh-venue-art {
+  display: block;
+  width: calc(100% + 52px);
+  max-width: none;
+  height: auto;
+  margin: 24px -26px 30px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
+}
+@media (min-width: 600px) {
+  .s3-bh-venue-art {
+    width: calc(100% + 96px);
+    margin-inline: -48px;
+  }
+}
+.s3-mm-small {
+  max-width: 310px;
+  margin: 26px auto !important;
+  font-size: 0.82rem !important;
+}
+.s3-mm-button,
+.botanical-sample-3-theme .rsvp-submit {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid var(--maroon);
+  border-radius: 100px;
+  color: var(--paper);
+  background: var(--maroon);
+  font:
+    700 0.67rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.s3-mm-schedule {
+  padding-inline: 20px;
+}
+.s3-mm-schedule h2 {
+  margin-bottom: 42px;
+}
+.s3-mm-schedule-route {
+  position: relative;
+  width: min(100%, 390px);
+  height: 720px;
+  margin: auto;
+}
+.s3-mm-schedule-path {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.s3-mm-schedule-path path {
+  fill: none;
+  stroke: rgba(132, 53, 47, 0.45);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+}
+.s3-mm-schedule-path text {
+  fill: var(--maroon);
+  font-size: 15px;
+}
+.s3-mm-schedule ol {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.s3-mm-schedule li {
+  position: absolute;
+  width: 170px;
+}
+.s3-mm-schedule li:nth-child(1) {
+  top: 8px;
+  left: 7px;
+}
+.s3-mm-schedule li:nth-child(2) {
+  top: 178px;
+  right: 2px;
+}
+.s3-mm-schedule li:nth-child(3) {
+  top: 350px;
+  left: 4px;
+}
+.s3-mm-schedule li:nth-child(4) {
+  right: 3px;
+  bottom: 0;
+}
+.s3-mm-schedule-card img {
+  display: block;
+  width: 155px;
+  height: 134px;
+  margin: auto;
+  object-fit: contain;
+}
+.s3-mm-schedule-card > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: -3px;
+}
+.s3-mm-schedule-card strong {
+  color: var(--maroon);
+  font:
+    400 1.25rem var(--font-instrument-serif),
+    serif;
+}
+.s3-mm-schedule-card span {
+  font-size: 0.78rem;
+}
+.s3-mm-details {
+  max-height: 1060px;
+  padding-inline: 28px;
+}
+.s3-mm-gifts-art {
+  display: block;
+  width: min(100%, 350px);
+  height: auto;
+  margin: 0 auto 4px;
+}
+.s3-mm-details article {
+  position: relative;
+  z-index: 2;
+  padding: 22px 16px;
+  margin-bottom: 100px;
+  background: rgba(247, 240, 227, 0.88);
+}
+.s3-mm-details article:last-child {
+  margin-bottom: 0;
+}
+.s3-mm-details article h2 {
+  margin-bottom: 35px;
+  font-size: var(--section-heading-size);
+}
+.s3-mm-swatches {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+.s3-mm-swatches i {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  background: var(--maroon);
+  box-shadow: 0 0 0 1px rgba(57, 47, 40, 0.14);
+}
+.s3-mm-swatches i:nth-child(2) {
+  background: #b17b2d;
+}
+.s3-mm-swatches i:nth-child(3) {
+  background: #e9ddc7;
+}
+.s3-mm-swatches i:nth-child(4) {
+  background: #425f49;
+}
+.s3-mm-swatches i:nth-child(5) {
+  background: #b1846a;
+}
+.s3-mm-gallery h2 {
+  margin-bottom: 34px;
+}
+.s3-mm-gallery-control {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  align-items: center;
+  max-width: 420px;
+  margin: auto;
+}
+.s3-mm-gallery-control > button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--maroon);
+  border-radius: 50%;
+  color: var(--maroon);
+  background: var(--paper);
+  cursor: pointer;
+}
+.s3-mm-gallery-control > button:last-child {
+  justify-self: end;
+}
+.s3-mm-gallery-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+}
+.s3-mm-gallery-frame {
+  z-index: 2;
+  object-fit: fill;
+  pointer-events: none;
+}
+.s3-mm-gallery-photo {
+  position: absolute;
+  inset: 7% 8%;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 2%;
+  background: #ddcdb8;
+}
+.s3-mm-gallery-photo img {
+  object-fit: cover;
+}
+.s3-mm-gallery-count {
+  margin: 23px 0 0;
+  color: var(--green);
+  font:
+    700 0.68rem var(--font-hind),
+    sans-serif !important;
+  letter-spacing: 0.18em;
+}
+.s3-mm-countdown {
+  background: rgba(239, 228, 211, 0.62);
+}
+.s3-mm-countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3px;
+  max-width: 430px;
+  margin: 36px auto 0;
+}
+.s3-mm-medallion {
+  position: relative;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+  place-items: center;
+}
+.s3-mm-medallion img {
+  object-fit: contain;
+  filter: hue-rotate(60deg) saturate(0.65);
+}
+.s3-mm-medallion strong {
+  position: relative;
+  z-index: 2;
+  color: var(--maroon);
+  font:
+    400 clamp(1.35rem, 7vw, 2.4rem) var(--font-instrument-serif),
+    serif;
+}
+.s3-mm-countdown small {
+  display: block;
+  margin-top: 7px;
+  font:
+    700 clamp(0.48rem, 2vw, 0.63rem) var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.s3-mm-rsvp {
+  background: var(--paper);
+}
+.s3-mm-rsvp > h2 {
+  max-width: 350px;
+  margin-inline: auto;
+}
+.botanical-sample-3-theme .rsvp-panel {
+  max-width: 430px;
+  margin: 36px auto 0;
+  text-align: left;
+}
+.botanical-sample-3-theme .guest-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(132, 53, 47, 0.2);
+}
+.botanical-sample-3-theme .guest-tabs button {
+  padding: 12px 6px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--ink);
+  background: transparent;
+  font:
+    600 0.7rem var(--font-hind),
+    sans-serif;
+  text-transform: uppercase;
+}
+.botanical-sample-3-theme .guest-tabs button.active {
+  border-color: var(--maroon);
+  color: var(--maroon);
+}
+.botanical-sample-3-theme .rsvp-form,
+.botanical-sample-3-theme .rsvp-form label {
+  display: grid;
+  gap: 7px;
+}
+.botanical-sample-3-theme .rsvp-form {
+  gap: 20px;
+}
+.botanical-sample-3-theme .rsvp-form label,
+.botanical-sample-3-theme .rsvp-form legend {
+  font:
+    600 0.72rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.06em;
+}
+.botanical-sample-3-theme .rsvp-form input,
+.botanical-sample-3-theme .rsvp-form textarea {
+  width: 100%;
+  padding: 12px 2px;
+  border: 0;
+  border-bottom: 1px solid rgba(132, 53, 47, 0.28);
+  border-radius: 0;
+  color: var(--ink);
+  background: transparent;
+  font:
+    400 0.9rem var(--font-hind),
+    sans-serif;
+}
+.botanical-sample-3-theme .rsvp-form fieldset {
+  padding: 0;
+  border: 0;
+}
+.botanical-sample-3-theme .choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.botanical-sample-3-theme .choice-grid label {
+  display: flex;
+  align-items: center;
+}
+.botanical-sample-3-theme .choice-grid input {
+  width: auto;
+}
+.botanical-sample-3-theme .rsvp-submit {
+  margin-top: 8px;
+  justify-self: center;
+}
+.s3-mm-footer {
+  padding: 52px 24px 36px;
+  text-align: center;
+}
+.s3-mm-footer .agency-logo {
+  width: 58px;
+  height: 58px;
+  margin: 4px auto 16px;
+}
+.s3-mm-footer p {
+  margin: 0;
+  color: rgba(57, 47, 40, 0.72);
+  font:
+    600 0.59rem var(--font-hind),
+    sans-serif;
+  letter-spacing: 0.12em;
+}
+@media (min-width: 600px) {
+  .botanical-sample-3-theme {
+    width: 430px;
+    max-width: 430px;
+    margin: auto;
+    box-shadow: 0 0 70px rgba(57, 47, 40, 0.14);
+  }
+  .s3-mm-section {
+    padding-inline: 48px;
+  }
+  .s3-mm-hero {
+    padding-top: 140px;
+  }
+  .s3-mm-gallery-photo {
+    inset: 7%;
+  }
+  .s3-mm-hero-couple {
+    width: 230px;
+  }
+}
+
+/* Richer Myanmar palette and corrected schedule artwork route. */
+.botanical-sample-3-theme {
+  --paper: #fff8ee;
+  --paper-deep: #f3e2d2;
+  --ink: #302623;
+  --maroon: #8d3040;
+  --green: #155b57;
+  --gold: #c38b36;
+  --coral: #c96758;
+  background:
+    radial-gradient(
+      circle at 16% 9%,
+      rgba(195, 139, 54, 0.09) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 79% 37%,
+      rgba(21, 91, 87, 0.06) 0 1px,
+      transparent 1.5px
+    ),
+    var(--paper);
+  background-size:
+    27px 27px,
+    31px 31px,
+    auto;
+}
+.s3-mm-section:after {
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--maroon), var(--gold), var(--green));
+}
+.s3-mm-hero {
+  background: linear-gradient(180deg, #fffaf3 0%, var(--paper) 100%);
+}
+.s3-mm-venue,
+.s3-mm-countdown {
+  background: linear-gradient(
+    145deg,
+    rgba(243, 226, 210, 0.9),
+    rgba(255, 248, 238, 0.94)
+  );
+}
+.s3-mm-schedule {
+  padding-inline: 18px;
+  background: linear-gradient(180deg, var(--paper), #fffaf4 48%, var(--paper));
+}
+.s3-mm-schedule-route {
+  height: 760px;
+}
+.s3-mm-schedule-path {
+  z-index: 0;
+}
+.s3-mm-schedule-path path {
+  stroke: color-mix(in srgb, var(--coral) 60%, var(--gold));
+  stroke-width: 2;
+  stroke-dasharray: 3 8;
+  stroke-linecap: round;
+}
+.s3-mm-schedule-path circle {
+  fill: var(--maroon);
+  stroke: var(--paper);
+  stroke-width: 3;
+}
+.s3-mm-schedule ol {
+  z-index: 1;
+}
+.s3-mm-schedule li {
+  width: 178px;
+}
+.s3-mm-schedule li:nth-child(1) {
+  top: 6px;
+  left: 0;
+}
+.s3-mm-schedule li:nth-child(2) {
+  top: 190px;
+  right: 0;
+}
+.s3-mm-schedule li:nth-child(3) {
+  top: 378px;
+  left: 0;
+}
+.s3-mm-schedule li:nth-child(4) {
+  right: 0;
+  bottom: 0;
+}
+.s3-mm-schedule-card {
+  position: relative;
+}
+.s3-mm-schedule-card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 14px;
+  left: 50%;
+  width: 128px;
+  height: 108px;
+  border-radius: 48% 52% 45% 55%;
+  background: radial-gradient(
+    circle,
+    rgba(195, 139, 54, 0.13),
+    rgba(201, 103, 88, 0.05) 58%,
+    transparent 70%
+  );
+  transform: translateX(-50%) rotate(-4deg);
+}
+.s3-mm-schedule li:nth-child(even) .s3-mm-schedule-card:before {
+  transform: translateX(-50%) rotate(5deg);
+}
+.s3-mm-schedule-card img {
+  width: 170px;
+  height: 146px;
+  object-position: center bottom;
+  filter: drop-shadow(0 9px 14px rgba(48, 38, 35, 0.08));
+}
+.s3-mm-schedule-card > div {
+  min-height: 48px;
+  margin-top: -1px;
+  justify-content: flex-start;
+}
+.s3-mm-schedule-card strong {
+  font-size: 1.32rem;
+}
+.s3-mm-schedule-card span {
+  color: var(--ink);
+  font-size: 0.76rem;
+  line-height: 1.25;
+}
+.s3-mm-welcome {
+  background: #fff8ee;
+}
+.s3-mm-venue {
+  background: linear-gradient(145deg, #e7f0eb, #f4eee1);
+}
+.s3-mm-schedule {
+  background:
+    radial-gradient(
+      circle at 18% 10%,
+      rgba(195, 139, 54, 0.1) 0 1px,
+      transparent 1.6px
+    ),
+    linear-gradient(180deg, #fff5e9, #f7e7dc 52%, #fff6ec);
+  background-size:
+    25px 25px,
+    auto;
+}
+.s3-mm-gallery {
+  background: linear-gradient(160deg, #e8f1ed, #fff8ee 72%);
+}
+.s3-mm-countdown {
+  color: var(--paper);
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(255, 255, 255, 0.08) 0 1px,
+      transparent 1.7px
+    ),
+    linear-gradient(145deg, #155b57, #284d49);
+  background-size:
+    24px 24px,
+    auto;
+}
+.s3-mm-countdown h2 {
+  color: var(--paper);
+}
+.s3-mm-countdown .s3-mm-kicker {
+  color: #efc978;
+}
+.s3-mm-countdown small {
+  color: rgba(255, 248, 238, 0.86);
+}
+.s3-mm-countdown .s3-mm-medallion strong {
+  color: var(--paper);
+}
+.s3-mm-countdown:after {
+  background: linear-gradient(90deg, transparent, #efc978, transparent);
+}
+.s3-mm-rsvp {
+  background: #fff8ee;
+}
+
+/* Apply the Myanmar palette consistently to every interactive and text surface. */
+.botanical-sample-3-theme h1,
+.botanical-sample-3-theme h2 {
+  color: var(--maroon);
+}
+.botanical-sample-3-theme p {
+  color: var(--ink);
+}
+.s3-mm-kicker,
+.s3-mm-eyebrow,
+.s3-mm-venue-name,
+.s3-mm-gallery-count {
+  color: var(--green);
+}
+.s3-mm-title-ornament,
+.s3-mm-hero h1 i,
+.s3-mm-doodle-divider {
+  color: var(--gold);
+}
+.s3-mm-date,
+.s3-mm-schedule-card strong {
+  color: var(--maroon);
+}
+.s3-mm-button,
+.botanical-sample-3-theme .rsvp-submit {
+  border-color: var(--gold);
+  color: #fffaf2;
+  background: var(--maroon);
+  box-shadow: 0 8px 20px rgba(141, 48, 64, 0.18);
+}
+.s3-mm-button:hover,
+.botanical-sample-3-theme .rsvp-submit:hover {
+  background: #742535;
+}
+.s3-mm-button:focus-visible,
+.botanical-sample-3-theme .rsvp-submit:focus-visible,
+.s3-mm-gallery-control > button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.s3-mm-gallery-control > button {
+  border-color: var(--gold);
+  color: var(--maroon);
+  background: #fffaf2;
+  box-shadow: 0 5px 14px rgba(21, 91, 87, 0.1);
+}
+.s3-mm-gallery-photo {
+  background: var(--paper-deep);
+}
+.s3-mm-countdown h2,
+.s3-mm-countdown p {
+  color: var(--paper);
+}
+.botanical-sample-3-theme .guest-tabs {
+  border-bottom-color: rgba(141, 48, 64, 0.24);
+}
+.botanical-sample-3-theme .guest-tabs button {
+  color: var(--green);
+}
+.botanical-sample-3-theme .guest-tabs button.active {
+  border-color: var(--maroon);
+  color: var(--maroon);
+}
+.botanical-sample-3-theme .rsvp-form input,
+.botanical-sample-3-theme .rsvp-form textarea {
+  border-bottom-color: rgba(141, 48, 64, 0.34);
+  color: var(--ink);
+}
+.botanical-sample-3-theme .rsvp-form input:focus,
+.botanical-sample-3-theme .rsvp-form textarea:focus {
+  border-bottom-color: var(--gold);
+  outline: 0;
+}
+.botanical-sample-3-theme .rsvp-form input[type="radio"] {
+  accent-color: var(--maroon);
+}
+.botanical-sample-3-theme .choice-grid label {
+  border-color: rgba(21, 91, 87, 0.25);
+}
+.s3-mm-footer {
+  color: var(--paper);
+  background: linear-gradient(145deg, #742535, var(--maroon));
+}
+.s3-mm-footer p {
+  color: rgba(255, 248, 238, 0.82);
+}
+.s3-mm-footer .agency-logo {
+  /* border: 2px solid var(--gold); */
+  border-radius: 50%;
+  filter: none;
+  /* box-shadow: 0 0 0 4px rgba(255, 248, 238, 0.1); */
+}
+
+/* Final three-color Myanmar system: ivory, peacock green, and pagoda gold. */
+.botanical-sample-3-theme {
+  --paper: #f6f2e9;
+  --paper-deep: #f6f2e9;
+  --ink: #1e5a4d;
+  --maroon: #1e5a4d;
+  --green: #1e5a4d;
+  --gold: #c8923a;
+  --coral: #c8923a;
+  color: var(--green);
+  background:
+    radial-gradient(
+      circle at 16% 9%,
+      rgba(200, 146, 58, 0.1) 0 1px,
+      transparent 1.5px
+    ),
+    var(--paper);
+  background-size:
+    27px 27px,
+    auto;
+}
+.botanical-sample-3-theme h1,
+.botanical-sample-3-theme h2,
+.botanical-sample-3-theme p,
+.s3-mm-date,
+.s3-mm-schedule-card strong,
+.s3-mm-schedule-card span {
+  color: var(--green);
+}
+.s3-mm-kicker,
+.s3-mm-eyebrow,
+.s3-mm-venue-name,
+.s3-mm-gallery-count {
+  color: var(--gold);
+}
+.s3-mm-title-ornament,
+.s3-mm-hero h1 i,
+.s3-mm-doodle-divider {
+  color: var(--gold);
+}
+.s3-mm-section:after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.s3-mm-hero,
+.s3-mm-welcome,
+.s3-mm-venue,
+.s3-mm-schedule,
+/* .s3-mm-details, */
+.s3-mm-gallery,
+.s3-mm-countdown,
+.s3-mm-rsvp,
+.s3-mm-footer {
+  background-color: var(--paper);
+}
+.s3-mm-details {
+  background: var(--paper);
+}
+.s3-mm-hero {
+  background: var(--paper);
+}
+.s3-mm-welcome {
+  background: var(--paper);
+}
+.s3-mm-venue {
+  background: var(--paper);
+}
+.s3-mm-schedule {
+  background: var(--paper);
+}
+.s3-mm-gallery {
+  background: var(--paper);
+}
+.s3-mm-countdown {
+  color: var(--green);
+  background: var(--paper);
+}
+.s3-mm-countdown h2,
+.s3-mm-countdown p,
+.s3-mm-countdown small,
+.s3-mm-countdown .s3-mm-medallion strong {
+  color: var(--green);
+}
+.s3-mm-countdown .s3-mm-kicker {
+  color: var(--gold);
+}
+.s3-mm-countdown:after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.s3-mm-rsvp {
+  background: var(--paper);
+}
+.s3-mm-button,
+.botanical-sample-3-theme .rsvp-submit {
+  border-color: var(--gold);
+  color: var(--paper);
+  background: var(--green);
+  box-shadow: 0 8px 20px rgba(30, 90, 77, 0.18);
+}
+.s3-mm-button:hover,
+.botanical-sample-3-theme .rsvp-submit:hover {
+  background: var(--green);
+}
+.s3-mm-gallery-control > button {
+  border-color: var(--gold);
+  color: var(--green);
+  background: var(--paper);
+  box-shadow: 0 5px 14px rgba(30, 90, 77, 0.1);
+}
+.s3-mm-gallery-photo {
+  background: var(--paper);
+}
+.botanical-sample-3-theme .guest-tabs {
+  border-bottom-color: rgba(30, 90, 77, 0.24);
+}
+.botanical-sample-3-theme .guest-tabs button,
+.botanical-sample-3-theme .guest-tabs button.active {
+  color: var(--green);
+}
+.botanical-sample-3-theme .guest-tabs button.active {
+  border-color: var(--gold);
+}
+.botanical-sample-3-theme .rsvp-form input,
+.botanical-sample-3-theme .rsvp-form textarea {
+  border-bottom-color: rgba(30, 90, 77, 0.34);
+  color: var(--green);
+}
+.botanical-sample-3-theme .rsvp-form input:focus,
+.botanical-sample-3-theme .rsvp-form textarea:focus {
+  border-bottom-color: var(--gold);
+}
+.botanical-sample-3-theme .rsvp-form input[type="radio"] {
+  accent-color: var(--green);
+}
+.botanical-sample-3-theme .choice-grid label {
+  border-color: rgba(30, 90, 77, 0.25);
+}
+.s3-mm-schedule-path path {
+  stroke: var(--gold);
+}
+.s3-mm-schedule-path circle {
+  fill: var(--green);
+  stroke: var(--paper);
+}
+.s3-mm-schedule-card:before {
+  background: radial-gradient(
+    circle,
+    rgba(200, 146, 58, 0.13),
+    rgba(200, 146, 58, 0.04) 58%,
+    transparent 70%
+  );
+}
+.s3-mm-footer {
+  color: var(--green);
+  background: var(--paper);
+}
+.s3-mm-footer p {
+  color: var(--green);
+}
+.s3-mm-footer .agency-logo {
+  /* border-color: var(--gold); */
+  box-shadow: 0 0 0 4px rgba(200, 146, 58, 0.1);
+}
+
+/* Match the Chinese RSVP tab treatment exactly, recolored in peacock green. */
+.botanical-sample-3-theme .guest-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4px;
+  margin-bottom: 28px;
+  border: 1px solid var(--green);
+  border-radius: 100px;
+}
+.botanical-sample-3-theme .guest-tabs button {
+  margin: 0;
+  padding: 11px 8px;
+  border: 0;
+  border-radius: 100px;
+  color: var(--green);
+  background: transparent;
+}
+.botanical-sample-3-theme .guest-tabs button.active {
+  border: 0;
+  color: var(--paper);
+  background: var(--green);
+}
+
+/* Use the Chinese schedule's responsive grid and route geometry exactly. */
+.s3-mm-schedule-route {
+  position: relative;
+  width: auto;
+  max-width: 390px;
+  height: auto;
+  margin: 0 auto;
+}
+.s3-mm-schedule-path {
+  position: absolute;
+  inset: -12px 0 auto;
+  z-index: 0;
+  width: 100%;
+  height: calc(100% + 24px);
+  overflow: visible;
+  pointer-events: none;
+}
+.s3-mm-schedule-path path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 0.5 6;
+  opacity: 0.72;
+}
+.s3-mm-schedule-path text {
+  fill: var(--green);
+  font-size: 15px;
+}
+.s3-mm-schedule-route ol {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.s3-mm-schedule-route li {
+  position: static;
+  display: grid;
+  width: auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 196px;
+}
+.s3-mm-schedule-route li:nth-child(1),
+.s3-mm-schedule-route li:nth-child(2),
+.s3-mm-schedule-route li:nth-child(3),
+.s3-mm-schedule-route li:nth-child(4) {
+  inset: auto;
+}
+.s3-mm-schedule-card {
+  display: flex;
+  width: 158px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.s3-mm-schedule-route li:nth-child(odd) .s3-mm-schedule-card {
+  grid-column: 2;
+  justify-self: end;
+}
+.s3-mm-schedule-route li:nth-child(even) .s3-mm-schedule-card {
+  grid-column: 1;
+  justify-self: start;
+}
+.s3-mm-schedule-card:before {
+  display: none;
+}
+.s3-mm-schedule-card img {
+  width: 142px;
+  height: 138px;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+.s3-mm-schedule-card > div {
+  display: flex;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.s3-mm-schedule-card strong {
+  font-size: 1.18rem;
+}
+.s3-mm-schedule-card span {
+  font-size: 0.76rem;
+}
+@media (max-width: 370px) {
+  .s3-mm-schedule-card {
+    width: 144px;
+  }
+}
+
+/* Larger gallery presentation with the same Chinese-layout controls. */
+.s3-mm-gallery {
+  padding-inline: 12px;
+}
+.s3-mm-gallery-control {
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  gap: 2px;
+  max-width: 520px;
+}
+.s3-mm-gallery-control > button {
+  width: 38px;
+  height: 38px;
+}
+.s3-mm-gallery-stage {
+  aspect-ratio: 3/4;
+}
+.s3-mm-gallery-photo {
+  inset: 6.5% 7%;
+}
+
+/* Pagoda gold is the shared accent for every section subheading. */
+.botanical-sample-3-theme .s3-mm-kicker,
+.botanical-sample-3-theme .s3-mm-eyebrow {
+  color: var(--gold);
+}
+
+/* Countdown numbers sit above a low Myanmar lacquer pedestal. */
+.s3-mm-countdown-grid {
+  gap: 7px;
+  margin-top: 36px;
+}
+.s3-mm-countdown-unit {
+  display: grid;
+  min-height: 94px;
+  grid-template-rows: 1fr 46px;
+  align-items: end;
+  justify-items: center;
+}
+.s3-mm-countdown-unit strong {
+  position: relative;
+  z-index: 2;
+  color: var(--green);
+  font:
+    400 clamp(1.55rem, 7vw, 2.4rem) var(--font-instrument-serif),
+    serif;
+  line-height: 1;
+}
+.s3-mm-countdown-base {
+  display: block;
+  width: 100%;
+  height: 46px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+.s3-mm-countdown small {
+  margin-top: 5px;
+  color: var(--green);
+}
+@media (min-width: 600px) {
+  .s3-mm-gallery {
+    padding-inline: 26px;
+  }
+}
+
+/* Keep the complete illustrated frame visible and give the couple more breathing room. */
+.s3-mm-hero {
+  height: 100vh;
+  min-height: 100vh;
+}
+.s3-mm-hero-background {
+  object-fit: contain;
+  object-position: center top;
+}
+.s3-mm-hero-couple {
+  width: clamp(104px, 29vw, 140px);
+  margin-top: 12px;
+}
+.s3-mm-hero-without-characters {
+  padding-block-end: 122%;
+}
+@media (min-width: 600px) {
+  .s3-mm-hero-couple {
+    width: 140px;
+  }
+}
+
+/* New-design dress code: a compact, antique double-line frame with a
+   separate botanical corner. */
+.botanical-sample-3-theme .s3-bh-schedule {
+  padding: 0;
+  background: var(--paper);
+}
+.s3-bh-schedule::after {
+  display: none;
+}
+
+.s3-bh-schedule-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  margin-inline: auto;
+  container-type: inline-size;
+}
+
+.s3-bh-schedule-art {
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.s3-bh-schedule-copy {
+  position: absolute;
+  inset: 19% 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(10px, 3cqw, 14px);
+  text-align: center;
+}
+
+.botanical-sample-3-theme .s3-bh-schedule-copy > * {
+  margin: 0;
+  color: #1e5a4d;
+}
+
+.botanical-sample-3-theme .s3-bh-schedule-copy h2 {
+  font-size: clamp(1.15rem, 5.8cqw, 1.55rem);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.botanical-sample-3-theme .s3-bh-schedule-eyebrow {
+  color: var(--gold);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.botanical-sample-3-theme .s3-bh-schedule-date,
+.botanical-sample-3-theme .s3-bh-schedule-location {
+  font-size: clamp(11px, 3cqw, 13px);
+  line-height: 1.5;
+}
+
+.botanical-sample-3-theme .s3-bh-schedule-time {
+  font: 400 clamp(13px, 4cqw, 18px)/1.4 var(--font-instrument-serif), serif;
+  white-space: nowrap;
+}
+
+.botanical-sample-3-theme .s3-bh-schedule-description {
+  font-size: clamp(11px, 3.2cqw, 14px);
+  line-height: 1.6;
+}
+
+.s3-mm-details {
+  max-height: none;
+  padding-inline: 18px;
+  padding-block: 28px 40px;
+}
+
+.s3-bh-hidden-section {
+  display: none !important;
+}
+
+.s3-mm-details .s3-bh-dress-code {
+  position: relative;
+  width: min(100%, 430px);
+  margin: 20px auto 0;
+  padding: 0;
+  background: transparent;
+}
+
+.s3-bh-dress-frame-art {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.s3-bh-dress-ornament {
+  position: absolute;
+  top: -3%;
+  left: -3%;
+  z-index: 4;
+  display: block;
+  width: 50%;
+  height: auto;
+  filter: drop-shadow(0 5px 8px rgba(30, 90, 77, 0.08));
+  pointer-events: none;
+}
+
+.s3-bh-dress-copy {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.s3-mm-details .s3-bh-dress-code .s3-bh-dress-copy .s3-mm-kicker {
+  margin-bottom: 18px;
+  color: var(--gold);
+}
+
+.s3-mm-details .s3-bh-dress-code h2 {
+  max-width: 300px;
+  margin: 20px auto 0;
+  color: var(--green);
+  font-size: var(--section-heading-size);
+  line-height: 1.1;
+}
+
+.s3-bh-dress-rule {
+  display: block;
+  width: 52px;
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.s3-bh-dress-guests {
+  position: relative;
+  z-index: 4;
+  display: block;
+  width: 76%;
+  max-width: 326px;
+  height: auto;
+  margin: 24px auto 0;
+  filter: drop-shadow(0 8px 10px rgba(30, 90, 77, 0.09));
+}
+
+/* Keep the cover's native proportions rather than stretching it to the viewport. */
+.botanical-sample-3-theme .s3-bh-hero {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 941 / 1672;
+  padding: 0;
+  background: var(--paper);
+  isolation: isolate;
+}
+
+.s3-bh-hero-art {
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.s3-bh-hero-copy {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  z-index: 1;
+  width: 74%;
+  max-width: 316px;
+  color: var(--green);
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.botanical-sample-3-theme .s3-bh-hero-eyebrow {
+  margin: 0 0 25px;
+  color: var(--green);
+  font: italic 400 clamp(0.9rem, 3.5vw, 1rem)/1.3 var(--font-instrument-serif), serif;
+  letter-spacing: 0.025em;
+  text-transform: none;
+}
+
+.botanical-sample-3-theme .s3-bh-hero-names {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  color: var(--green);
+  font: 500 clamp(1.7rem, 7.4vw, 2.3rem)/1.12 var(--font-cormorant-sc), serif;
+  letter-spacing: 0.005em;
+}
+
+.s3-bh-hero-ampersand {
+  margin: 3px 0;
+  color: var(--green);
+  font-size: 0.64em;
+  font-style: normal;
+}
+
+.s3-bh-hero-date {
+  display: block;
+  margin-top: 30px;
+  color: var(--green);
+  font: 400 clamp(0.95rem, 3.9vw, 1.1rem)/1.3 var(--font-instrument-serif), serif;
+  letter-spacing: 0.12em;
+}
+
+.s3-bh-hero-weekday {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.65rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.s3-bh-hero-date-row {
+  display: grid;
+  width: 80%;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.s3-bh-hero-month,
+.s3-bh-hero-year {
+  font-size: clamp(0.7rem, 3vw, 0.9rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.s3-bh-hero-day {
+  color: var(--gold);
+  border-inline: 1px solid rgba(30, 90, 77, 0.35);
+  font-size: clamp(2.6rem, 11vw, 3.4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.botanical-sample-3-theme .attendance-options {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.botanical-sample-3-theme .attendance-options label {
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* Match the embroidered design's 22px, 1.3s text rise after the video reveal. */
+@keyframes s3-bh-text-rise {
+  from { opacity: 0; translate: 0 22px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .s3-bh-scroll-text {
+    opacity: 0;
+    translate: 0 22px;
+  }
+
+  .s3-bh-scroll-text.s3-bh-scroll-text-visible {
+    animation: s3-bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .s3-bh-hero-copy > * {
+    opacity: 0;
+    translate: 0 22px;
+  }
+
+  .s3-bh-hero[data-phase="open"] .s3-bh-hero-copy > * {
+    animation: s3-bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .s3-bh-hero[data-phase="open"] .s3-bh-hero-names {
+    animation-delay: 100ms;
+  }
+
+  .s3-bh-hero[data-phase="open"] .s3-bh-hero-date {
+    animation-delay: 200ms;
+  }
+}
+
+.s3-bh-intro {
+  /* The opening stays viewport-sized even when the cover is shorter. */
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 100;
+  overflow: hidden;
+  background: var(--paper);
+  opacity: 1;
+  transition: opacity 850ms ease;
+}
+
+/* Do not clip the fixed intro to the shorter artwork or paint later sections over it. */
+.botanical-sample-3-theme .s3-bh-hero:not([data-phase="open"]) {
+  overflow: visible;
+  z-index: 100;
+}
+
+.s3-bh-hero[data-phase="revealing"] .s3-bh-intro {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.s3-bh-intro-poster,
+.s3-bh-intro-video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s3-bh-intro-video {
+  opacity: 0;
+}
+
+.s3-bh-intro-video[data-ready="true"] {
+  opacity: 1;
+}
+
+.s3-bh-intro-trigger {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  padding: 0 24px max(9%, 48px);
+  border: 0;
+  color: #f6f2e9;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.s3-bh-intro-trigger span {
+  font: 400 0.78rem/1.2 var(--font-instrument-serif), serif;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 5px rgba(11, 33, 24, 0.55);
+}
+
+.s3-bh-intro-trigger:focus-visible {
+  outline: 2px solid #d1b36b;
+  outline-offset: -10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s3-bh-intro {
+    transition: none;
+  }
+}
+
+/* Antique botanical countdown plaque; the timer remains live HTML. */
+.botanical-sample-3-theme .s3-mm-countdown {
+  padding: 64px 12px 76px;
+  background: var(--paper);
+}
+
+.s3-mm-countdown:after {
+  display: none;
+}
+
+.s3-bh-countdown-plaque {
+  position: relative;
+  display: grid;
+  width: min(100%, 430px);
+  aspect-ratio: 1448 / 1086;
+  margin: 0 auto;
+  padding: 16% 14% 14%;
+  place-items: center;
+}
+
+.s3-bh-countdown-border {
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.s3-bh-countdown-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.botanical-sample-3-theme .s3-bh-countdown-content .s3-mm-kicker {
+  margin: 0 0 4px;
+  color: #8c7649;
+  font-size: 0.5rem !important;
+}
+
+.botanical-sample-3-theme .s3-bh-countdown-content h2 {
+  margin: 0;
+  color: #425b43;
+  font-size: var(--section-heading-size);
+  line-height: 1;
+}
+
+.s3-bh-countdown-content .s3-mm-countdown-grid {
+  gap: 2px;
+  margin: 12px auto 0;
+}
+
+.s3-bh-countdown-content .s3-mm-countdown-unit {
+  min-height: 62px;
+  grid-template-rows: 1fr 25px;
+}
+
+.s3-bh-countdown-content .s3-mm-countdown-unit strong {
+  font-size: clamp(1.4rem, 6vw, 1.8rem);
+}
+
+.s3-bh-countdown-content .s3-mm-countdown-base {
+  height: 25px;
+}
+
+.s3-bh-countdown-content .s3-mm-countdown-grid small {
+  margin-top: 2px;
+  font-size: 0.52rem;
+}
+
+/* A lighter scalloped banner carried by the two looping birds. */
+.botanical-sample-3-theme .s3-mm-countdown {
+  padding: 100px 12px 86px;
+}
+
+.s3-bh-countdown-scene {
+  position: relative;
+  width: min(100%, 430px);
+  margin: 0 auto;
+}
+
+/* Birds, ropes, banner and live text rise together once on section entry. */
+@media (prefers-reduced-motion: no-preference) {
+  .s3-bh-countdown-scene {
+    transition: transform 3000ms cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1400ms ease;
+  }
+  .s3-bh-countdown-scene[data-entered="false"] {
+    transform: translateY(64px);
+    opacity: 0;
+  }
+  .s3-bh-countdown-scene[data-entered="true"] {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.s3-bh-countdown-scene .s3-bh-countdown-plaque {
+  z-index: 2;
+  width: 100%;
+  padding: 19% 13% 16%;
+}
+
+.s3-bh-countdown-bird {
+  position: absolute;
+  /* Meet the baked-in rope ends with the bird's feet in the video. */
+  top: -19%;
+  z-index: 3;
+  width: 22%;
+  aspect-ratio: 768 / 832;
+  pointer-events: none;
+}
+
+.s3-bh-countdown-bird-left { left: -0.7%; }
+.s3-bh-countdown-bird-right { right: -0.7%; }
+
+.s3-bh-countdown-bird img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.s3-bh-countdown-bird-right img { transform: scaleX(-1); }
+
+.s3-bh-countdown-scene .s3-bh-countdown-content h2 {
+  margin: 0 0 6px;
+  font-size: var(--section-heading-size);
+}
+
+.botanical-sample-3-theme .s3-bh-countdown-scene .s3-bh-countdown-content .s3-mm-kicker {
+  margin: 0;
+  color: #6b805d;
+  font-size: 0.52rem !important;
+  letter-spacing: 0.25em;
+}
+
+.s3-bh-countdown-scene .s3-mm-countdown-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 275px;
+  gap: 0;
+  margin-top: 18px;
+}
+
+.s3-bh-countdown-scene .s3-mm-countdown-grid > div + div {
+  border-left: 1px solid rgba(176, 138, 69, 0.3);
+}
+
+.s3-bh-countdown-scene .s3-mm-countdown-unit {
+  display: block;
+  min-height: 0;
+}
+
+.s3-bh-countdown-scene .s3-mm-countdown-unit strong {
+  font-size: clamp(1.8rem, 8vw, 2.2rem);
+}
+
+.s3-bh-countdown-scene .s3-mm-countdown-grid small {
+  margin-top: 8px;
+  color: #6b805d;
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .s3-bh-countdown-scene { animation: none; }
+  .s3-bh-countdown-bird img { display: none; }
+  .s3-bh-countdown-bird {
+    background: url("/botanical-hummingbird-sample-3/countdown-bird-reference-v1.png") center / contain no-repeat;
+  }
+  .s3-bh-countdown-bird-right { transform: scaleX(-1); }
+}
+
+.botanical-sample-3-theme .s3-bh-rsvp-deadline {
+  margin: 0;
+  text-align: center;
+  color: var(--green);
+  font-size: 0.8rem;
+}
+
+/* Use the original small-caps font for headings, local fallback for body copy. */
+.botanical-sample-3-theme :is(h1, h2, h3) {
+  font-family: var(--font-cormorant-sc), serif;
+}
+
+.botanical-sample-3-theme .s3-mm-kicker {
+  font-family: var(--font-cormorant-sc), serif !important;
+}
+
+.botanical-sample-3-theme p,
+.botanical-sample-3-theme .s3-bh-hero-eyebrow,
+.botanical-sample-3-theme .s3-bh-hero-date,
+.botanical-sample-3-theme .s3-bh-schedule-time,
+.botanical-sample-3-theme .s3-mm-countdown-unit strong {
+  font-family: var(--font-cormorant-body);
+}
