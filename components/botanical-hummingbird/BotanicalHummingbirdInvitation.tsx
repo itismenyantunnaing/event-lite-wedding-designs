@@ -3,20 +3,14 @@ import BotanicalHummingbirdHero from "./BotanicalHummingbirdHero";
 import BotanicalHummingbirdCountdown from "./BotanicalHummingbirdCountdown";
 import BotanicalHummingbirdRSVPForm from "./BotanicalHummingbirdRSVPForm";
 import BotanicalHummingbirdMoments from "./BotanicalHummingbirdMoments";
+import BotanicalHummingbirdTextReveal from "./BotanicalHummingbirdTextReveal";
 import { botanicalHummingbirdDemo } from "../../data/botanical-hummingbird-demo";
 
-type MyanmarInvitationProps = {
-  scheduleOverride?: typeof botanicalHummingbirdDemo.schedule;
-};
-
-export default function BotanicalHummingbirdInvitation({
-  scheduleOverride,
-}: MyanmarInvitationProps = {}) {
+export default function BotanicalHummingbirdInvitation() {
   const { venue } = botanicalHummingbirdDemo;
-  const schedule = scheduleOverride ?? botanicalHummingbirdDemo.schedule;
 
   return (
-    <main className="myanmar-theme">
+    <BotanicalHummingbirdTextReveal>
       <BotanicalHummingbirdHero />
       <BotanicalHummingbirdCountdown />
 
@@ -32,11 +26,6 @@ export default function BotanicalHummingbirdInvitation({
         <p className="mm-kicker">A joyful beginning</p>
         <h2>Dear family &amp; friends</h2>
         <p>{botanicalHummingbirdDemo.introduction}</p>
-        <div className="mm-doodle-divider" aria-hidden="true">
-          <span>❀</span>
-          <i />
-          <span>❀</span>
-        </div>
       </section>
 
       <section className="mm-section mm-venue">
@@ -62,42 +51,27 @@ export default function BotanicalHummingbirdInvitation({
         </a>
       </section>
 
-      <section id="schedule" className="mm-section mm-schedule bh-hidden-section">
-        <p className="mm-kicker">The order of our day</p>
-        <h2>Wedding schedule</h2>
-        <div className="mm-schedule-route">
-          <svg
-            className="mm-schedule-path"
-            viewBox="0 0 390 720"
+      <section id="schedule" className="mm-section bh-schedule">
+        <div className="bh-schedule-card">
+          <Image
+            className="bh-schedule-art"
+            src="/botanical-hummingbird/schedule-botanical-birds-v5.png"
+            alt=""
+            fill
+            sizes="(max-width: 599px) 100vw, 430px"
             aria-hidden="true"
-          >
-            <path d="M196 28 C320 74 310 148 196 178 C76 210 76 290 196 330 C318 371 310 445 196 486 C82 526 84 606 196 696" />
-            <text x="190" y="27">
-              ♥
-            </text>
-            <text x="190" y="700">
-              ♥
-            </text>
-          </svg>
-          <ol>
-            {schedule.map((item) => (
-              <li key={item.time}>
-                <div className="mm-schedule-card">
-                  <Image
-                    src={item.image}
-                    alt=""
-                    width={1312}
-                    height={1312}
-                    sizes="170px"
-                  />
-                  <div>
-                    <strong>{item.time}</strong>
-                    <span>{item.title}</span>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
+            unoptimized
+          />
+          <div className="bh-schedule-copy">
+            <p className="bh-schedule-eyebrow">A day to remember</p>
+            <h2>Wedding schedule</h2>
+            <p className="bh-schedule-date">14 November 2026</p>
+            <h3 className="bh-schedule-time">10:00 AM – 12:00 PM</h3>
+            <p className="bh-schedule-description">
+              Join us for our wedding ceremony and a joyful celebration with family and friends.
+            </p>
+            <p className="bh-schedule-location">Lotte Hotel Yangon</p>
+          </div>
         </div>
       </section>
 
@@ -116,27 +90,8 @@ export default function BotanicalHummingbirdInvitation({
           <p>{botanicalHummingbirdDemo.giftNote}</p>
         </article>
         <article className="bh-dress-code">
-          <Image
-            className="bh-dress-frame-art"
-            src="/botanical-hummingbird/dress-code-border-simple-v2.png"
-            alt=""
-            aria-hidden="true"
-            width={1254}
-            height={1254}
-            sizes="(max-width: 599px) 92vw, 430px"
-          />
-          <Image
-            className="bh-dress-ornament"
-            src="/botanical-hummingbird/lily-bird-corner-matched-v2.png"
-            alt="One blue-gray bird beside Lily of the Valley flowers"
-            width={1536}
-            height={1024}
-            sizes="(max-width: 599px) 56vw, 250px"
-            unoptimized
-          />
           <div className="bh-dress-copy">
             <p className="mm-kicker">Dress code</p>
-            <i className="bh-dress-rule" aria-hidden="true" />
             <h2>Myanmar Formal Attire</h2>
           </div>
           <Image
@@ -167,6 +122,6 @@ export default function BotanicalHummingbirdInvitation({
         />
         <p>©2027 EVENT ELITE. ALL RIGHTS RESERVED.</p>
       </footer>
-    </main>
+    </BotanicalHummingbirdTextReveal>
   );
 }

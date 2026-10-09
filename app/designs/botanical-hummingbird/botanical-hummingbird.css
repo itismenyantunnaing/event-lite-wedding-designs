@@ -164,11 +164,20 @@
 .mm-welcome {
   padding-top: 22px;
 }
+.mm-welcome::after {
+  display: none;
+}
 .bh-welcome-topper {
   display: block;
   width: calc(100% + 52px);
   height: auto;
   margin: 0 -26px 12px;
+}
+@media (min-width: 600px) {
+  .bh-welcome-topper {
+    width: calc(100% + 96px);
+    margin-inline: -48px;
+  }
 }
 .mm-doodle-divider {
   display: flex;
@@ -843,8 +852,8 @@
 
 /* Final three-color Myanmar system: ivory, peacock green, and pagoda gold. */
 .myanmar-theme {
-  --paper: #f8f0e2;
-  --paper-deep: #f8f0e2;
+  --paper: #f6f2e9;
+  --paper-deep: #f6f2e9;
   --ink: #1e5a4d;
   --maroon: #1e5a4d;
   --green: #1e5a4d;
@@ -896,7 +905,7 @@
   background-color: var(--paper);
 }
 .mm-details {
-  background-color: var(--paper);
+  background: var(--paper);
 }
 .mm-hero {
   background: var(--paper);
@@ -908,25 +917,14 @@
   background: #f8ead4;
 }
 .mm-schedule {
-  background:
-    radial-gradient(
-      circle at 18% 10%,
-      rgba(200, 146, 58, 0.11) 0 1px,
-      transparent 1.6px
-    ),
-    var(--paper);
-  background-size:
-    25px 25px,
-    auto;
+  background: var(--paper);
 }
 .mm-gallery {
   background: var(--paper);
 }
 .mm-countdown {
   color: var(--green);
-  background:
-    linear-gradient(rgba(30, 90, 77, 0.06), rgba(30, 90, 77, 0.06)),
-    var(--paper);
+  background: var(--paper);
 }
 .mm-countdown h2,
 .mm-countdown p,
@@ -1225,6 +1223,70 @@
 
 /* New-design dress code: a compact, antique double-line frame with a
    separate botanical corner. */
+.myanmar-theme .bh-schedule {
+  padding: 0;
+  background: var(--paper);
+}
+.bh-schedule::after {
+  display: none;
+}
+
+.bh-schedule-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  margin-inline: auto;
+  container-type: inline-size;
+}
+
+.bh-schedule-art {
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.bh-schedule-copy {
+  position: absolute;
+  inset: 19% 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(10px, 3cqw, 14px);
+  text-align: center;
+}
+
+.myanmar-theme .bh-schedule-copy > * {
+  margin: 0;
+  color: #1e5a4d;
+}
+
+.myanmar-theme .bh-schedule-copy h2 {
+  font-size: clamp(24px, 8.5cqw, 36px);
+  line-height: 1;
+}
+
+.myanmar-theme .bh-schedule-eyebrow {
+  font-size: clamp(9px, 2.7cqw, 11px);
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.myanmar-theme .bh-schedule-date,
+.myanmar-theme .bh-schedule-location {
+  font-size: clamp(11px, 3cqw, 13px);
+  line-height: 1.5;
+}
+
+.myanmar-theme .bh-schedule-time {
+  font: 400 clamp(13px, 4cqw, 18px)/1.4 var(--font-instrument-serif), serif;
+  white-space: nowrap;
+}
+
+.myanmar-theme .bh-schedule-description {
+  font-size: clamp(11px, 3.2cqw, 14px);
+  line-height: 1.6;
+}
+
 .mm-details {
   max-height: none;
   padding-inline: 18px;
@@ -1238,7 +1300,6 @@
 .mm-details .bh-dress-code {
   position: relative;
   width: min(100%, 430px);
-  aspect-ratio: 1;
   margin: 20px auto 0;
   padding: 0;
   background: transparent;
@@ -1268,13 +1329,9 @@
 }
 
 .bh-dress-copy {
-  position: absolute;
-  top: 39%;
-  right: 14%;
-  left: 14%;
+  position: relative;
   z-index: 3;
   text-align: center;
-  transform: translateY(-50%);
 }
 
 .mm-details .bh-dress-code .bh-dress-copy .mm-kicker {
@@ -1299,17 +1356,14 @@
 }
 
 .bh-dress-guests {
-  position: absolute;
-  right: 50%;
-  bottom: 3.5%;
+  position: relative;
   z-index: 4;
   display: block;
   width: 76%;
   max-width: 326px;
   height: auto;
-  margin: 0;
+  margin: 24px auto 0;
   filter: drop-shadow(0 8px 10px rgba(30, 90, 77, 0.09));
-  transform: translateX(50%);
 }
 
 /* Invitation cover inspired by the vintage botanical reference. */
@@ -1320,7 +1374,7 @@
   height: 100svh;
   min-height: 620px;
   padding: 0;
-  background: #f6f2e9;
+  background: var(--paper);
   isolation: isolate;
 }
 
@@ -1385,6 +1439,15 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .bh-scroll-text {
+    opacity: 0;
+    translate: 0 22px;
+  }
+
+  .bh-scroll-text.bh-scroll-text-visible {
+    animation: bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   .bh-hero-copy > * {
     opacity: 0;
     translate: 0 22px;
@@ -1408,7 +1471,7 @@
   inset: 0;
   z-index: 5;
   overflow: hidden;
-  background: #f6f2e9;
+  background: var(--paper);
   opacity: 1;
   transition: opacity 850ms ease;
 }
@@ -1472,7 +1535,7 @@
 /* Antique botanical countdown plaque; the timer remains live HTML. */
 .myanmar-theme .mm-countdown {
   padding: 64px 12px 76px;
-  background: #f6f2e9;
+  background: var(--paper);
 }
 
 .mm-countdown:after {
@@ -1554,21 +1617,23 @@
 }
 
 .bh-countdown-scene .bh-countdown-plaque {
+  z-index: 2;
   width: 100%;
   padding: 19% 13% 16%;
 }
 
 .bh-countdown-bird {
   position: absolute;
-  top: -24%;
+  /* Meet the baked-in rope ends with the bird's feet in the video. */
+  top: -19%;
   z-index: 3;
-  width: 28%;
+  width: 22%;
   aspect-ratio: 768 / 832;
   pointer-events: none;
 }
 
-.bh-countdown-bird-left { left: -2%; }
-.bh-countdown-bird-right { right: -2%; }
+.bh-countdown-bird-left { left: -0.7%; }
+.bh-countdown-bird-right { right: -0.7%; }
 
 .bh-countdown-bird video {
   display: block;
