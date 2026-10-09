@@ -3,10 +3,10 @@ import { Cormorant_SC } from "next/font/google";
 import BotanicalHummingbirdInvitation from "../../../components/botanical-hummingbird/BotanicalHummingbirdInvitation";
 import "./botanical-hummingbird.css";
 
-const cormorantSC = Cormorant_SC({
+const headingFont = Cormorant_SC({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant-sc",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant-heading",
   display: "swap",
 });
 
@@ -16,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function BotanicalHummingbirdDesignPage() {
-  return <div className={cormorantSC.variable}><BotanicalHummingbirdInvitation /></div>;
+  return <div className={headingFont.variable}><BotanicalHummingbirdInvitation /></div>;
 }

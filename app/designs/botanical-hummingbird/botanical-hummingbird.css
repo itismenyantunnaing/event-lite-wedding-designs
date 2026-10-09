@@ -1,8 +1,20 @@
+/* Keep the same local font and sizing as the former Next.js fallback. */
+@font-face {
+  font-family: "Cormorant SC Fallback";
+  src: local("Times New Roman");
+  ascent-override: 81.43%;
+  descent-override: 25.29%;
+  line-gap-override: 0%;
+  size-adjust: 113.48%;
+}
+
 .myanmar-theme {
+  --font-cormorant-sc: var(--font-cormorant-heading);
+  --font-cormorant-body: "Cormorant SC Fallback", "Times New Roman", serif;
   --section-heading-size: clamp(1.75rem, 7.5vw, 2.1rem);
   --font-instrument-serif: var(--font-cormorant-sc);
-  --font-hind: var(--font-cormorant-sc);
-  font-family: var(--font-cormorant-sc), serif;
+  --font-hind: var(--font-cormorant-body);
+  font-family: var(--font-cormorant-body);
   --paper: #f7f0e3;
   --paper-deep: #efe4d3;
   --ink: #392f28;
@@ -1747,4 +1759,21 @@
   text-align: center;
   color: var(--green);
   font-size: 0.8rem;
+}
+
+/* Use the original small-caps font for headings, local fallback for body copy. */
+.myanmar-theme :is(h1, h2, h3) {
+  font-family: var(--font-cormorant-sc), serif;
+}
+
+.myanmar-theme .mm-kicker {
+  font-family: var(--font-cormorant-sc), serif !important;
+}
+
+.myanmar-theme p,
+.myanmar-theme .bh-hero-eyebrow,
+.myanmar-theme .bh-hero-date,
+.myanmar-theme .bh-schedule-time,
+.myanmar-theme .mm-countdown-unit strong {
+  font-family: var(--font-cormorant-body);
 }
