@@ -70,7 +70,6 @@ export default function BotanicalHummingbirdInvitation() {
             <p className="bh-schedule-description">
               Join us for our wedding ceremony and a joyful celebration with family and friends.
             </p>
-            <p className="bh-schedule-location">Lotte Hotel Yangon Crystal Ballroom</p>
           </div>
         </div>
       </section>

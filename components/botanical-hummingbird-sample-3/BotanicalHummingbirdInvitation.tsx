@@ -17,7 +17,7 @@ export default function BotanicalHummingbirdInvitation() {
       <section className="s3-mm-section s3-mm-welcome">
         <Image
           className="s3-bh-welcome-topper"
-          src="/botanical-hummingbird-sample-3/welcome-natural-lily-v3.png"
+          src="/botanical-hummingbird-sample-3/welcome-landing-matched-lily-v4.png"
           alt="A bird flying beneath a garland of Lily of the Valley"
           width={1774}
           height={887}
@@ -40,7 +40,6 @@ export default function BotanicalHummingbirdInvitation() {
           sizes="(max-width: 599px) 100vw, 430px"
           unoptimized
         />
-        <p className="s3-mm-small">{venue.note}</p>
         <a
           className="s3-mm-button"
           href={venue.mapUrl}
@@ -55,7 +54,7 @@ export default function BotanicalHummingbirdInvitation() {
         <div className="s3-bh-schedule-card">
           <Image
             className="s3-bh-schedule-art"
-            src="/botanical-hummingbird-sample-3/schedule-natural-lily-v1.png"
+            src="/botanical-hummingbird-sample-3/schedule-landing-matched-lily-v4.png"
             alt=""
             fill
             sizes="(max-width: 599px) 100vw, 430px"
@@ -70,7 +69,6 @@ export default function BotanicalHummingbirdInvitation() {
             <p className="s3-bh-schedule-description">
               Join us for our wedding ceremony and a joyful celebration with family and friends.
             </p>
-            <p className="s3-bh-schedule-location">Lotte Hotel Yangon Crystal Ballroom</p>
           </div>
         </div>
       </section>
