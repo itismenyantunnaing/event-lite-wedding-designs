@@ -11,7 +11,8 @@ export const botanicalHummingbirdDemo = {
   introduction:
     "With the blessings of our parents and hearts full of gratitude, we invite you to share in a morning of timeless traditions, joyful promises, and a beautiful new beginning.",
   venue: {
-    name: "Lotte Hotel Yangon Crystal Ballroom & Sapphire Ballroom",
+    name: "Lotte Hotel Yangon",
+    ballrooms: ["Crystal Ballroom", "Sapphire Ballroom"],
     note: "Please arrive by 9:30 AM",
     mapUrl:
       "https://www.google.com/maps/search/?api=1&query=Lotte+Hotel+Yangon",

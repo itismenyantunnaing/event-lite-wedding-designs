@@ -30,7 +30,14 @@ export default function BotanicalHummingbirdInvitation() {
 
       <section className="s3-mm-section s3-mm-venue">
         <p className="s3-mm-kicker">Where to find us</p>
-        <h2>{venue.name}</h2>
+        <h2>
+          {venue.name}
+          <span className="s3-bh-venue-ballrooms">
+            <span>{venue.ballrooms[0]}</span>
+            <span className="s3-bh-venue-ballrooms-ampersand">&amp;</span>
+            <span>{venue.ballrooms[1]}</span>
+          </span>
+        </h2>
         <Image
           className="s3-bh-venue-art"
           src="/botanical-hummingbird-sample-3/lotte-hotel-watercolor-v2-ivory.png"

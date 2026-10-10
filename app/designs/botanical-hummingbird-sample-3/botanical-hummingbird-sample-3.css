@@ -220,6 +220,21 @@
   margin-inline: auto;
   margin-bottom: 0;
 }
+.s3-bh-venue-ballrooms {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 10px;
+  font-size: clamp(1.15rem, 4.8vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.s3-bh-venue-ballrooms > span {
+  white-space: nowrap;
+}
+.s3-bh-venue-ballrooms-ampersand {
+  font-size: 0.85em;
+}
 .s3-bh-venue-art {
   display: block;
   width: calc(100% + 52px);
