@@ -978,7 +978,7 @@
   border-color: var(--gold);
   color: var(--paper);
   background: var(--green);
-  box-shadow: 0 8px 20px rgba(30, 90, 77, 0.18);
+  box-shadow: 0 8px 20px rgba(32, 44, 21, 0.18);
 }
 .s3-mm-button:hover,
 .botanical-sample-3-theme .rsvp-submit:hover {
@@ -988,13 +988,13 @@
   border-color: var(--gold);
   color: var(--green);
   background: var(--paper);
-  box-shadow: 0 5px 14px rgba(30, 90, 77, 0.1);
+  box-shadow: 0 5px 14px rgba(32, 44, 21, 0.1);
 }
 .s3-mm-gallery-photo {
   background: var(--paper);
 }
 .botanical-sample-3-theme .guest-tabs {
-  border-bottom-color: rgba(30, 90, 77, 0.24);
+  border-bottom-color: rgba(32, 44, 21, 0.24);
 }
 .botanical-sample-3-theme .guest-tabs button,
 .botanical-sample-3-theme .guest-tabs button.active {
@@ -1005,7 +1005,7 @@
 }
 .botanical-sample-3-theme .rsvp-form input,
 .botanical-sample-3-theme .rsvp-form textarea {
-  border-bottom-color: rgba(30, 90, 77, 0.34);
+  border-bottom-color: rgba(32, 44, 21, 0.34);
   color: var(--green);
 }
 .botanical-sample-3-theme .rsvp-form input:focus,
@@ -1016,7 +1016,7 @@
   accent-color: var(--green);
 }
 .botanical-sample-3-theme .choice-grid label {
-  border-color: rgba(30, 90, 77, 0.25);
+  border-color: rgba(32, 44, 21, 0.25);
 }
 .s3-mm-schedule-path path {
   stroke: var(--gold);
@@ -1358,7 +1358,7 @@
   display: block;
   width: 50%;
   height: auto;
-  filter: drop-shadow(0 5px 8px rgba(30, 90, 77, 0.08));
+  filter: drop-shadow(0 5px 8px rgba(32, 44, 21, 0.08));
   pointer-events: none;
 }
 
@@ -1397,7 +1397,7 @@
   max-width: 326px;
   height: auto;
   margin: 24px auto 0;
-  filter: drop-shadow(0 8px 10px rgba(30, 90, 77, 0.09));
+  filter: drop-shadow(0 8px 10px rgba(32, 44, 21, 0.09));
 }
 
 /* Keep the cover's native proportions rather than stretching it to the viewport. */
@@ -1492,7 +1492,7 @@
 
 .s3-bh-hero-day {
   color: var(--gold);
-  border-inline: 1px solid rgba(30, 90, 77, 0.35);
+  border-inline: 1px solid rgba(32, 44, 21, 0.35);
   font-size: clamp(2.6rem, 11vw, 3.4rem);
   font-weight: 300;
   line-height: 1.1;
@@ -1508,40 +1508,6 @@
   gap: 6px;
   min-width: 0;
   white-space: nowrap;
-}
-
-/* Match the embroidered design's 22px, 1.3s text rise after the video reveal. */
-@keyframes s3-bh-text-rise {
-  from { opacity: 0; translate: 0 22px; }
-  to { opacity: 1; translate: 0 0; }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .s3-bh-scroll-text {
-    opacity: 0;
-    translate: 0 22px;
-  }
-
-  .s3-bh-scroll-text.s3-bh-scroll-text-visible {
-    animation: s3-bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  .s3-bh-hero-copy > * {
-    opacity: 0;
-    translate: 0 22px;
-  }
-
-  .s3-bh-hero[data-phase="open"] .s3-bh-hero-copy > * {
-    animation: s3-bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  .s3-bh-hero[data-phase="open"] .s3-bh-hero-names {
-    animation-delay: 100ms;
-  }
-
-  .s3-bh-hero[data-phase="open"] .s3-bh-hero-date {
-    animation-delay: 200ms;
-  }
 }
 
 .s3-bh-intro {

@@ -60,7 +60,7 @@ export default function BotanicalHummingbirdCountdown() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="s3-mm-section s3-mm-countdown">
+    <section id="countdown" tabIndex={-1} ref={sectionRef} className="s3-mm-section s3-mm-countdown">
       <div className="s3-bh-countdown-scene" data-entered={entered}>
         <div className="s3-bh-countdown-bird s3-bh-countdown-bird-left" aria-hidden="true">
           <CountdownBird />

@@ -101,7 +101,7 @@ export default function BotanicalHummingbirdHero() {
   };
 
   return (
-    <section ref={heroRef} className="s3-mm-hero s3-bh-hero" data-phase={phase} aria-label="Wedding invitation cover">
+    <section id="home" tabIndex={-1} ref={heroRef} className="s3-mm-hero s3-bh-hero" data-phase={phase} aria-label="Wedding invitation cover">
       <Image
         className="s3-bh-hero-art"
         src="/botanical-hummingbird-sample-3/hero-forest-arch-lily-v2.png"

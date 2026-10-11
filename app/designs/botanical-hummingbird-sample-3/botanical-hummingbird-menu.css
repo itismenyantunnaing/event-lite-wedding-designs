@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* All menu styles belong to Sample 3; existing invitation typography stays intact. */
+.s3-push-menu {
+  --s3-artwork-green: #2a361f;
+  --s3-menu-green: var(--s3-artwork-green);
+  overflow-x: clip;
+}
+.s3-push-menu .s3-menu-nav {
+  position: fixed;
+  inset: 0;
+  height: 100svh;
+  height: 100dvh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 110;
+  font-family: "Inter", Arial, sans-serif;
+  color: #fff;
+}
+.s3-push-menu .s3-menu-nav[data-ready="false"] {
+  visibility: hidden;
+}
+.s3-push-menu .menu-bar {
+  position: absolute;
+  inset: 0 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 2;
+}
+.s3-push-menu .menu-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  pointer-events: auto;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font:
+    500 0.95rem "Inter",
+    Arial,
+    sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+}
+.s3-push-menu .menu-hamburger-icon {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: var(--s3-menu-green);
+}
+.s3-push-menu .menu-hamburger-icon span {
+  position: absolute;
+  width: 15px;
+  height: 1.25px;
+  background: #fff;
+  transition: transform 0.75s cubic-bezier(0.87, 0, 0.13, 1);
+  transform-origin: center;
+}
+.s3-push-menu .menu-hamburger-icon span:first-child {
+  transform: translateY(-3px);
+}
+.s3-push-menu .menu-hamburger-icon span:last-child {
+  transform: translateY(3px);
+}
+.s3-push-menu .menu-hamburger-icon.active span:first-child {
+  transform: rotate(45deg) scaleX(1.05);
+}
+.s3-push-menu .menu-hamburger-icon.active span:last-child {
+  transform: rotate(-45deg) scaleX(1.05);
+}
+.s3-push-menu .menu-overlay {
+  position: absolute;
+  inset: 0;
+  height: 100svh;
+  height: 100dvh;
+  background: var(--s3-menu-green);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  will-change: clip-path;
+}
+.s3-push-menu .menu-overlay-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  height: 100svh;
+  height: 100dvh;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  overflow: hidden;
+  will-change: transform;
+}
+.s3-push-menu .menu-media-wrapper {
+  flex: 2;
+  opacity: 0;
+  will-change: opacity;
+}
+.s3-push-menu .menu-media-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+.s3-push-menu .menu-content-wrapper {
+  flex: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 7rem 5vw 2rem;
+}
+.s3-push-menu .menu-content-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+.s3-push-menu .menu-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.s3-push-menu .menu-link a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font:
+    500 clamp(2.25rem, 4.5vw, 3.75rem)/1.15 "Inter",
+    Arial,
+    sans-serif;
+  letter-spacing: -0.04em;
+}
+.s3-push-menu .menu-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+.s3-push-menu .menu-footer p {
+  margin: 0;
+  color: #b8cabe;
+  font:
+    400 0.9rem/1.45 "Inter",
+    Arial,
+    sans-serif;
+}
+.s3-push-menu .line {
+  position: relative;
+  will-change: transform;
+}
+.s3-push-menu .s3-menu-nav a:focus-visible,
+.s3-push-menu .menu-toggle-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+@media (max-width: 1000px) {
+  .s3-push-menu .menu-media-wrapper {
+    display: none;
+  }
+  .s3-push-menu .menu-bar {
+    padding: 1.5rem;
+  }
+  .s3-push-menu .menu-overlay-content {
+    overflow: hidden;
+  }
+  .s3-push-menu .menu-content-wrapper {
+    flex: 1;
+    min-height: 0;
+    padding: 7rem 1.5rem 6rem;
+  }
+  .s3-push-menu .menu-link a {
+    font-size: clamp(2rem, 8vw, 3.25rem);
+  }
+  .s3-push-menu .menu-footer {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .s3-push-menu .menu-footer p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-height: 650px) {
+  .s3-push-menu .menu-content-wrapper {
+    padding-top: 5rem;
+  }
+  .s3-push-menu .menu-link a {
+    font-size: 2rem;
+  }
+  .s3-push-menu .menu-footer {
+    padding-top: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .s3-push-menu .menu-hamburger-icon span {
+    transition: none;
+  }
+}
+
+/* Invitation descriptions, RSVP deadline, and copyright use Inter. */
+.botanical-sample-3-theme .s3-bh-welcome-description,
+.botanical-sample-3-theme .s3-bh-schedule-description,
+.botanical-sample-3-theme .s3-bh-rsvp-deadline,
+.botanical-sample-3-theme .s3-mm-footer p {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Shared green sampled from the landing artwork's dark foliage.
+   Previous menu green: #173e30; previous invitation primary green: #1e5a4d. */
+.s3-push-menu .botanical-sample-3-theme {
+  --green: var(--s3-artwork-green);
+  --ink: var(--s3-artwork-green);
+  --maroon: var(--s3-artwork-green);
+}
+.s3-push-menu .botanical-sample-3-theme .s3-bh-schedule-copy > *,
+.s3-push-menu .botanical-sample-3-theme .s3-bh-countdown-content h2,
+.s3-push-menu
+  .botanical-sample-3-theme
+  .s3-bh-countdown-scene
+  .s3-bh-countdown-content
+  .s3-mm-kicker,
+.s3-push-menu .s3-bh-countdown-scene .s3-mm-countdown-grid small {
+  color: var(--s3-artwork-green);
+}
+
+/* Keep the schedule label in the same gold as the other section labels. */
+.s3-push-menu .botanical-sample-3-theme .s3-bh-schedule-copy > .s3-bh-schedule-eyebrow {
+  color: var(--gold);
+}
+
+/* SplitText wraps each line in its own overflow-hidden mask. */
+.botanical-sample-3-theme .s3-bh-reveal-line {
+  will-change: transform;
+}
+
+/* The overlay clips and moves the monogram with the menu opening. */
+.s3-push-menu .menu-monogram {
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .s3-push-menu .menu-monogram {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+}
+
+/* Prevent unprepared hero text flashing as the envelope video disappears. */
+@media (prefers-reduced-motion: no-preference) {
+  .botanical-sample-3-theme .s3-bh-hero:not([data-text-ready="true"]) .s3-bh-hero-copy {
+    visibility: hidden;
+  }
+}
+
+.s3-push-menu .menu-music {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0;
+}
+.s3-push-menu .menu-music > p {
+  color: #fff;
+  font-size: 0.9rem;
+}
+.s3-push-menu .menu-music-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #b8cabe;
+  font: 400 0.8rem/1.4 "Inter", Arial, sans-serif;
+  cursor: pointer;
+}
+.s3-push-menu .menu-music-track {
+  display: flex;
+  align-items: center;
+  width: 2.6rem;
+  height: 1.4rem;
+  padding: 3px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.s3-push-menu .menu-music-track > span {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 180ms ease;
+}
+.s3-push-menu .menu-music-toggle[aria-checked="true"] .menu-music-track {
+  background: var(--gold, #c8923a);
+}
+.s3-push-menu .menu-music-toggle[aria-checked="true"] .menu-music-track > span {
+  transform: translateX(1.05rem);
+}
+.s3-push-menu .menu-music-toggle:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+@media (max-width: 1000px) {
+  .s3-push-menu .menu-music { left: 1.5rem; bottom: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .s3-push-menu .menu-music-track > span { transition: none; }
+}
+
+.s3-push-menu .menu-music > p,
+.s3-push-menu .menu-music-toggle > span:last-child {
+  opacity: 0.75;
+}
+
+/* Keep the logo and Music fixed while only the links scroll on short phones. */
+@media (max-width: 1000px) {
+  .s3-push-menu .menu-content-main {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    align-items: flex-start;
+  }
+  .s3-push-menu .menu-content-main > .menu-col {
+    margin-block: auto;
+    flex-shrink: 0;
+  }
+}

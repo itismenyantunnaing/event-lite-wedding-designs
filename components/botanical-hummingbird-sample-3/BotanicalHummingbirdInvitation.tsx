@@ -1,9 +1,9 @@
 import Image from "next/image";
+import BotanicalHummingbirdTextReveal from "./BotanicalHummingbirdTextReveal";
 import BotanicalHummingbirdHero from "./BotanicalHummingbirdHero";
 import BotanicalHummingbirdCountdown from "./BotanicalHummingbirdCountdown";
 import BotanicalHummingbirdRSVPForm from "./BotanicalHummingbirdRSVPForm";
 import BotanicalHummingbirdMoments from "./BotanicalHummingbirdMoments";
-import BotanicalHummingbirdTextReveal from "./BotanicalHummingbirdTextReveal";
 import { botanicalHummingbirdDemo } from "../../data/botanical-hummingbird-sample-3-demo";
 
 export default function BotanicalHummingbirdInvitation() {
@@ -14,7 +14,7 @@ export default function BotanicalHummingbirdInvitation() {
       <BotanicalHummingbirdHero />
       <BotanicalHummingbirdCountdown />
 
-      <section className="s3-mm-section s3-mm-welcome">
+      <section id="welcome" tabIndex={-1} className="s3-mm-section s3-mm-welcome">
         <Image
           className="s3-bh-welcome-topper"
           src="/botanical-hummingbird-sample-3/welcome-landing-matched-lily-v4.png"
@@ -25,13 +25,13 @@ export default function BotanicalHummingbirdInvitation() {
         />
         <p className="s3-mm-kicker">A joyful beginning</p>
         <h2>Dear family &amp; friends</h2>
-        <p>{botanicalHummingbirdDemo.introduction}</p>
+        <p className="s3-bh-welcome-description">{botanicalHummingbirdDemo.introduction}</p>
       </section>
 
-      <section className="s3-mm-section s3-mm-venue">
+      <section id="location" tabIndex={-1} className="s3-mm-section s3-mm-venue">
         <p className="s3-mm-kicker">Where to find us</p>
         <h2>
-          {venue.name}
+          <span className="s3-bh-venue-name">{venue.name}</span>
           <span className="s3-bh-venue-ballrooms">
             <span>{venue.ballrooms[0]}</span>
             <span className="s3-bh-venue-ballrooms-ampersand">&amp;</span>
@@ -57,7 +57,7 @@ export default function BotanicalHummingbirdInvitation() {
         </a>
       </section>
 
-      <section id="schedule" className="s3-mm-section s3-bh-schedule">
+      <section tabIndex={-1} id="schedule" className="s3-mm-section s3-bh-schedule">
         <div className="s3-bh-schedule-card">
           <Image
             className="s3-bh-schedule-art"
@@ -80,7 +80,7 @@ export default function BotanicalHummingbirdInvitation() {
         </div>
       </section>
 
-      <section className="s3-mm-section s3-mm-details">
+      <section id="dress-code" tabIndex={-1} className="s3-mm-section s3-mm-details">
         <Image
           className="s3-mm-gifts-art s3-bh-hidden-section"
           src="/myanmar/doodle-gifts.png"
@@ -112,7 +112,7 @@ export default function BotanicalHummingbirdInvitation() {
 
       <BotanicalHummingbirdMoments />
 
-      <section className="s3-mm-section s3-mm-rsvp">
+      <section id="rsvp" tabIndex={-1} className="s3-mm-section s3-mm-rsvp">
         <h2>Will you celebrate with us?</h2>
         <BotanicalHummingbirdRSVPForm />
       </section>
