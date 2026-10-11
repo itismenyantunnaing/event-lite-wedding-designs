@@ -2,6 +2,8 @@
 
 import { useRef, useState, type ReactNode, type MouseEvent } from 'react';
 import gsap from 'gsap';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowUpRight01Icon } from '@hugeicons/core-free-icons';
 import { useGSAP } from '@gsap/react';
 import { CustomEase } from 'gsap/CustomEase';
 import { SplitText } from 'gsap/SplitText';
@@ -37,6 +39,8 @@ export default function BotanicalHummingbirdMenu({ children }: { children: React
     const content = select('.menu-overlay-content')[0];
     const media = select('.menu-media-wrapper')[0];
     const columns = select('.menu-col');
+    const menuRows = select('.menu-link-row');
+    gsap.set(menuRows, { yPercent: 110 });
     // Set both components explicitly: mobile transform parsing can retain a
     // pixel offset from the CSS translateY(-50%) when only yPercent changes.
     gsap.set(content, { y: 0, yPercent: -50 });
@@ -78,6 +82,7 @@ export default function BotanicalHummingbirdMenu({ children }: { children: React
       timeline = gsap.timeline({
         onComplete: contextSafe(() => {
           gsap.set(splits.flatMap((split) => split.lines), { yPercent: 110 });
+          gsap.set(menuRows, { yPercent: 110 });
           gsap.set(columns, { opacity: 1 });
           gsap.set(media, { opacity: 0 });
           phase = 'closed';
@@ -114,6 +119,12 @@ export default function BotanicalHummingbirdMenu({ children }: { children: React
         .to(overlay, { clipPath: visibleClip, duration, ease: 'hop' }, 0)
         .to(content, { y: 0, yPercent: 0, duration, ease: 'hop' }, 0)
         .to(media, { opacity: 1, duration: reducedMotion.matches ? 0 : 0.75, ease: 'power2.out' }, reducedMotion.matches ? 0 : 0.5);
+      openingTimeline.to(menuRows, {
+        yPercent: 0,
+        duration: reducedMotion.matches ? 0 : 1.35,
+        ease: 'hop',
+        stagger: reducedMotion.matches ? 0 : 0.075,
+      }, 0);
       splits.forEach((split) => {
         const lines = split.lines;
         openingTimeline.to(lines, {
@@ -132,7 +143,9 @@ export default function BotanicalHummingbirdMenu({ children }: { children: React
       lenis = new Lenis({ autoRaf: true });
       // Wait for fonts before measuring line breaks; re-split on width changes.
       columns.forEach((column: HTMLElement) => {
-        const split = SplitText.create(column.querySelectorAll('a, p'), {
+        const paragraphs = column.querySelectorAll('p');
+        if (!paragraphs.length) return;
+        const split = SplitText.create(paragraphs, {
           type: 'lines', mask: 'lines', linesClass: 'line', autoSplit: true,
           onSplit: (instance) => {
             gsap.set(instance.lines, { yPercent: phase === 'closed' ? 110 : 0 });
@@ -208,7 +221,14 @@ export default function BotanicalHummingbirdMenu({ children }: { children: React
             <div className="menu-content-wrapper">
               <div className="menu-content-main">
                 <div className="menu-col">
-                  {links.map(([title, id]) => <div className="menu-link" key={id}><a href={`#${id}`} onClick={(event) => navigate(event, id)}>{title}</a></div>)}
+                  {links.map(([title, id]) => <div className="menu-link" key={id}>
+                    <a href={`#${id}`} onClick={(event) => navigate(event, id)}>
+                      <span className="menu-link-row">
+                        <span className="menu-link-label">{title}</span>
+                        <HugeiconsIcon className="menu-arrow-icon" aria-hidden="true" icon={ArrowUpRight01Icon} size={24} strokeWidth={1.5} />
+                      </span>
+                    </a>
+                  </div>)}
                 </div>
               </div>
             </div>
