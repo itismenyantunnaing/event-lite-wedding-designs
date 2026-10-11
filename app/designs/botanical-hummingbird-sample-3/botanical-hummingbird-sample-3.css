@@ -1557,6 +1557,13 @@
   transition: opacity 850ms ease;
 }
 
+@media (min-width: 600px) {
+  .s3-bh-intro {
+    width: 430px;
+    margin-inline: auto;
+  }
+}
+
 /* Do not clip the fixed intro to the shorter artwork or paint later sections over it. */
 .botanical-sample-3-theme .s3-bh-hero:not([data-phase="open"]) {
   overflow: visible;

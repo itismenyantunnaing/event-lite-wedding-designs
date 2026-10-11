@@ -133,14 +133,14 @@ export default function BotanicalHummingbirdHero() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="s3-bh-intro-poster"
-            src="/botanical-hummingbird-sample-3/envelope-opening-wh-poster-v1.png"
+            src="/botanical-hummingbird-sample-3/envelope-opening-champagne-poster-v3.png"
             alt=""
           />
           <video
             ref={videoRef}
             className="s3-bh-intro-video"
             data-ready={videoReady}
-            src="/botanical-hummingbird-sample-3/envelope-opening-wh-v1.mp4"
+            src="/botanical-hummingbird-sample-3/envelope-opening-champagne-v3.mp4"
             preload="auto"
             playsInline
             muted
