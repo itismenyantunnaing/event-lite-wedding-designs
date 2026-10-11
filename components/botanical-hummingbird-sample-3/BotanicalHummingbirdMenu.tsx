@@ -2,8 +2,6 @@
 
 import { useRef, useState, type ReactNode, type MouseEvent } from 'react';
 import gsap from 'gsap';
-import { HugeiconsIcon } from '@hugeicons/react';
-import { ArrowUpRight01Icon } from '@hugeicons/core-free-icons';
 import { useGSAP } from '@gsap/react';
 import { CustomEase } from 'gsap/CustomEase';
 import { SplitText } from 'gsap/SplitText';
@@ -225,7 +223,6 @@ export default function BotanicalHummingbirdMenu({ children }: { children: React
                     <a href={`#${id}`} onClick={(event) => navigate(event, id)}>
                       <span className="menu-link-row">
                         <span className="menu-link-label">{title}</span>
-                        <HugeiconsIcon className="menu-arrow-icon" aria-hidden="true" icon={ArrowUpRight01Icon} size={24} strokeWidth={1.5} />
                       </span>
                     </a>
                   </div>)}
