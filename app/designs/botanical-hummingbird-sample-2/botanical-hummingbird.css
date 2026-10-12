@@ -1,6 +1,6 @@
 /* Keep the same local font and sizing as the former Next.js fallback. */
 @font-face {
-  font-family: "Cormorant SC Sample 2 Fallback";
+  font-family: "Cormorant SC Botanical Fallback";
   src: local("Times New Roman");
   ascent-override: 81.43%;
   descent-override: 25.29%;
@@ -10,7 +10,7 @@
 
 .botanical-sample-2-theme {
   --font-cormorant-sc: var(--font-cormorant-heading);
-  --font-cormorant-body: "Cormorant SC Sample 2 Fallback", "Times New Roman", serif;
+  --font-cormorant-body: "Cormorant SC Botanical Fallback", "Times New Roman", serif;
   --section-heading-size: clamp(1.75rem, 7.5vw, 2.1rem);
   --font-instrument-serif: var(--font-cormorant-sc);
   --font-hind: var(--font-cormorant-body);
@@ -220,12 +220,28 @@
   margin-inline: auto;
   margin-bottom: 0;
 }
+.s2-bh-venue-ballrooms {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 10px;
+  font-size: clamp(1.15rem, 4.8vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.s2-bh-venue-ballrooms > span {
+  white-space: nowrap;
+}
+.s2-bh-venue-ballrooms-ampersand {
+  font-size: 0.85em;
+}
 .s2-bh-venue-art {
   display: block;
   width: calc(100% + 52px);
   max-width: none;
   height: auto;
-  margin: 24px -26px 30px;
+  /* margin: 24px -26px 30px; */
+  margin-inline-start: -26px;
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
   mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
 }
@@ -963,7 +979,7 @@
   border-color: var(--gold);
   color: var(--paper);
   background: var(--green);
-  box-shadow: 0 8px 20px rgba(30, 90, 77, 0.18);
+  box-shadow: 0 8px 20px rgba(32, 44, 21, 0.18);
 }
 .s2-mm-button:hover,
 .botanical-sample-2-theme .rsvp-submit:hover {
@@ -973,13 +989,13 @@
   border-color: var(--gold);
   color: var(--green);
   background: var(--paper);
-  box-shadow: 0 5px 14px rgba(30, 90, 77, 0.1);
+  box-shadow: 0 5px 14px rgba(32, 44, 21, 0.1);
 }
 .s2-mm-gallery-photo {
   background: var(--paper);
 }
 .botanical-sample-2-theme .guest-tabs {
-  border-bottom-color: rgba(30, 90, 77, 0.24);
+  border-bottom-color: rgba(32, 44, 21, 0.24);
 }
 .botanical-sample-2-theme .guest-tabs button,
 .botanical-sample-2-theme .guest-tabs button.active {
@@ -990,7 +1006,7 @@
 }
 .botanical-sample-2-theme .rsvp-form input,
 .botanical-sample-2-theme .rsvp-form textarea {
-  border-bottom-color: rgba(30, 90, 77, 0.34);
+  border-bottom-color: rgba(32, 44, 21, 0.34);
   color: var(--green);
 }
 .botanical-sample-2-theme .rsvp-form input:focus,
@@ -1001,7 +1017,7 @@
   accent-color: var(--green);
 }
 .botanical-sample-2-theme .choice-grid label {
-  border-color: rgba(30, 90, 77, 0.25);
+  border-color: rgba(32, 44, 21, 0.25);
 }
 .s2-mm-schedule-path path {
   stroke: var(--gold);
@@ -1343,7 +1359,7 @@
   display: block;
   width: 50%;
   height: auto;
-  filter: drop-shadow(0 5px 8px rgba(30, 90, 77, 0.08));
+  filter: drop-shadow(0 5px 8px rgba(32, 44, 21, 0.08));
   pointer-events: none;
 }
 
@@ -1382,16 +1398,17 @@
   max-width: 326px;
   height: auto;
   margin: 24px auto 0;
-  filter: drop-shadow(0 8px 10px rgba(30, 90, 77, 0.09));
+  filter: drop-shadow(0 8px 10px rgba(32, 44, 21, 0.09));
 }
 
-/* Invitation cover inspired by the vintage botanical reference. */
+/* Keep the cover's native proportions rather than stretching it to the viewport. */
 .botanical-sample-2-theme .s2-bh-hero {
   position: relative;
   display: block;
   width: 100%;
-  height: 100svh;
-  min-height: 620px;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 941 / 1672;
   padding: 0;
   background: var(--paper);
   isolation: isolate;
@@ -1402,13 +1419,13 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
   pointer-events: none;
 }
 
 .s2-bh-hero-copy {
   position: absolute;
-  top: 45%;
+  top: 38%;
   left: 50%;
   z-index: 1;
   width: 74%;
@@ -1476,7 +1493,7 @@
 
 .s2-bh-hero-day {
   color: var(--gold);
-  border-inline: 1px solid rgba(30, 90, 77, 0.35);
+  border-inline: 1px solid rgba(32, 44, 21, 0.35);
   font-size: clamp(2.6rem, 11vw, 3.4rem);
   font-weight: 300;
   line-height: 1.1;
@@ -1494,46 +1511,12 @@
   white-space: nowrap;
 }
 
-/* Match the embroidered design's 22px, 1.3s text rise after the video reveal. */
-@keyframes s2-bh-text-rise {
-  from { opacity: 0; translate: 0 22px; }
-  to { opacity: 1; translate: 0 0; }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .s2-bh-scroll-text {
-    opacity: 0;
-    translate: 0 22px;
-  }
-
-  .s2-bh-scroll-text.s2-bh-scroll-text-visible {
-    animation: s2-bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  .s2-bh-hero-copy > * {
-    opacity: 0;
-    translate: 0 22px;
-  }
-
-  .s2-bh-hero[data-phase="open"] .s2-bh-hero-copy > * {
-    animation: s2-bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  .s2-bh-hero[data-phase="open"] .s2-bh-hero-names {
-    animation-delay: 100ms;
-  }
-
-  .s2-bh-hero[data-phase="open"] .s2-bh-hero-date {
-    animation-delay: 200ms;
-  }
-}
-
 .s2-bh-intro {
-  /* Keep the opening viewport-sized independently of the landing artwork. */
+  /* The opening stays viewport-sized even when the cover is shorter. */
   position: fixed;
   inset: 0;
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   z-index: 100;
   overflow: hidden;
   background: var(--paper);
@@ -1541,7 +1524,14 @@
   transition: opacity 850ms ease;
 }
 
-/* Avoid clipping the fixed intro or painting later sections over it. */
+@media (min-width: 600px) {
+  .s2-bh-intro {
+    width: 430px;
+    margin-inline: auto;
+  }
+}
+
+/* Do not clip the fixed intro to the shorter artwork or paint later sections over it. */
 .botanical-sample-2-theme .s2-bh-hero:not([data-phase="open"]) {
   overflow: visible;
   z-index: 100;
@@ -1767,7 +1757,7 @@
   .s2-bh-countdown-scene { animation: none; }
   .s2-bh-countdown-bird img { display: none; }
   .s2-bh-countdown-bird {
-    background: url("/botanical-hummingbird-sample-2/countdown-bird-reference-v1.png") center / contain no-repeat;
+    background: url("/botanical-hummingbird/countdown-bird-reference-v1.png") center / contain no-repeat;
   }
   .s2-bh-countdown-bird-right { transform: scaleX(-1); }
 }
@@ -1795,3 +1785,100 @@
 .botanical-sample-2-theme .s2-mm-countdown-unit strong {
   font-family: var(--font-cormorant-body);
 }
+
+/* Full viewport sections, with room for longer content on small screens. */
+.botanical-sample-2-theme :is(#countdown, #welcome, #dress-code, #rsvp) {
+  box-sizing: border-box;
+  min-height: 100svh;
+  height: auto;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Separate botanical corners frame a full-height wedding schedule. */
+.botanical-sample-2-theme .s2-bh-schedule {
+  padding: 0;
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+.botanical-sample-2-theme .s2-bh-schedule-card {
+  min-height: 100svh;
+  min-height: 100dvh;
+  aspect-ratio: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(220px, 34svh, 340px) 24px;
+  overflow: hidden;
+}
+.s2-bh-schedule-corner {
+  position: absolute;
+  width: min(68%, 360px);
+  height: min(36svh, 360px);
+  object-fit: contain;
+  pointer-events: none;
+}
+.s2-bh-schedule-corner-top {
+  top: 0;
+  right: 0;
+  object-position: top right;
+}
+.s2-bh-schedule-corner-bottom {
+  bottom: 0;
+  left: 0;
+  object-position: bottom left;
+}
+.botanical-sample-2-theme .s2-bh-schedule-copy {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  width: min(100%, 320px);
+}
+
+/* Match the schedule typography to the other invitation sections. */
+.botanical-sample-2-theme .s2-bh-schedule-copy {
+  width: min(100%, 360px);
+  gap: 16px;
+}
+.botanical-sample-2-theme .s2-bh-schedule-copy h2 {
+  font-size: var(--section-heading-size);
+  white-space: normal;
+}
+.botanical-sample-2-theme .s2-bh-schedule-copy .s2-bh-schedule-eyebrow {
+  font-size: 0.8rem !important;
+}
+.botanical-sample-2-theme .s2-bh-schedule-date {
+  font-size: 1.05rem;
+}
+.botanical-sample-2-theme .s2-bh-schedule-time {
+  font-size: 1.5rem;
+  white-space: normal;
+}
+.botanical-sample-2-theme .s2-bh-schedule-description {
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+/* Native section snapping is active only after the envelope has opened. */
+html.s2-scroll-snap {
+  scroll-snap-type: y mandatory;
+}
+.botanical-sample-2-theme > section[id],
+.botanical-sample-2-theme > footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.s2-scroll-snap {
+    scroll-snap-type: none;
+  }
+}
+
+/* Clip artwork without making main an intermediate scroll container. */
+.botanical-sample-2-theme {
+  overflow: clip;
+}
+

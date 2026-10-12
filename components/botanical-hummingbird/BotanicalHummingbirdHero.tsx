@@ -101,46 +101,46 @@ export default function BotanicalHummingbirdHero() {
   };
 
   return (
-    <section ref={heroRef} className="mm-hero bh-hero" data-phase={phase} aria-label="Wedding invitation cover">
+    <section id="home" tabIndex={-1} ref={heroRef} className="s3-mm-hero s3-bh-hero" data-phase={phase} aria-label="Wedding invitation cover">
       <Image
-        className="bh-hero-art"
-        src="/botanical-hummingbird/hero-lily-of-the-valley-cover-v2.png"
+        className="s3-bh-hero-art"
+        src="/botanical-hummingbird/hero-forest-arch-lily-v2.png"
         alt=""
         fill
         sizes="(min-width: 600px) 430px, 100vw"
         priority
       />
-      <div className="bh-hero-copy">
-        <p className="bh-hero-eyebrow">We are getting married</p>
-        <h1 className="bh-hero-names">
+      <div className="s3-bh-hero-copy">
+        <p className="s3-bh-hero-eyebrow">We are getting married</p>
+        <h1 className="s3-bh-hero-names">
           <span>Wai Phyo Tun</span>
-          <span className="bh-hero-ampersand">&amp;</span>
+          <span className="s3-bh-hero-ampersand">&amp;</span>
           <span>Han Su Mon</span>
         </h1>
-        <time className="bh-hero-date" dateTime="2026-11-14" aria-label="Saturday, 14 November 2026">
-          <span className="bh-hero-weekday">Saturday</span>
-          <span className="bh-hero-date-row" aria-hidden="true">
-            <span className="bh-hero-month">Nov</span>
-            <span className="bh-hero-day">14</span>
-            <span className="bh-hero-year">2026</span>
+        <time className="s3-bh-hero-date" dateTime="2026-11-14" aria-label="Saturday, 14 November 2026">
+          <span className="s3-bh-hero-weekday">Saturday</span>
+          <span className="s3-bh-hero-date-row" aria-hidden="true">
+            <span className="s3-bh-hero-month">Nov</span>
+            <span className="s3-bh-hero-day">14</span>
+            <span className="s3-bh-hero-year">2026</span>
           </span>
         </time>
       </div>
 
       {phase !== "open" && (
-        <div className="bh-intro" aria-hidden={phase !== "closed"}>
+        <div className="s3-bh-intro" aria-hidden={phase !== "closed"}>
           {/* The poster matches the first frame while mobile video initializes. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            className="bh-intro-poster"
-            src="/botanical-hummingbird/envelope-opening-wh-poster-v1.png"
+            className="s3-bh-intro-poster"
+            src="/botanical-hummingbird/envelope-opening-champagne-poster-v3.png"
             alt=""
           />
           <video
             ref={videoRef}
-            className="bh-intro-video"
+            className="s3-bh-intro-video"
             data-ready={videoReady}
-            src="/botanical-hummingbird/envelope-opening-wh-v1.mp4"
+            src="/botanical-hummingbird/envelope-opening-champagne-v3.mp4"
             preload="auto"
             playsInline
             muted
@@ -151,7 +151,7 @@ export default function BotanicalHummingbirdHero() {
           />
           {phase === "closed" && (
             <button
-              className="bh-intro-trigger"
+              className="s3-bh-intro-trigger"
               type="button"
               onClick={openInvitation}
               aria-label="Open the wedding invitation"

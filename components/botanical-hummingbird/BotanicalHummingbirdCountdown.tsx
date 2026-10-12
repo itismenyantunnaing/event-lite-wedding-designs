@@ -60,29 +60,29 @@ export default function BotanicalHummingbirdCountdown() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="mm-section mm-countdown">
-      <div className="bh-countdown-scene" data-entered={entered}>
-        <div className="bh-countdown-bird bh-countdown-bird-left" aria-hidden="true">
+    <section id="countdown" tabIndex={-1} ref={sectionRef} className="s3-mm-section s3-mm-countdown">
+      <div className="s3-bh-countdown-scene" data-entered={entered}>
+        <div className="s3-bh-countdown-bird s3-bh-countdown-bird-left" aria-hidden="true">
           <CountdownBird />
         </div>
-        <div className="bh-countdown-bird bh-countdown-bird-right" aria-hidden="true">
+        <div className="s3-bh-countdown-bird s3-bh-countdown-bird-right" aria-hidden="true">
           <CountdownBird />
         </div>
-        <div className="bh-countdown-plaque">
+        <div className="s3-bh-countdown-plaque">
           <Image
-            className="bh-countdown-border"
+            className="s3-bh-countdown-border"
             src="/botanical-hummingbird/countdown-simple-banner-with-strings-v2.png"
             alt=""
             fill
             sizes="(min-width: 600px) 430px, 100vw"
           />
-          <div className="bh-countdown-content">
+          <div className="s3-bh-countdown-content">
             <h2>Countdown</h2>
-            <p className="mm-kicker">Until 14 November 2026</p>
-            <div className="mm-countdown-grid" aria-label="Wedding countdown">
+            <p className="s3-mm-kicker">Until 14 November 2026</p>
+            <div className="s3-mm-countdown-grid" aria-label="Wedding countdown">
               {Object.entries(time).map(([label, value]) => (
                 <div key={label}>
-                  <span className="mm-countdown-unit">
+                  <span className="s3-mm-countdown-unit">
                     <strong>{String(value).padStart(2, "0")}</strong>
                   </span>
                   <small>{label}</small>

@@ -101,10 +101,10 @@ export default function BotanicalHummingbirdHero() {
   };
 
   return (
-    <section ref={heroRef} className="s2-mm-hero s2-bh-hero" data-phase={phase} aria-label="Wedding invitation cover">
+    <section id="home" tabIndex={-1} ref={heroRef} className="s2-mm-hero s2-bh-hero" data-phase={phase} aria-label="Wedding invitation cover">
       <Image
         className="s2-bh-hero-art"
-        src="/botanical-hummingbird-sample-2/hero-natural-green-v3.png"
+        src="/botanical-hummingbird/hero-forest-arch-lily-v2.png"
         alt=""
         fill
         sizes="(min-width: 600px) 430px, 100vw"
@@ -133,14 +133,14 @@ export default function BotanicalHummingbirdHero() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="s2-bh-intro-poster"
-            src="/botanical-hummingbird-sample-2/envelope-opening-wh-poster-v1.png"
+            src="/botanical-hummingbird/envelope-opening-champagne-poster-v3.png"
             alt=""
           />
           <video
             ref={videoRef}
             className="s2-bh-intro-video"
             data-ready={videoReady}
-            src="/botanical-hummingbird-sample-2/envelope-opening-wh-v1.mp4"
+            src="/botanical-hummingbird/envelope-opening-champagne-v3.mp4"
             preload="auto"
             playsInline
             muted

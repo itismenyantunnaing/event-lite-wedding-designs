@@ -10,8 +10,8 @@ const CountdownBird = memo(function CountdownBird() {
   return (
     <Image
       src={failed
-        ? "/botanical-hummingbird-sample-2/countdown-bird-reference-v1.png"
-        : "/botanical-hummingbird-sample-2/countdown-bird-loop-transparent-v2.apng"}
+        ? "/botanical-hummingbird/countdown-bird-reference-v1.png"
+        : "/botanical-hummingbird/countdown-bird-loop-transparent-v2.apng"}
       alt=""
       width={320}
       height={346}
@@ -60,7 +60,7 @@ export default function BotanicalHummingbirdCountdown() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="s2-mm-section s2-mm-countdown">
+    <section id="countdown" tabIndex={-1} ref={sectionRef} className="s2-mm-section s2-mm-countdown">
       <div className="s2-bh-countdown-scene" data-entered={entered}>
         <div className="s2-bh-countdown-bird s2-bh-countdown-bird-left" aria-hidden="true">
           <CountdownBird />
@@ -71,7 +71,7 @@ export default function BotanicalHummingbirdCountdown() {
         <div className="s2-bh-countdown-plaque">
           <Image
             className="s2-bh-countdown-border"
-            src="/botanical-hummingbird-sample-2/countdown-simple-banner-with-strings-v2.png"
+            src="/botanical-hummingbird/countdown-simple-banner-with-strings-v2.png"
             alt=""
             fill
             sizes="(min-width: 600px) 430px, 100vw"

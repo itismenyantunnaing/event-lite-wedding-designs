@@ -1,5 +1,5 @@
 
-/* All menu styles belong to Sample 3; existing invitation typography stays intact. */
+/* All menu styles belong to Botanical; existing invitation typography stays intact. */
 .s3-push-menu {
   --s3-artwork-green: #2a361f;
   --s3-menu-green: var(--s3-artwork-green);
@@ -207,24 +207,24 @@
 }
 
 /* Invitation descriptions, RSVP deadline, and copyright use Times New Roman. */
-.botanical-sample-3-theme .s3-bh-welcome-description,
-.botanical-sample-3-theme .s3-bh-schedule-description,
-.botanical-sample-3-theme .s3-bh-rsvp-deadline,
-.botanical-sample-3-theme .s3-mm-footer p {
+.botanical-hummingbird-theme .s3-bh-welcome-description,
+.botanical-hummingbird-theme .s3-bh-schedule-description,
+.botanical-hummingbird-theme .s3-bh-rsvp-deadline,
+.botanical-hummingbird-theme .s3-mm-footer p {
   font-family: "Times New Roman", Times, serif;
 }
 
 /* Shared green sampled from the landing artwork's dark foliage.
    Previous menu green: #173e30; previous invitation primary green: #1e5a4d. */
-.s3-push-menu .botanical-sample-3-theme {
+.s3-push-menu .botanical-hummingbird-theme {
   --green: var(--s3-artwork-green);
   --ink: var(--s3-artwork-green);
   --maroon: var(--s3-artwork-green);
 }
-.s3-push-menu .botanical-sample-3-theme .s3-bh-schedule-copy > *,
-.s3-push-menu .botanical-sample-3-theme .s3-bh-countdown-content h2,
+.s3-push-menu .botanical-hummingbird-theme .s3-bh-schedule-copy > *,
+.s3-push-menu .botanical-hummingbird-theme .s3-bh-countdown-content h2,
 .s3-push-menu
-  .botanical-sample-3-theme
+  .botanical-hummingbird-theme
   .s3-bh-countdown-scene
   .s3-bh-countdown-content
   .s3-mm-kicker,
@@ -233,12 +233,12 @@
 }
 
 /* Keep the schedule label in the same gold as the other section labels. */
-.s3-push-menu .botanical-sample-3-theme .s3-bh-schedule-copy > .s3-bh-schedule-eyebrow {
+.s3-push-menu .botanical-hummingbird-theme .s3-bh-schedule-copy > .s3-bh-schedule-eyebrow {
   color: var(--gold);
 }
 
 /* SplitText wraps each line in its own overflow-hidden mask. */
-.botanical-sample-3-theme .s3-bh-reveal-line {
+.botanical-hummingbird-theme .s3-bh-reveal-line {
   will-change: transform;
 }
 
@@ -262,7 +262,7 @@
 
 /* Prevent unprepared hero text flashing as the envelope video disappears. */
 @media (prefers-reduced-motion: no-preference) {
-  .botanical-sample-3-theme .s3-bh-hero:not([data-text-ready="true"]) .s3-bh-hero-copy {
+  .botanical-hummingbird-theme .s3-bh-hero:not([data-text-ready="true"]) .s3-bh-hero-copy {
     visibility: hidden;
   }
 }

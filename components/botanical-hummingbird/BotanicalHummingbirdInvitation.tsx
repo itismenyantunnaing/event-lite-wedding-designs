@@ -1,9 +1,9 @@
 import Image from "next/image";
+import BotanicalHummingbirdTextReveal from "./BotanicalHummingbirdTextReveal";
 import BotanicalHummingbirdHero from "./BotanicalHummingbirdHero";
 import BotanicalHummingbirdCountdown from "./BotanicalHummingbirdCountdown";
 import BotanicalHummingbirdRSVPForm from "./BotanicalHummingbirdRSVPForm";
 import BotanicalHummingbirdMoments from "./BotanicalHummingbirdMoments";
-import BotanicalHummingbirdTextReveal from "./BotanicalHummingbirdTextReveal";
 import { botanicalHummingbirdDemo } from "../../data/botanical-hummingbird-demo";
 
 export default function BotanicalHummingbirdInvitation() {
@@ -14,25 +14,32 @@ export default function BotanicalHummingbirdInvitation() {
       <BotanicalHummingbirdHero />
       <BotanicalHummingbirdCountdown />
 
-      <section className="mm-section mm-welcome">
+      <section id="welcome" tabIndex={-1} className="s3-mm-section s3-mm-welcome">
         <Image
-          className="bh-welcome-topper"
-          src="/botanical-hummingbird/welcome-lily-bird-topper-v1.png"
+          className="s3-bh-welcome-topper"
+          src="/botanical-hummingbird/welcome-landing-matched-lily-v4.png"
           alt="A bird flying beneath a garland of Lily of the Valley"
           width={1774}
           height={887}
           sizes="(max-width: 599px) 100vw, 430px"
         />
-        <p className="mm-kicker">A joyful beginning</p>
+        <p className="s3-mm-kicker">A joyful beginning</p>
         <h2>Dear family &amp; friends</h2>
-        <p>{botanicalHummingbirdDemo.introduction}</p>
+        <p className="s3-bh-welcome-description">{botanicalHummingbirdDemo.introduction}</p>
       </section>
 
-      <section className="mm-section mm-venue">
-        <p className="mm-kicker">Where to find us</p>
-        <h2>{venue.name}</h2>
+      <section id="location" tabIndex={-1} className="s3-mm-section s3-mm-venue">
+        <p className="s3-mm-kicker">Where to find us</p>
+        <h2>
+          <span className="s3-bh-venue-name">{venue.name}</span>
+          <span className="s3-bh-venue-ballrooms">
+            <span>{venue.ballrooms[0]}</span>
+            <span className="s3-bh-venue-ballrooms-ampersand">&amp;</span>
+            <span>{venue.ballrooms[1]}</span>
+          </span>
+        </h2>
         <Image
-          className="bh-venue-art"
+          className="s3-bh-venue-art"
           src="/botanical-hummingbird/lotte-hotel-watercolor-v2-ivory.png"
           alt="Watercolor illustration of Lotte Hotel Yangon"
           width={1086}
@@ -40,9 +47,8 @@ export default function BotanicalHummingbirdInvitation() {
           sizes="(max-width: 599px) 100vw, 430px"
           unoptimized
         />
-        <p className="mm-small">{venue.note}</p>
         <a
-          className="mm-button"
+          className="s3-mm-button"
           href={venue.mapUrl}
           target="_blank"
           rel="noreferrer"
@@ -51,50 +57,61 @@ export default function BotanicalHummingbirdInvitation() {
         </a>
       </section>
 
-      <section id="schedule" className="mm-section bh-schedule">
-        <div className="bh-schedule-card">
+      <section tabIndex={-1} id="schedule" className="s3-mm-section s3-bh-schedule">
+        <div className="s3-bh-schedule-card">
           <Image
-            className="bh-schedule-art"
-            src="/botanical-hummingbird/schedule-botanical-birds-v5.png"
+            className="s3-bh-schedule-corner s3-bh-schedule-corner-top"
+            src="/botanical-hummingbird/schedule-corner-top-right-v1.png"
             alt=""
-            fill
-            sizes="(max-width: 599px) 100vw, 430px"
+            width={1024}
+            height={1024}
+            sizes="(max-width: 599px) 65vw, 360px"
             aria-hidden="true"
             unoptimized
           />
-          <div className="bh-schedule-copy">
-            <p className="mm-kicker bh-schedule-eyebrow">A day to remember</p>
+          <Image
+            className="s3-bh-schedule-corner s3-bh-schedule-corner-bottom"
+            src="/botanical-hummingbird/schedule-corner-bottom-left-v1.png"
+            alt=""
+            width={1024}
+            height={1024}
+            sizes="(max-width: 599px) 65vw, 360px"
+            aria-hidden="true"
+            unoptimized
+          />
+          <div className="s3-bh-schedule-copy">
+            <p className="s3-mm-kicker s3-bh-schedule-eyebrow">A day to remember</p>
             <h2>Wedding schedule</h2>
-            <p className="bh-schedule-date">14 November 2026</p>
-            <h3 className="bh-schedule-time">10:00 AM – 12:00 PM</h3>
-            <p className="bh-schedule-description">
+            <p className="s3-bh-schedule-date">14 November 2026</p>
+            <h3 className="s3-bh-schedule-time">10:00 AM – 12:00 PM</h3>
+            <p className="s3-bh-schedule-description">
               Join us for our wedding ceremony and a joyful celebration with family and friends.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="mm-section mm-details">
+      <section id="dress-code" tabIndex={-1} className="s3-mm-section s3-mm-details">
         <Image
-          className="mm-gifts-art bh-hidden-section"
+          className="s3-mm-gifts-art s3-bh-hidden-section"
           src="/myanmar/doodle-gifts.png"
           alt="Myanmar wedding gifts with traditional textiles, jasmine and lotus flowers"
           width={1536}
           height={1024}
           sizes="340px"
         />
-        <article className="bh-hidden-section">
-          <p className="mm-kicker">A little note</p>
+        <article className="s3-bh-hidden-section">
+          <p className="s3-mm-kicker">A little note</p>
           <h2>Your blessing is our gift</h2>
           <p>{botanicalHummingbirdDemo.giftNote}</p>
         </article>
-        <article className="bh-dress-code">
-          <div className="bh-dress-copy">
-            <p className="mm-kicker">Dress code</p>
+        <article className="s3-bh-dress-code">
+          <div className="s3-bh-dress-copy">
+            <p className="s3-mm-kicker">Dress code</p>
             <h2>Myanmar Formal Attire</h2>
           </div>
           <Image
-            className="bh-dress-guests"
+            className="s3-bh-dress-guests"
             src="/botanical-hummingbird/myanmar-formal-guests.png"
             alt="Eight wedding guests wearing elegant Myanmar formal attire"
             width={1920}
@@ -106,11 +123,11 @@ export default function BotanicalHummingbirdInvitation() {
 
       <BotanicalHummingbirdMoments />
 
-      <section className="mm-section mm-rsvp">
+      <section id="rsvp" tabIndex={-1} className="s3-mm-section s3-mm-rsvp">
         <h2>Will you celebrate with us?</h2>
         <BotanicalHummingbirdRSVPForm />
       </section>
-      <footer className="mm-footer">
+      <footer className="s3-mm-footer">
         <Image
           className="agency-logo"
           src="/eventElite-logo.svg"

@@ -1,6 +1,6 @@
 /* Keep the same local font and sizing as the former Next.js fallback. */
 @font-face {
-  font-family: "Cormorant SC Fallback";
+  font-family: "Cormorant SC Botanical Fallback";
   src: local("Times New Roman");
   ascent-override: 81.43%;
   descent-override: 25.29%;
@@ -8,9 +8,9 @@
   size-adjust: 113.48%;
 }
 
-.myanmar-theme {
+.botanical-hummingbird-theme {
   --font-cormorant-sc: var(--font-cormorant-heading);
-  --font-cormorant-body: "Cormorant SC Fallback", "Times New Roman", serif;
+  --font-cormorant-body: "Cormorant SC Botanical Fallback", "Times New Roman", serif;
   --section-heading-size: clamp(1.75rem, 7.5vw, 2.1rem);
   --font-instrument-serif: var(--font-cormorant-sc);
   --font-hind: var(--font-cormorant-body);
@@ -41,12 +41,12 @@
     31px 31px,
     auto;
 }
-.myanmar-theme h1,
-.myanmar-theme h2,
-.myanmar-theme p {
+.botanical-hummingbird-theme h1,
+.botanical-hummingbird-theme h2,
+.botanical-hummingbird-theme p {
   margin-top: 0;
 }
-.myanmar-theme h2 {
+.botanical-hummingbird-theme h2 {
   margin-bottom: 20px;
   color: var(--maroon);
   font:
@@ -54,16 +54,16 @@
     serif;
   letter-spacing: -0.01em;
 }
-.myanmar-theme p {
+.botanical-hummingbird-theme p {
   font-size: 0.98rem;
   line-height: 1.65;
 }
-.mm-section {
+.s3-mm-section {
   position: relative;
   padding: 82px 26px;
   text-align: center;
 }
-.mm-section:after {
+.s3-mm-section:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -73,8 +73,8 @@
   background: var(--gold);
   transform: translateX(-50%);
 }
-.mm-kicker,
-.mm-eyebrow {
+.s3-mm-kicker,
+.s3-mm-eyebrow {
   margin-bottom: 13px;
   color: var(--green);
   font:
@@ -83,7 +83,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.mm-hero {
+.s3-mm-hero {
   position: relative;
   display: flex;
   height: 100svh;
@@ -96,31 +96,31 @@
   text-align: center;
   background: var(--paper);
 }
-.mm-hero-background {
+.s3-mm-hero-background {
   z-index: 0;
   object-fit: cover;
   object-position: center bottom;
   pointer-events: none;
 }
-.mm-hero-copy {
+.s3-mm-hero-copy {
   position: relative;
   z-index: 2;
   width: 100%;
 }
-.mm-eyebrow {
+.s3-mm-eyebrow {
   margin-bottom: 8px;
   font-size: 0.6rem;
 }
-.mm-title-ornament {
+.s3-mm-title-ornament {
   display: block;
   color: var(--gold);
   font-size: 0.78rem;
   line-height: 1;
 }
-.mm-title-ornament-second {
+.s3-mm-title-ornament-second {
   margin-top: -3px;
 }
-.mm-hero-couple-name {
+.s3-mm-hero-couple-name {
   color: var(--maroon);
   font:
     400 clamp(3.6rem, 18vw, 5rem)/0.82 var(--font-instrument-serif),
@@ -131,17 +131,17 @@
   gap: 12px;
   align-items: center;
 }
-.mm-hero-couple-name i {
+.s3-mm-hero-couple-name i {
   color: var(--gold);
   font-size: 0.42em;
   font-weight: 400;
 }
-.mm-invitation {
+.s3-mm-invitation {
   max-width: 260px;
   margin: 0 auto 8px;
   font-size: 0.74rem !important;
 }
-.mm-date {
+.s3-mm-date {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,14 +149,14 @@
   margin-block: 8px;
   color: var(--maroon);
 }
-.mm-date span {
+.s3-mm-date span {
   font:
     700 0.85rem var(--font-hind),
     sans-serif;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.mm-venue-name {
+.s3-mm-venue-name {
   margin: 0;
   color: var(--green);
   font:
@@ -165,7 +165,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.mm-hero-couple {
+.s3-mm-hero-couple {
   position: relative;
   z-index: 1;
   width: min(49vw, 245px);
@@ -173,29 +173,29 @@
   margin-top: 5px;
   filter: drop-shadow(0 12px 20px rgba(57, 47, 40, 0.08));
 }
-.mm-welcome > p:not(.mm-kicker) {
+.s3-mm-welcome > p:not(.s3-mm-kicker) {
   max-width: 330px;
   margin-inline: auto;
 }
-.mm-welcome {
+.s3-mm-welcome {
   padding-top: 22px;
 }
-.mm-welcome::after {
+.s3-mm-welcome::after {
   display: none;
 }
-.bh-welcome-topper {
+.s3-bh-welcome-topper {
   display: block;
   width: calc(100% + 52px);
   height: auto;
   margin: 0 -26px 12px;
 }
 @media (min-width: 600px) {
-  .bh-welcome-topper {
+  .s3-bh-welcome-topper {
     width: calc(100% + 96px);
     margin-inline: -48px;
   }
 }
-.mm-doodle-divider {
+.s3-mm-doodle-divider {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,44 +204,60 @@
   margin: 34px auto -8px;
   color: var(--gold);
 }
-.mm-doodle-divider i {
+.s3-mm-doodle-divider i {
   width: 100px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--maroon), transparent);
 }
-.mm-doodle-divider span {
+.s3-mm-doodle-divider span {
   font-size: 0.8rem;
 }
-.mm-venue {
+.s3-mm-venue {
   background: rgba(239, 228, 211, 0.78);
 }
-.mm-venue h2 {
+.s3-mm-venue h2 {
   max-width: 330px;
   margin-inline: auto;
   margin-bottom: 0;
 }
-.bh-venue-art {
+.s3-bh-venue-ballrooms {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 10px;
+  font-size: clamp(1.15rem, 4.8vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.s3-bh-venue-ballrooms > span {
+  white-space: nowrap;
+}
+.s3-bh-venue-ballrooms-ampersand {
+  font-size: 0.85em;
+}
+.s3-bh-venue-art {
   display: block;
   width: calc(100% + 52px);
   max-width: none;
   height: auto;
-  margin: 24px -26px 30px;
+  /* margin: 24px -26px 30px; */
+  margin-inline-start: -26px;
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
   mask-image: linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
 }
 @media (min-width: 600px) {
-  .bh-venue-art {
+  .s3-bh-venue-art {
     width: calc(100% + 96px);
     margin-inline: -48px;
   }
 }
-.mm-small {
+.s3-mm-small {
   max-width: 310px;
   margin: 26px auto !important;
   font-size: 0.82rem !important;
 }
-.mm-button,
-.myanmar-theme .rsvp-submit {
+.s3-mm-button,
+.botanical-hummingbird-theme .rsvp-submit {
   display: inline-block;
   padding: 13px 30px;
   border: 1px solid var(--maroon);
@@ -255,114 +271,114 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.mm-schedule {
+.s3-mm-schedule {
   padding-inline: 20px;
 }
-.mm-schedule h2 {
+.s3-mm-schedule h2 {
   margin-bottom: 42px;
 }
-.mm-schedule-route {
+.s3-mm-schedule-route {
   position: relative;
   width: min(100%, 390px);
   height: 720px;
   margin: auto;
 }
-.mm-schedule-path {
+.s3-mm-schedule-path {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   overflow: visible;
 }
-.mm-schedule-path path {
+.s3-mm-schedule-path path {
   fill: none;
   stroke: rgba(132, 53, 47, 0.45);
   stroke-width: 1.5;
   stroke-dasharray: 4 6;
 }
-.mm-schedule-path text {
+.s3-mm-schedule-path text {
   fill: var(--maroon);
   font-size: 15px;
 }
-.mm-schedule ol {
+.s3-mm-schedule ol {
   position: absolute;
   inset: 0;
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.mm-schedule li {
+.s3-mm-schedule li {
   position: absolute;
   width: 170px;
 }
-.mm-schedule li:nth-child(1) {
+.s3-mm-schedule li:nth-child(1) {
   top: 8px;
   left: 7px;
 }
-.mm-schedule li:nth-child(2) {
+.s3-mm-schedule li:nth-child(2) {
   top: 178px;
   right: 2px;
 }
-.mm-schedule li:nth-child(3) {
+.s3-mm-schedule li:nth-child(3) {
   top: 350px;
   left: 4px;
 }
-.mm-schedule li:nth-child(4) {
+.s3-mm-schedule li:nth-child(4) {
   right: 3px;
   bottom: 0;
 }
-.mm-schedule-card img {
+.s3-mm-schedule-card img {
   display: block;
   width: 155px;
   height: 134px;
   margin: auto;
   object-fit: contain;
 }
-.mm-schedule-card > div {
+.s3-mm-schedule-card > div {
   display: flex;
   flex-direction: column;
   margin-top: -3px;
 }
-.mm-schedule-card strong {
+.s3-mm-schedule-card strong {
   color: var(--maroon);
   font:
     400 1.25rem var(--font-instrument-serif),
     serif;
 }
-.mm-schedule-card span {
+.s3-mm-schedule-card span {
   font-size: 0.78rem;
 }
-.mm-details {
+.s3-mm-details {
   max-height: 1060px;
   padding-inline: 28px;
 }
-.mm-gifts-art {
+.s3-mm-gifts-art {
   display: block;
   width: min(100%, 350px);
   height: auto;
   margin: 0 auto 4px;
 }
-.mm-details article {
+.s3-mm-details article {
   position: relative;
   z-index: 2;
   padding: 22px 16px;
   margin-bottom: 100px;
   background: rgba(247, 240, 227, 0.88);
 }
-.mm-details article:last-child {
+.s3-mm-details article:last-child {
   margin-bottom: 0;
 }
-.mm-details article h2 {
+.s3-mm-details article h2 {
   margin-bottom: 35px;
   font-size: var(--section-heading-size);
 }
-.mm-swatches {
+.s3-mm-swatches {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-top: 24px;
 }
-.mm-swatches i {
+.s3-mm-swatches i {
   width: 28px;
   height: 28px;
   border: 2px solid var(--paper);
@@ -370,29 +386,29 @@
   background: var(--maroon);
   box-shadow: 0 0 0 1px rgba(57, 47, 40, 0.14);
 }
-.mm-swatches i:nth-child(2) {
+.s3-mm-swatches i:nth-child(2) {
   background: #b17b2d;
 }
-.mm-swatches i:nth-child(3) {
+.s3-mm-swatches i:nth-child(3) {
   background: #e9ddc7;
 }
-.mm-swatches i:nth-child(4) {
+.s3-mm-swatches i:nth-child(4) {
   background: #425f49;
 }
-.mm-swatches i:nth-child(5) {
+.s3-mm-swatches i:nth-child(5) {
   background: #b1846a;
 }
-.mm-gallery h2 {
+.s3-mm-gallery h2 {
   margin-bottom: 34px;
 }
-.mm-gallery-control {
+.s3-mm-gallery-control {
   display: grid;
   grid-template-columns: 42px minmax(0, 1fr) 42px;
   align-items: center;
   max-width: 420px;
   margin: auto;
 }
-.mm-gallery-control > button {
+.s3-mm-gallery-control > button {
   display: grid;
   width: 34px;
   height: 34px;
@@ -404,20 +420,20 @@
   background: var(--paper);
   cursor: pointer;
 }
-.mm-gallery-control > button:last-child {
+.s3-mm-gallery-control > button:last-child {
   justify-self: end;
 }
-.mm-gallery-stage {
+.s3-mm-gallery-stage {
   position: relative;
   width: 100%;
   aspect-ratio: 3/4;
 }
-.mm-gallery-frame {
+.s3-mm-gallery-frame {
   z-index: 2;
   object-fit: fill;
   pointer-events: none;
 }
-.mm-gallery-photo {
+.s3-mm-gallery-photo {
   position: absolute;
   inset: 7% 8%;
   z-index: 1;
@@ -425,10 +441,10 @@
   border-radius: 2%;
   background: #ddcdb8;
 }
-.mm-gallery-photo img {
+.s3-mm-gallery-photo img {
   object-fit: cover;
 }
-.mm-gallery-count {
+.s3-mm-gallery-count {
   margin: 23px 0 0;
   color: var(--green);
   font:
@@ -436,28 +452,28 @@
     sans-serif !important;
   letter-spacing: 0.18em;
 }
-.mm-countdown {
+.s3-mm-countdown {
   background: rgba(239, 228, 211, 0.62);
 }
-.mm-countdown-grid {
+.s3-mm-countdown-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 3px;
   max-width: 430px;
   margin: 36px auto 0;
 }
-.mm-medallion {
+.s3-mm-medallion {
   position: relative;
   display: grid;
   width: 100%;
   aspect-ratio: 1;
   place-items: center;
 }
-.mm-medallion img {
+.s3-mm-medallion img {
   object-fit: contain;
   filter: hue-rotate(60deg) saturate(0.65);
 }
-.mm-medallion strong {
+.s3-mm-medallion strong {
   position: relative;
   z-index: 2;
   color: var(--maroon);
@@ -465,7 +481,7 @@
     400 clamp(1.35rem, 7vw, 2.4rem) var(--font-instrument-serif),
     serif;
 }
-.mm-countdown small {
+.s3-mm-countdown small {
   display: block;
   margin-top: 7px;
   font:
@@ -474,25 +490,25 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.mm-rsvp {
+.s3-mm-rsvp {
   background: var(--paper);
 }
-.mm-rsvp > h2 {
+.s3-mm-rsvp > h2 {
   max-width: 350px;
   margin-inline: auto;
 }
-.myanmar-theme .rsvp-panel {
+.botanical-hummingbird-theme .rsvp-panel {
   max-width: 430px;
   margin: 36px auto 0;
   text-align: left;
 }
-.myanmar-theme .guest-tabs {
+.botanical-hummingbird-theme .guest-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 28px;
   border-bottom: 1px solid rgba(132, 53, 47, 0.2);
 }
-.myanmar-theme .guest-tabs button {
+.botanical-hummingbird-theme .guest-tabs button {
   padding: 12px 6px;
   border: 0;
   border-bottom: 2px solid transparent;
@@ -503,27 +519,27 @@
     sans-serif;
   text-transform: uppercase;
 }
-.myanmar-theme .guest-tabs button.active {
+.botanical-hummingbird-theme .guest-tabs button.active {
   border-color: var(--maroon);
   color: var(--maroon);
 }
-.myanmar-theme .rsvp-form,
-.myanmar-theme .rsvp-form label {
+.botanical-hummingbird-theme .rsvp-form,
+.botanical-hummingbird-theme .rsvp-form label {
   display: grid;
   gap: 7px;
 }
-.myanmar-theme .rsvp-form {
+.botanical-hummingbird-theme .rsvp-form {
   gap: 20px;
 }
-.myanmar-theme .rsvp-form label,
-.myanmar-theme .rsvp-form legend {
+.botanical-hummingbird-theme .rsvp-form label,
+.botanical-hummingbird-theme .rsvp-form legend {
   font:
     600 0.72rem var(--font-hind),
     sans-serif;
   letter-spacing: 0.06em;
 }
-.myanmar-theme .rsvp-form input,
-.myanmar-theme .rsvp-form textarea {
+.botanical-hummingbird-theme .rsvp-form input,
+.botanical-hummingbird-theme .rsvp-form textarea {
   width: 100%;
   padding: 12px 2px;
   border: 0;
@@ -535,37 +551,37 @@
     400 0.9rem var(--font-hind),
     sans-serif;
 }
-.myanmar-theme .rsvp-form fieldset {
+.botanical-hummingbird-theme .rsvp-form fieldset {
   padding: 0;
   border: 0;
 }
-.myanmar-theme .choice-grid {
+.botanical-hummingbird-theme .choice-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 10px;
 }
-.myanmar-theme .choice-grid label {
+.botanical-hummingbird-theme .choice-grid label {
   display: flex;
   align-items: center;
 }
-.myanmar-theme .choice-grid input {
+.botanical-hummingbird-theme .choice-grid input {
   width: auto;
 }
-.myanmar-theme .rsvp-submit {
+.botanical-hummingbird-theme .rsvp-submit {
   margin-top: 8px;
   justify-self: center;
 }
-.mm-footer {
+.s3-mm-footer {
   padding: 52px 24px 36px;
   text-align: center;
 }
-.mm-footer .agency-logo {
+.s3-mm-footer .agency-logo {
   width: 58px;
   height: 58px;
   margin: 4px auto 16px;
 }
-.mm-footer p {
+.s3-mm-footer p {
   margin: 0;
   color: rgba(57, 47, 40, 0.72);
   font:
@@ -574,28 +590,28 @@
   letter-spacing: 0.12em;
 }
 @media (min-width: 600px) {
-  .myanmar-theme {
+  .botanical-hummingbird-theme {
     width: 430px;
     max-width: 430px;
     margin: auto;
     box-shadow: 0 0 70px rgba(57, 47, 40, 0.14);
   }
-  .mm-section {
+  .s3-mm-section {
     padding-inline: 48px;
   }
-  .mm-hero {
+  .s3-mm-hero {
     padding-top: 140px;
   }
-  .mm-gallery-photo {
+  .s3-mm-gallery-photo {
     inset: 7%;
   }
-  .mm-hero-couple {
+  .s3-mm-hero-couple {
     width: 230px;
   }
 }
 
 /* Richer Myanmar palette and corrected schedule artwork route. */
-.myanmar-theme {
+.botanical-hummingbird-theme {
   --paper: #fff8ee;
   --paper-deep: #f3e2d2;
   --ink: #302623;
@@ -620,69 +636,69 @@
     31px 31px,
     auto;
 }
-.mm-section:after {
+.s3-mm-section:after {
   height: 2px;
   border-radius: 2px;
   background: linear-gradient(90deg, var(--maroon), var(--gold), var(--green));
 }
-.mm-hero {
+.s3-mm-hero {
   background: linear-gradient(180deg, #fffaf3 0%, var(--paper) 100%);
 }
-.mm-venue,
-.mm-countdown {
+.s3-mm-venue,
+.s3-mm-countdown {
   background: linear-gradient(
     145deg,
     rgba(243, 226, 210, 0.9),
     rgba(255, 248, 238, 0.94)
   );
 }
-.mm-schedule {
+.s3-mm-schedule {
   padding-inline: 18px;
   background: linear-gradient(180deg, var(--paper), #fffaf4 48%, var(--paper));
 }
-.mm-schedule-route {
+.s3-mm-schedule-route {
   height: 760px;
 }
-.mm-schedule-path {
+.s3-mm-schedule-path {
   z-index: 0;
 }
-.mm-schedule-path path {
+.s3-mm-schedule-path path {
   stroke: color-mix(in srgb, var(--coral) 60%, var(--gold));
   stroke-width: 2;
   stroke-dasharray: 3 8;
   stroke-linecap: round;
 }
-.mm-schedule-path circle {
+.s3-mm-schedule-path circle {
   fill: var(--maroon);
   stroke: var(--paper);
   stroke-width: 3;
 }
-.mm-schedule ol {
+.s3-mm-schedule ol {
   z-index: 1;
 }
-.mm-schedule li {
+.s3-mm-schedule li {
   width: 178px;
 }
-.mm-schedule li:nth-child(1) {
+.s3-mm-schedule li:nth-child(1) {
   top: 6px;
   left: 0;
 }
-.mm-schedule li:nth-child(2) {
+.s3-mm-schedule li:nth-child(2) {
   top: 190px;
   right: 0;
 }
-.mm-schedule li:nth-child(3) {
+.s3-mm-schedule li:nth-child(3) {
   top: 378px;
   left: 0;
 }
-.mm-schedule li:nth-child(4) {
+.s3-mm-schedule li:nth-child(4) {
   right: 0;
   bottom: 0;
 }
-.mm-schedule-card {
+.s3-mm-schedule-card {
   position: relative;
 }
-.mm-schedule-card:before {
+.s3-mm-schedule-card:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -699,35 +715,35 @@
   );
   transform: translateX(-50%) rotate(-4deg);
 }
-.mm-schedule li:nth-child(even) .mm-schedule-card:before {
+.s3-mm-schedule li:nth-child(even) .s3-mm-schedule-card:before {
   transform: translateX(-50%) rotate(5deg);
 }
-.mm-schedule-card img {
+.s3-mm-schedule-card img {
   width: 170px;
   height: 146px;
   object-position: center bottom;
   filter: drop-shadow(0 9px 14px rgba(48, 38, 35, 0.08));
 }
-.mm-schedule-card > div {
+.s3-mm-schedule-card > div {
   min-height: 48px;
   margin-top: -1px;
   justify-content: flex-start;
 }
-.mm-schedule-card strong {
+.s3-mm-schedule-card strong {
   font-size: 1.32rem;
 }
-.mm-schedule-card span {
+.s3-mm-schedule-card span {
   color: var(--ink);
   font-size: 0.76rem;
   line-height: 1.25;
 }
-.mm-welcome {
+.s3-mm-welcome {
   background: #fff8ee;
 }
-.mm-venue {
+.s3-mm-venue {
   background: linear-gradient(145deg, #e7f0eb, #f4eee1);
 }
-.mm-schedule {
+.s3-mm-schedule {
   background:
     radial-gradient(
       circle at 18% 10%,
@@ -739,10 +755,10 @@
     25px 25px,
     auto;
 }
-.mm-gallery {
+.s3-mm-gallery {
   background: linear-gradient(160deg, #e8f1ed, #fff8ee 72%);
 }
-.mm-countdown {
+.s3-mm-countdown {
   color: var(--paper);
   background:
     radial-gradient(
@@ -755,112 +771,112 @@
     24px 24px,
     auto;
 }
-.mm-countdown h2 {
+.s3-mm-countdown h2 {
   color: var(--paper);
 }
-.mm-countdown .mm-kicker {
+.s3-mm-countdown .s3-mm-kicker {
   color: #efc978;
 }
-.mm-countdown small {
+.s3-mm-countdown small {
   color: rgba(255, 248, 238, 0.86);
 }
-.mm-countdown .mm-medallion strong {
+.s3-mm-countdown .s3-mm-medallion strong {
   color: var(--paper);
 }
-.mm-countdown:after {
+.s3-mm-countdown:after {
   background: linear-gradient(90deg, transparent, #efc978, transparent);
 }
-.mm-rsvp {
+.s3-mm-rsvp {
   background: #fff8ee;
 }
 
 /* Apply the Myanmar palette consistently to every interactive and text surface. */
-.myanmar-theme h1,
-.myanmar-theme h2 {
+.botanical-hummingbird-theme h1,
+.botanical-hummingbird-theme h2 {
   color: var(--maroon);
 }
-.myanmar-theme p {
+.botanical-hummingbird-theme p {
   color: var(--ink);
 }
-.mm-kicker,
-.mm-eyebrow,
-.mm-venue-name,
-.mm-gallery-count {
+.s3-mm-kicker,
+.s3-mm-eyebrow,
+.s3-mm-venue-name,
+.s3-mm-gallery-count {
   color: var(--green);
 }
-.mm-title-ornament,
-.mm-hero h1 i,
-.mm-doodle-divider {
+.s3-mm-title-ornament,
+.s3-mm-hero h1 i,
+.s3-mm-doodle-divider {
   color: var(--gold);
 }
-.mm-date,
-.mm-schedule-card strong {
+.s3-mm-date,
+.s3-mm-schedule-card strong {
   color: var(--maroon);
 }
-.mm-button,
-.myanmar-theme .rsvp-submit {
+.s3-mm-button,
+.botanical-hummingbird-theme .rsvp-submit {
   border-color: var(--gold);
   color: #fffaf2;
   background: var(--maroon);
   box-shadow: 0 8px 20px rgba(141, 48, 64, 0.18);
 }
-.mm-button:hover,
-.myanmar-theme .rsvp-submit:hover {
+.s3-mm-button:hover,
+.botanical-hummingbird-theme .rsvp-submit:hover {
   background: #742535;
 }
-.mm-button:focus-visible,
-.myanmar-theme .rsvp-submit:focus-visible,
-.mm-gallery-control > button:focus-visible {
+.s3-mm-button:focus-visible,
+.botanical-hummingbird-theme .rsvp-submit:focus-visible,
+.s3-mm-gallery-control > button:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
-.mm-gallery-control > button {
+.s3-mm-gallery-control > button {
   border-color: var(--gold);
   color: var(--maroon);
   background: #fffaf2;
   box-shadow: 0 5px 14px rgba(21, 91, 87, 0.1);
 }
-.mm-gallery-photo {
+.s3-mm-gallery-photo {
   background: var(--paper-deep);
 }
-.mm-countdown h2,
-.mm-countdown p {
+.s3-mm-countdown h2,
+.s3-mm-countdown p {
   color: var(--paper);
 }
-.myanmar-theme .guest-tabs {
+.botanical-hummingbird-theme .guest-tabs {
   border-bottom-color: rgba(141, 48, 64, 0.24);
 }
-.myanmar-theme .guest-tabs button {
+.botanical-hummingbird-theme .guest-tabs button {
   color: var(--green);
 }
-.myanmar-theme .guest-tabs button.active {
+.botanical-hummingbird-theme .guest-tabs button.active {
   border-color: var(--maroon);
   color: var(--maroon);
 }
-.myanmar-theme .rsvp-form input,
-.myanmar-theme .rsvp-form textarea {
+.botanical-hummingbird-theme .rsvp-form input,
+.botanical-hummingbird-theme .rsvp-form textarea {
   border-bottom-color: rgba(141, 48, 64, 0.34);
   color: var(--ink);
 }
-.myanmar-theme .rsvp-form input:focus,
-.myanmar-theme .rsvp-form textarea:focus {
+.botanical-hummingbird-theme .rsvp-form input:focus,
+.botanical-hummingbird-theme .rsvp-form textarea:focus {
   border-bottom-color: var(--gold);
   outline: 0;
 }
-.myanmar-theme .rsvp-form input[type="radio"] {
+.botanical-hummingbird-theme .rsvp-form input[type="radio"] {
   accent-color: var(--maroon);
 }
-.myanmar-theme .choice-grid label {
+.botanical-hummingbird-theme .choice-grid label {
   border-color: rgba(21, 91, 87, 0.25);
 }
-.mm-footer {
+.s3-mm-footer {
   color: var(--paper);
   background: linear-gradient(145deg, #742535, var(--maroon));
 }
-.mm-footer p {
+.s3-mm-footer p {
   color: rgba(255, 248, 238, 0.82);
 }
-.mm-footer .agency-logo {
+.s3-mm-footer .agency-logo {
   /* border: 2px solid var(--gold); */
   border-radius: 50%;
   filter: none;
@@ -868,7 +884,7 @@
 }
 
 /* Final three-color Myanmar system: ivory, peacock green, and pagoda gold. */
-.myanmar-theme {
+.botanical-hummingbird-theme {
   --paper: #f6f2e9;
   --paper-deep: #f6f2e9;
   --ink: #1e5a4d;
@@ -888,129 +904,129 @@
     27px 27px,
     auto;
 }
-.myanmar-theme h1,
-.myanmar-theme h2,
-.myanmar-theme p,
-.mm-date,
-.mm-schedule-card strong,
-.mm-schedule-card span {
+.botanical-hummingbird-theme h1,
+.botanical-hummingbird-theme h2,
+.botanical-hummingbird-theme p,
+.s3-mm-date,
+.s3-mm-schedule-card strong,
+.s3-mm-schedule-card span {
   color: var(--green);
 }
-.mm-kicker,
-.mm-eyebrow,
-.mm-venue-name,
-.mm-gallery-count {
+.s3-mm-kicker,
+.s3-mm-eyebrow,
+.s3-mm-venue-name,
+.s3-mm-gallery-count {
   color: var(--gold);
 }
-.mm-title-ornament,
-.mm-hero h1 i,
-.mm-doodle-divider {
+.s3-mm-title-ornament,
+.s3-mm-hero h1 i,
+.s3-mm-doodle-divider {
   color: var(--gold);
 }
-.mm-section:after {
+.s3-mm-section:after {
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
-.mm-hero,
-.mm-welcome,
-.mm-venue,
-.mm-schedule,
-/* .mm-details, */
-.mm-gallery,
-.mm-countdown,
-.mm-rsvp,
-.mm-footer {
+.s3-mm-hero,
+.s3-mm-welcome,
+.s3-mm-venue,
+.s3-mm-schedule,
+/* .s3-mm-details, */
+.s3-mm-gallery,
+.s3-mm-countdown,
+.s3-mm-rsvp,
+.s3-mm-footer {
   background-color: var(--paper);
 }
-.mm-details {
+.s3-mm-details {
   background: var(--paper);
 }
-.mm-hero {
+.s3-mm-hero {
   background: var(--paper);
 }
-.mm-welcome {
+.s3-mm-welcome {
   background: var(--paper);
 }
-.mm-venue {
+.s3-mm-venue {
   background: var(--paper);
 }
-.mm-schedule {
+.s3-mm-schedule {
   background: var(--paper);
 }
-.mm-gallery {
+.s3-mm-gallery {
   background: var(--paper);
 }
-.mm-countdown {
+.s3-mm-countdown {
   color: var(--green);
   background: var(--paper);
 }
-.mm-countdown h2,
-.mm-countdown p,
-.mm-countdown small,
-.mm-countdown .mm-medallion strong {
+.s3-mm-countdown h2,
+.s3-mm-countdown p,
+.s3-mm-countdown small,
+.s3-mm-countdown .s3-mm-medallion strong {
   color: var(--green);
 }
-.mm-countdown .mm-kicker {
+.s3-mm-countdown .s3-mm-kicker {
   color: var(--gold);
 }
-.mm-countdown:after {
+.s3-mm-countdown:after {
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
-.mm-rsvp {
+.s3-mm-rsvp {
   background: var(--paper);
 }
-.mm-button,
-.myanmar-theme .rsvp-submit {
+.s3-mm-button,
+.botanical-hummingbird-theme .rsvp-submit {
   border-color: var(--gold);
   color: var(--paper);
   background: var(--green);
-  box-shadow: 0 8px 20px rgba(30, 90, 77, 0.18);
+  box-shadow: 0 8px 20px rgba(32, 44, 21, 0.18);
 }
-.mm-button:hover,
-.myanmar-theme .rsvp-submit:hover {
+.s3-mm-button:hover,
+.botanical-hummingbird-theme .rsvp-submit:hover {
   background: var(--green);
 }
-.mm-gallery-control > button {
+.s3-mm-gallery-control > button {
   border-color: var(--gold);
   color: var(--green);
   background: var(--paper);
-  box-shadow: 0 5px 14px rgba(30, 90, 77, 0.1);
+  box-shadow: 0 5px 14px rgba(32, 44, 21, 0.1);
 }
-.mm-gallery-photo {
+.s3-mm-gallery-photo {
   background: var(--paper);
 }
-.myanmar-theme .guest-tabs {
-  border-bottom-color: rgba(30, 90, 77, 0.24);
+.botanical-hummingbird-theme .guest-tabs {
+  border-bottom-color: rgba(32, 44, 21, 0.24);
 }
-.myanmar-theme .guest-tabs button,
-.myanmar-theme .guest-tabs button.active {
+.botanical-hummingbird-theme .guest-tabs button,
+.botanical-hummingbird-theme .guest-tabs button.active {
   color: var(--green);
 }
-.myanmar-theme .guest-tabs button.active {
+.botanical-hummingbird-theme .guest-tabs button.active {
   border-color: var(--gold);
 }
-.myanmar-theme .rsvp-form input,
-.myanmar-theme .rsvp-form textarea {
-  border-bottom-color: rgba(30, 90, 77, 0.34);
+.botanical-hummingbird-theme .rsvp-form input,
+.botanical-hummingbird-theme .rsvp-form textarea {
+  border-bottom-color: rgba(32, 44, 21, 0.34);
   color: var(--green);
 }
-.myanmar-theme .rsvp-form input:focus,
-.myanmar-theme .rsvp-form textarea:focus {
+.botanical-hummingbird-theme .rsvp-form input:focus,
+.botanical-hummingbird-theme .rsvp-form textarea:focus {
   border-bottom-color: var(--gold);
 }
-.myanmar-theme .rsvp-form input[type="radio"] {
+.botanical-hummingbird-theme .rsvp-form input[type="radio"] {
   accent-color: var(--green);
 }
-.myanmar-theme .choice-grid label {
-  border-color: rgba(30, 90, 77, 0.25);
+.botanical-hummingbird-theme .choice-grid label {
+  border-color: rgba(32, 44, 21, 0.25);
 }
-.mm-schedule-path path {
+.s3-mm-schedule-path path {
   stroke: var(--gold);
 }
-.mm-schedule-path circle {
+.s3-mm-schedule-path circle {
   fill: var(--green);
   stroke: var(--paper);
 }
-.mm-schedule-card:before {
+.s3-mm-schedule-card:before {
   background: radial-gradient(
     circle,
     rgba(200, 146, 58, 0.13),
@@ -1018,20 +1034,20 @@
     transparent 70%
   );
 }
-.mm-footer {
+.s3-mm-footer {
   color: var(--green);
   background: var(--paper);
 }
-.mm-footer p {
+.s3-mm-footer p {
   color: var(--green);
 }
-.mm-footer .agency-logo {
+.s3-mm-footer .agency-logo {
   /* border-color: var(--gold); */
   box-shadow: 0 0 0 4px rgba(200, 146, 58, 0.1);
 }
 
 /* Match the Chinese RSVP tab treatment exactly, recolored in peacock green. */
-.myanmar-theme .guest-tabs {
+.botanical-hummingbird-theme .guest-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 4px;
@@ -1039,7 +1055,7 @@
   border: 1px solid var(--green);
   border-radius: 100px;
 }
-.myanmar-theme .guest-tabs button {
+.botanical-hummingbird-theme .guest-tabs button {
   margin: 0;
   padding: 11px 8px;
   border: 0;
@@ -1047,21 +1063,21 @@
   color: var(--green);
   background: transparent;
 }
-.myanmar-theme .guest-tabs button.active {
+.botanical-hummingbird-theme .guest-tabs button.active {
   border: 0;
   color: var(--paper);
   background: var(--green);
 }
 
 /* Use the Chinese schedule's responsive grid and route geometry exactly. */
-.mm-schedule-route {
+.s3-mm-schedule-route {
   position: relative;
   width: auto;
   max-width: 390px;
   height: auto;
   margin: 0 auto;
 }
-.mm-schedule-path {
+.s3-mm-schedule-path {
   position: absolute;
   inset: -12px 0 auto;
   z-index: 0;
@@ -1070,7 +1086,7 @@
   overflow: visible;
   pointer-events: none;
 }
-.mm-schedule-path path {
+.s3-mm-schedule-path path {
   fill: none;
   stroke: var(--gold);
   stroke-width: 1.6;
@@ -1078,11 +1094,11 @@
   stroke-dasharray: 0.5 6;
   opacity: 0.72;
 }
-.mm-schedule-path text {
+.s3-mm-schedule-path text {
   fill: var(--green);
   font-size: 15px;
 }
-.mm-schedule-route ol {
+.s3-mm-schedule-route ol {
   position: relative;
   inset: auto;
   z-index: 1;
@@ -1092,7 +1108,7 @@
   padding: 0;
   list-style: none;
 }
-.mm-schedule-route li {
+.s3-mm-schedule-route li {
   position: static;
   display: grid;
   width: auto;
@@ -1100,38 +1116,38 @@
   align-items: center;
   min-height: 196px;
 }
-.mm-schedule-route li:nth-child(1),
-.mm-schedule-route li:nth-child(2),
-.mm-schedule-route li:nth-child(3),
-.mm-schedule-route li:nth-child(4) {
+.s3-mm-schedule-route li:nth-child(1),
+.s3-mm-schedule-route li:nth-child(2),
+.s3-mm-schedule-route li:nth-child(3),
+.s3-mm-schedule-route li:nth-child(4) {
   inset: auto;
 }
-.mm-schedule-card {
+.s3-mm-schedule-card {
   display: flex;
   width: 158px;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.mm-schedule-route li:nth-child(odd) .mm-schedule-card {
+.s3-mm-schedule-route li:nth-child(odd) .s3-mm-schedule-card {
   grid-column: 2;
   justify-self: end;
 }
-.mm-schedule-route li:nth-child(even) .mm-schedule-card {
+.s3-mm-schedule-route li:nth-child(even) .s3-mm-schedule-card {
   grid-column: 1;
   justify-self: start;
 }
-.mm-schedule-card:before {
+.s3-mm-schedule-card:before {
   display: none;
 }
-.mm-schedule-card img {
+.s3-mm-schedule-card img {
   width: 142px;
   height: 138px;
   object-fit: contain;
   object-position: center;
   filter: none;
 }
-.mm-schedule-card > div {
+.s3-mm-schedule-card > div {
   display: flex;
   min-height: 0;
   padding: 0;
@@ -1140,57 +1156,57 @@
   align-items: center;
   text-align: center;
 }
-.mm-schedule-card strong {
+.s3-mm-schedule-card strong {
   font-size: 1.18rem;
 }
-.mm-schedule-card span {
+.s3-mm-schedule-card span {
   font-size: 0.76rem;
 }
 @media (max-width: 370px) {
-  .mm-schedule-card {
+  .s3-mm-schedule-card {
     width: 144px;
   }
 }
 
 /* Larger gallery presentation with the same Chinese-layout controls. */
-.mm-gallery {
+.s3-mm-gallery {
   padding-inline: 12px;
 }
-.mm-gallery-control {
+.s3-mm-gallery-control {
   grid-template-columns: 42px minmax(0, 1fr) 42px;
   gap: 2px;
   max-width: 520px;
 }
-.mm-gallery-control > button {
+.s3-mm-gallery-control > button {
   width: 38px;
   height: 38px;
 }
-.mm-gallery-stage {
+.s3-mm-gallery-stage {
   aspect-ratio: 3/4;
 }
-.mm-gallery-photo {
+.s3-mm-gallery-photo {
   inset: 6.5% 7%;
 }
 
 /* Pagoda gold is the shared accent for every section subheading. */
-.myanmar-theme .mm-kicker,
-.myanmar-theme .mm-eyebrow {
+.botanical-hummingbird-theme .s3-mm-kicker,
+.botanical-hummingbird-theme .s3-mm-eyebrow {
   color: var(--gold);
 }
 
 /* Countdown numbers sit above a low Myanmar lacquer pedestal. */
-.mm-countdown-grid {
+.s3-mm-countdown-grid {
   gap: 7px;
   margin-top: 36px;
 }
-.mm-countdown-unit {
+.s3-mm-countdown-unit {
   display: grid;
   min-height: 94px;
   grid-template-rows: 1fr 46px;
   align-items: end;
   justify-items: center;
 }
-.mm-countdown-unit strong {
+.s3-mm-countdown-unit strong {
   position: relative;
   z-index: 2;
   color: var(--green);
@@ -1199,56 +1215,56 @@
     serif;
   line-height: 1;
 }
-.mm-countdown-base {
+.s3-mm-countdown-base {
   display: block;
   width: 100%;
   height: 46px;
   object-fit: contain;
   object-position: center bottom;
 }
-.mm-countdown small {
+.s3-mm-countdown small {
   margin-top: 5px;
   color: var(--green);
 }
 @media (min-width: 600px) {
-  .mm-gallery {
+  .s3-mm-gallery {
     padding-inline: 26px;
   }
 }
 
 /* Keep the complete illustrated frame visible and give the couple more breathing room. */
-.mm-hero {
+.s3-mm-hero {
   height: 100vh;
   min-height: 100vh;
 }
-.mm-hero-background {
+.s3-mm-hero-background {
   object-fit: contain;
   object-position: center top;
 }
-.mm-hero-couple {
+.s3-mm-hero-couple {
   width: clamp(104px, 29vw, 140px);
   margin-top: 12px;
 }
-.mm-hero-without-characters {
+.s3-mm-hero-without-characters {
   padding-block-end: 122%;
 }
 @media (min-width: 600px) {
-  .mm-hero-couple {
+  .s3-mm-hero-couple {
     width: 140px;
   }
 }
 
 /* New-design dress code: a compact, antique double-line frame with a
    separate botanical corner. */
-.myanmar-theme .bh-schedule {
+.botanical-hummingbird-theme .s3-bh-schedule {
   padding: 0;
   background: var(--paper);
 }
-.bh-schedule::after {
+.s3-bh-schedule::after {
   display: none;
 }
 
-.bh-schedule-card {
+.s3-bh-schedule-card {
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -1256,12 +1272,12 @@
   container-type: inline-size;
 }
 
-.bh-schedule-art {
+.s3-bh-schedule-art {
   object-fit: fill;
   pointer-events: none;
 }
 
-.bh-schedule-copy {
+.s3-bh-schedule-copy {
   position: absolute;
   inset: 19% 23%;
   display: flex;
@@ -1271,18 +1287,18 @@
   text-align: center;
 }
 
-.myanmar-theme .bh-schedule-copy > * {
+.botanical-hummingbird-theme .s3-bh-schedule-copy > * {
   margin: 0;
   color: #1e5a4d;
 }
 
-.myanmar-theme .bh-schedule-copy h2 {
+.botanical-hummingbird-theme .s3-bh-schedule-copy h2 {
   font-size: clamp(1.15rem, 5.8cqw, 1.55rem);
   line-height: 1.1;
   white-space: nowrap;
 }
 
-.myanmar-theme .bh-schedule-eyebrow {
+.botanical-hummingbird-theme .s3-bh-schedule-eyebrow {
   color: var(--gold);
   font-size: 0.68rem;
   letter-spacing: 0.2em;
@@ -1290,33 +1306,33 @@
   text-transform: uppercase;
 }
 
-.myanmar-theme .bh-schedule-date,
-.myanmar-theme .bh-schedule-location {
+.botanical-hummingbird-theme .s3-bh-schedule-date,
+.botanical-hummingbird-theme .s3-bh-schedule-location {
   font-size: clamp(11px, 3cqw, 13px);
   line-height: 1.5;
 }
 
-.myanmar-theme .bh-schedule-time {
+.botanical-hummingbird-theme .s3-bh-schedule-time {
   font: 400 clamp(13px, 4cqw, 18px)/1.4 var(--font-instrument-serif), serif;
   white-space: nowrap;
 }
 
-.myanmar-theme .bh-schedule-description {
+.botanical-hummingbird-theme .s3-bh-schedule-description {
   font-size: clamp(11px, 3.2cqw, 14px);
   line-height: 1.6;
 }
 
-.mm-details {
+.s3-mm-details {
   max-height: none;
   padding-inline: 18px;
   padding-block: 28px 40px;
 }
 
-.bh-hidden-section {
+.s3-bh-hidden-section {
   display: none !important;
 }
 
-.mm-details .bh-dress-code {
+.s3-mm-details .s3-bh-dress-code {
   position: relative;
   width: min(100%, 430px);
   margin: 20px auto 0;
@@ -1324,7 +1340,7 @@
   background: transparent;
 }
 
-.bh-dress-frame-art {
+.s3-bh-dress-frame-art {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -1335,7 +1351,7 @@
   pointer-events: none;
 }
 
-.bh-dress-ornament {
+.s3-bh-dress-ornament {
   position: absolute;
   top: -3%;
   left: -3%;
@@ -1343,22 +1359,22 @@
   display: block;
   width: 50%;
   height: auto;
-  filter: drop-shadow(0 5px 8px rgba(30, 90, 77, 0.08));
+  filter: drop-shadow(0 5px 8px rgba(32, 44, 21, 0.08));
   pointer-events: none;
 }
 
-.bh-dress-copy {
+.s3-bh-dress-copy {
   position: relative;
   z-index: 3;
   text-align: center;
 }
 
-.mm-details .bh-dress-code .bh-dress-copy .mm-kicker {
+.s3-mm-details .s3-bh-dress-code .s3-bh-dress-copy .s3-mm-kicker {
   margin-bottom: 18px;
   color: var(--gold);
 }
 
-.mm-details .bh-dress-code h2 {
+.s3-mm-details .s3-bh-dress-code h2 {
   max-width: 300px;
   margin: 20px auto 0;
   color: var(--green);
@@ -1366,7 +1382,7 @@
   line-height: 1.1;
 }
 
-.bh-dress-rule {
+.s3-bh-dress-rule {
   display: block;
   width: 52px;
   height: 1px;
@@ -1374,7 +1390,7 @@
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-.bh-dress-guests {
+.s3-bh-dress-guests {
   position: relative;
   z-index: 4;
   display: block;
@@ -1382,33 +1398,34 @@
   max-width: 326px;
   height: auto;
   margin: 24px auto 0;
-  filter: drop-shadow(0 8px 10px rgba(30, 90, 77, 0.09));
+  filter: drop-shadow(0 8px 10px rgba(32, 44, 21, 0.09));
 }
 
-/* Invitation cover inspired by the vintage botanical reference. */
-.myanmar-theme .bh-hero {
+/* Keep the cover's native proportions rather than stretching it to the viewport. */
+.botanical-hummingbird-theme .s3-bh-hero {
   position: relative;
   display: block;
   width: 100%;
-  height: 100svh;
-  min-height: 620px;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 941 / 1672;
   padding: 0;
   background: var(--paper);
   isolation: isolate;
 }
 
-.bh-hero-art {
+.s3-bh-hero-art {
   z-index: 0;
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
   pointer-events: none;
 }
 
-.bh-hero-copy {
+.s3-bh-hero-copy {
   position: absolute;
-  top: 45%;
+  top: 38%;
   left: 50%;
   z-index: 1;
   width: 74%;
@@ -1418,7 +1435,7 @@
   transform: translateX(-50%);
 }
 
-.myanmar-theme .bh-hero-eyebrow {
+.botanical-hummingbird-theme .s3-bh-hero-eyebrow {
   margin: 0 0 25px;
   color: var(--green);
   font: italic 400 clamp(0.9rem, 3.5vw, 1rem)/1.3 var(--font-instrument-serif), serif;
@@ -1426,7 +1443,7 @@
   text-transform: none;
 }
 
-.myanmar-theme .bh-hero-names {
+.botanical-hummingbird-theme .s3-bh-hero-names {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -1436,14 +1453,14 @@
   letter-spacing: 0.005em;
 }
 
-.bh-hero-ampersand {
+.s3-bh-hero-ampersand {
   margin: 3px 0;
   color: var(--green);
   font-size: 0.64em;
   font-style: normal;
 }
 
-.bh-hero-date {
+.s3-bh-hero-date {
   display: block;
   margin-top: 30px;
   color: var(--green);
@@ -1451,7 +1468,7 @@
   letter-spacing: 0.12em;
 }
 
-.bh-hero-weekday {
+.s3-bh-hero-weekday {
   display: block;
   margin-bottom: 10px;
   font-size: 0.65rem;
@@ -1459,7 +1476,7 @@
   text-transform: uppercase;
 }
 
-.bh-hero-date-row {
+.s3-bh-hero-date-row {
   display: grid;
   width: 80%;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1467,69 +1484,35 @@
   margin-inline: auto;
 }
 
-.bh-hero-month,
-.bh-hero-year {
+.s3-bh-hero-month,
+.s3-bh-hero-year {
   font-size: clamp(0.7rem, 3vw, 0.9rem);
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-.bh-hero-day {
+.s3-bh-hero-day {
   color: var(--gold);
-  border-inline: 1px solid rgba(30, 90, 77, 0.35);
+  border-inline: 1px solid rgba(32, 44, 21, 0.35);
   font-size: clamp(2.6rem, 11vw, 3.4rem);
   font-weight: 300;
   line-height: 1.1;
   letter-spacing: 0;
 }
 
-.myanmar-theme .attendance-options {
+.botanical-hummingbird-theme .attendance-options {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.myanmar-theme .attendance-options label {
+.botanical-hummingbird-theme .attendance-options label {
   justify-content: center;
   gap: 6px;
   min-width: 0;
   white-space: nowrap;
 }
 
-/* Match the embroidered design's 22px, 1.3s text rise after the video reveal. */
-@keyframes bh-text-rise {
-  from { opacity: 0; translate: 0 22px; }
-  to { opacity: 1; translate: 0 0; }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .bh-scroll-text {
-    opacity: 0;
-    translate: 0 22px;
-  }
-
-  .bh-scroll-text.bh-scroll-text-visible {
-    animation: bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  .bh-hero-copy > * {
-    opacity: 0;
-    translate: 0 22px;
-  }
-
-  .bh-hero[data-phase="open"] .bh-hero-copy > * {
-    animation: bh-text-rise 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-
-  .bh-hero[data-phase="open"] .bh-hero-names {
-    animation-delay: 100ms;
-  }
-
-  .bh-hero[data-phase="open"] .bh-hero-date {
-    animation-delay: 200ms;
-  }
-}
-
-.bh-intro {
-  /* Keep the opening viewport-sized independently of the landing artwork. */
+.s3-bh-intro {
+  /* The opening stays viewport-sized even when the cover is shorter. */
   position: fixed;
   inset: 0;
   height: 100vh;
@@ -1541,19 +1524,26 @@
   transition: opacity 850ms ease;
 }
 
-/* Avoid clipping the fixed intro or painting later sections over it. */
-.myanmar-theme .bh-hero:not([data-phase="open"]) {
+@media (min-width: 600px) {
+  .s3-bh-intro {
+    width: 430px;
+    margin-inline: auto;
+  }
+}
+
+/* Do not clip the fixed intro to the shorter artwork or paint later sections over it. */
+.botanical-hummingbird-theme .s3-bh-hero:not([data-phase="open"]) {
   overflow: visible;
   z-index: 100;
 }
 
-.bh-hero[data-phase="revealing"] .bh-intro {
+.s3-bh-hero[data-phase="revealing"] .s3-bh-intro {
   pointer-events: none;
   opacity: 0;
 }
 
-.bh-intro-poster,
-.bh-intro-video {
+.s3-bh-intro-poster,
+.s3-bh-intro-video {
   position: absolute;
   inset: 0;
   display: block;
@@ -1562,15 +1552,15 @@
   object-fit: cover;
 }
 
-.bh-intro-video {
+.s3-bh-intro-video {
   opacity: 0;
 }
 
-.bh-intro-video[data-ready="true"] {
+.s3-bh-intro-video[data-ready="true"] {
   opacity: 1;
 }
 
-.bh-intro-trigger {
+.s3-bh-intro-trigger {
   position: absolute;
   inset: 0;
   display: flex;
@@ -1585,35 +1575,35 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.bh-intro-trigger span {
+.s3-bh-intro-trigger span {
   font: 400 0.78rem/1.2 var(--font-instrument-serif), serif;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-shadow: 0 1px 5px rgba(11, 33, 24, 0.55);
 }
 
-.bh-intro-trigger:focus-visible {
+.s3-bh-intro-trigger:focus-visible {
   outline: 2px solid #d1b36b;
   outline-offset: -10px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bh-intro {
+  .s3-bh-intro {
     transition: none;
   }
 }
 
 /* Antique botanical countdown plaque; the timer remains live HTML. */
-.myanmar-theme .mm-countdown {
+.botanical-hummingbird-theme .s3-mm-countdown {
   padding: 64px 12px 76px;
   background: var(--paper);
 }
 
-.mm-countdown:after {
+.s3-mm-countdown:after {
   display: none;
 }
 
-.bh-countdown-plaque {
+.s3-bh-countdown-plaque {
   position: relative;
   display: grid;
   width: min(100%, 430px);
@@ -1623,59 +1613,59 @@
   place-items: center;
 }
 
-.bh-countdown-border {
+.s3-bh-countdown-border {
   object-fit: contain;
   pointer-events: none;
 }
 
-.bh-countdown-content {
+.s3-bh-countdown-content {
   position: relative;
   z-index: 1;
   width: 100%;
 }
 
-.myanmar-theme .bh-countdown-content .mm-kicker {
+.botanical-hummingbird-theme .s3-bh-countdown-content .s3-mm-kicker {
   margin: 0 0 4px;
   color: #8c7649;
   font-size: 0.5rem !important;
 }
 
-.myanmar-theme .bh-countdown-content h2 {
+.botanical-hummingbird-theme .s3-bh-countdown-content h2 {
   margin: 0;
   color: #425b43;
   font-size: var(--section-heading-size);
   line-height: 1;
 }
 
-.bh-countdown-content .mm-countdown-grid {
+.s3-bh-countdown-content .s3-mm-countdown-grid {
   gap: 2px;
   margin: 12px auto 0;
 }
 
-.bh-countdown-content .mm-countdown-unit {
+.s3-bh-countdown-content .s3-mm-countdown-unit {
   min-height: 62px;
   grid-template-rows: 1fr 25px;
 }
 
-.bh-countdown-content .mm-countdown-unit strong {
+.s3-bh-countdown-content .s3-mm-countdown-unit strong {
   font-size: clamp(1.4rem, 6vw, 1.8rem);
 }
 
-.bh-countdown-content .mm-countdown-base {
+.s3-bh-countdown-content .s3-mm-countdown-base {
   height: 25px;
 }
 
-.bh-countdown-content .mm-countdown-grid small {
+.s3-bh-countdown-content .s3-mm-countdown-grid small {
   margin-top: 2px;
   font-size: 0.52rem;
 }
 
 /* A lighter scalloped banner carried by the two looping birds. */
-.myanmar-theme .mm-countdown {
+.botanical-hummingbird-theme .s3-mm-countdown {
   padding: 100px 12px 86px;
 }
 
-.bh-countdown-scene {
+.s3-bh-countdown-scene {
   position: relative;
   width: min(100%, 430px);
   margin: 0 auto;
@@ -1683,26 +1673,26 @@
 
 /* Birds, ropes, banner and live text rise together once on section entry. */
 @media (prefers-reduced-motion: no-preference) {
-  .bh-countdown-scene {
+  .s3-bh-countdown-scene {
     transition: transform 3000ms cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1400ms ease;
   }
-  .bh-countdown-scene[data-entered="false"] {
+  .s3-bh-countdown-scene[data-entered="false"] {
     transform: translateY(64px);
     opacity: 0;
   }
-  .bh-countdown-scene[data-entered="true"] {
+  .s3-bh-countdown-scene[data-entered="true"] {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-.bh-countdown-scene .bh-countdown-plaque {
+.s3-bh-countdown-scene .s3-bh-countdown-plaque {
   z-index: 2;
   width: 100%;
   padding: 19% 13% 16%;
 }
 
-.bh-countdown-bird {
+.s3-bh-countdown-bird {
   position: absolute;
   /* Meet the baked-in rope ends with the bird's feet in the video. */
   top: -19%;
@@ -1712,51 +1702,51 @@
   pointer-events: none;
 }
 
-.bh-countdown-bird-left { left: -0.7%; }
-.bh-countdown-bird-right { right: -0.7%; }
+.s3-bh-countdown-bird-left { left: -0.7%; }
+.s3-bh-countdown-bird-right { right: -0.7%; }
 
-.bh-countdown-bird img {
+.s3-bh-countdown-bird img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.bh-countdown-bird-right img { transform: scaleX(-1); }
+.s3-bh-countdown-bird-right img { transform: scaleX(-1); }
 
-.bh-countdown-scene .bh-countdown-content h2 {
+.s3-bh-countdown-scene .s3-bh-countdown-content h2 {
   margin: 0 0 6px;
   font-size: var(--section-heading-size);
 }
 
-.myanmar-theme .bh-countdown-scene .bh-countdown-content .mm-kicker {
+.botanical-hummingbird-theme .s3-bh-countdown-scene .s3-bh-countdown-content .s3-mm-kicker {
   margin: 0;
   color: #6b805d;
   font-size: 0.52rem !important;
   letter-spacing: 0.25em;
 }
 
-.bh-countdown-scene .mm-countdown-grid {
+.s3-bh-countdown-scene .s3-mm-countdown-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 275px;
   gap: 0;
   margin-top: 18px;
 }
 
-.bh-countdown-scene .mm-countdown-grid > div + div {
+.s3-bh-countdown-scene .s3-mm-countdown-grid > div + div {
   border-left: 1px solid rgba(176, 138, 69, 0.3);
 }
 
-.bh-countdown-scene .mm-countdown-unit {
+.s3-bh-countdown-scene .s3-mm-countdown-unit {
   display: block;
   min-height: 0;
 }
 
-.bh-countdown-scene .mm-countdown-unit strong {
+.s3-bh-countdown-scene .s3-mm-countdown-unit strong {
   font-size: clamp(1.8rem, 8vw, 2.2rem);
 }
 
-.bh-countdown-scene .mm-countdown-grid small {
+.s3-bh-countdown-scene .s3-mm-countdown-grid small {
   margin-top: 8px;
   color: #6b805d;
   font-size: 0.52rem;
@@ -1764,15 +1754,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bh-countdown-scene { animation: none; }
-  .bh-countdown-bird img { display: none; }
-  .bh-countdown-bird {
+  .s3-bh-countdown-scene { animation: none; }
+  .s3-bh-countdown-bird img { display: none; }
+  .s3-bh-countdown-bird {
     background: url("/botanical-hummingbird/countdown-bird-reference-v1.png") center / contain no-repeat;
   }
-  .bh-countdown-bird-right { transform: scaleX(-1); }
+  .s3-bh-countdown-bird-right { transform: scaleX(-1); }
 }
 
-.myanmar-theme .bh-rsvp-deadline {
+.botanical-hummingbird-theme .s3-bh-rsvp-deadline {
   margin: 0;
   text-align: center;
   color: var(--green);
@@ -1780,18 +1770,84 @@
 }
 
 /* Use the original small-caps font for headings, local fallback for body copy. */
-.myanmar-theme :is(h1, h2, h3) {
+.botanical-hummingbird-theme :is(h1, h2, h3) {
   font-family: var(--font-cormorant-sc), serif;
 }
 
-.myanmar-theme .mm-kicker {
+.botanical-hummingbird-theme .s3-mm-kicker {
   font-family: var(--font-cormorant-sc), serif !important;
 }
 
-.myanmar-theme p,
-.myanmar-theme .bh-hero-eyebrow,
-.myanmar-theme .bh-hero-date,
-.myanmar-theme .bh-schedule-time,
-.myanmar-theme .mm-countdown-unit strong {
+.botanical-hummingbird-theme p,
+.botanical-hummingbird-theme .s3-bh-hero-eyebrow,
+.botanical-hummingbird-theme .s3-bh-hero-date,
+.botanical-hummingbird-theme .s3-bh-schedule-time,
+.botanical-hummingbird-theme .s3-mm-countdown-unit strong {
   font-family: var(--font-cormorant-body);
+}
+
+
+/* Separate botanical corners frame a full-height wedding schedule. */
+.botanical-hummingbird-theme .s3-bh-schedule {
+  padding: 0;
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+.botanical-hummingbird-theme .s3-bh-schedule-card {
+  min-height: 100svh;
+  min-height: 100dvh;
+  aspect-ratio: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(220px, 34svh, 340px) 24px;
+  overflow: hidden;
+}
+.s3-bh-schedule-corner {
+  position: absolute;
+  width: min(68%, 360px);
+  height: min(36svh, 360px);
+  object-fit: contain;
+  pointer-events: none;
+}
+.s3-bh-schedule-corner-top {
+  top: 0;
+  right: 0;
+  object-position: top right;
+}
+.s3-bh-schedule-corner-bottom {
+  bottom: 0;
+  left: 0;
+  object-position: bottom left;
+}
+.botanical-hummingbird-theme .s3-bh-schedule-copy {
+  position: relative;
+  inset: auto;
+  z-index: 1;
+  width: min(100%, 320px);
+}
+
+/* Match the schedule typography to the other invitation sections. */
+.botanical-hummingbird-theme .s3-bh-schedule-copy {
+  width: min(100%, 360px);
+  gap: 16px;
+}
+.botanical-hummingbird-theme .s3-bh-schedule-copy h2 {
+  font-size: var(--section-heading-size);
+  white-space: normal;
+}
+.botanical-hummingbird-theme .s3-bh-schedule-copy .s3-bh-schedule-eyebrow {
+  font-size: 0.8rem !important;
+}
+.botanical-hummingbird-theme .s3-bh-schedule-date {
+  font-size: 1.05rem;
+}
+.botanical-hummingbird-theme .s3-bh-schedule-time {
+  font-size: 1.5rem;
+  white-space: normal;
+}
+.botanical-hummingbird-theme .s3-bh-schedule-description {
+  font-size: 0.98rem;
+  line-height: 1.65;
 }

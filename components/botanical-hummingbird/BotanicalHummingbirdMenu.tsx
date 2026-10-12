@@ -214,8 +214,8 @@ export default function BotanicalHummingbirdMenu({ children }: { children: React
         </div>
         <div id="menu-overlay" className="menu-overlay" inert={!open} aria-hidden={!open}>
           <div className="menu-overlay-content" data-lenis-prevent>
-            <img className="menu-monogram" src="/botanical-hummingbird-sample-3/menu-monogram-gold-v1.png" alt="Wedding monogram" width={80} height={80} />
-            <div className="menu-media-wrapper"><img src="/botanical-hummingbird-sample-3/hero-forest-arch-lily-v2.png" alt="" /></div>
+            <img className="menu-monogram" src="/botanical-hummingbird/menu-monogram-gold-v1.png" alt="Wedding monogram" width={80} height={80} />
+            <div className="menu-media-wrapper"><img src="/botanical-hummingbird/hero-forest-arch-lily-v2.png" alt="" /></div>
             <div className="menu-content-wrapper">
               <div className="menu-content-main">
                 <div className="menu-col">

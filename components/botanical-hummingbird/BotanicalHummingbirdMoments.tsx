@@ -15,10 +15,10 @@ export default function BotanicalHummingbirdMoments() {
   const [photo, setPhoto] = useState(0);
   return (
     <>
-      <section className="mm-section mm-gallery bh-hidden-section">
-        <p className="mm-kicker">A collection of moments</p>
+      <section className="s3-mm-section s3-mm-gallery s3-bh-hidden-section">
+        <p className="s3-mm-kicker">A collection of moments</p>
         <h2>Our story</h2>
-        <div className="mm-gallery-control">
+        <div className="s3-mm-gallery-control">
           <button
             onClick={() =>
               setPhoto((photo - 1 + photos.length) % photos.length)
@@ -27,8 +27,8 @@ export default function BotanicalHummingbirdMoments() {
           >
             <HugeiconsIcon icon={ArrowLeft02Icon} size={18} strokeWidth={1.5} />
           </button>
-          <div className="mm-gallery-stage">
-            <div className="mm-gallery-photo">
+          <div className="s3-mm-gallery-stage">
+            <div className="s3-mm-gallery-photo">
               <Image
                 key={photos[photo].src}
                 src={photos[photo].src}
@@ -40,7 +40,7 @@ export default function BotanicalHummingbirdMoments() {
               />
             </div>
             <Image
-              className="mm-gallery-frame"
+              className="s3-mm-gallery-frame"
               src="/myanmar/doodle-gallery-border.png"
               alt=""
               fill
@@ -58,7 +58,7 @@ export default function BotanicalHummingbirdMoments() {
             />
           </button>
         </div>
-        <p className="mm-gallery-count">
+        <p className="s3-mm-gallery-count">
           {photo + 1} / {photos.length}
         </p>
       </section>
