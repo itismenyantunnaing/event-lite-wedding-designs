@@ -919,16 +919,6 @@
   background: var(--cn-gold);
 }
 
-.cn-hero-couple {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: min(38vw, 150px);
-  height: 145px;
-  margin: 4px auto 0;
-  object-fit: contain;
-  object-position: center bottom;
-}
 
 .cn-hero-without-characters {
   padding-bottom: 42%;

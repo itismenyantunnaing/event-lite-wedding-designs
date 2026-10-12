@@ -149,14 +149,6 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.mm-hero-couple {
-  position: relative;
-  z-index: 1;
-  width: min(49vw, 245px);
-  height: auto;
-  margin-top: 5px;
-  filter: drop-shadow(0 12px 20px rgba(57, 47, 40, 0.08));
-}
 .mm-welcome > p:not(.mm-kicker) {
   max-width: 330px;
   margin-inline: auto;
@@ -538,9 +530,6 @@
   }
   .mm-gallery-photo {
     inset: 7%;
-  }
-  .mm-hero-couple {
-    width: 230px;
   }
 }
 
@@ -1188,15 +1177,6 @@
   object-fit: contain;
   object-position: center top;
 }
-.mm-hero-couple {
-  width: clamp(104px, 29vw, 140px);
-  margin-top: 12px;
-}
 .mm-hero-without-characters {
   padding-block-end: 122%;
-}
-@media (min-width: 600px) {
-  .mm-hero-couple {
-    width: 140px;
-  }
 }

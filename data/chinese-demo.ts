@@ -28,10 +28,3 @@ export const chineseDemo = {
   dressCode:
     "Celebration formal. Warm neutrals, deep reds, jade, and touches of gold are especially welcome.",
 };
-
-export const chineseBackupSchedule = [
-  { time: "10:00 AM", title: "Tea ceremony", image: "/chinese/tea-ceremony-transparent.webp" },
-  { time: "3:30 PM", title: "Guest welcome", image: "/chinese/wedding-toast-transparent.webp" },
-  { time: "4:18 PM", title: "Wedding ceremony", image: "/chinese/hero-couple-transparent.webp" },
-  { time: "6:30 PM", title: "Celebration banquet", image: "/chinese/banquet-transparent.webp" },
-];
