@@ -60,22 +60,12 @@ export default function BotanicalHummingbirdInvitation() {
       <section tabIndex={-1} id="schedule" className="s3-mm-section s3-bh-schedule">
         <div className="s3-bh-schedule-card">
           <Image
-            className="s3-bh-schedule-corner s3-bh-schedule-corner-top"
-            src="/botanical-hummingbird/schedule-corner-top-right-v1.png"
+            className="s3-bh-schedule-art"
+            src="/botanical-hummingbird/schedule-landing-matched-lily-v6.png"
             alt=""
-            width={1024}
-            height={1024}
-            sizes="(max-width: 599px) 65vw, 360px"
-            aria-hidden="true"
-            unoptimized
-          />
-          <Image
-            className="s3-bh-schedule-corner s3-bh-schedule-corner-bottom"
-            src="/botanical-hummingbird/schedule-corner-bottom-left-v1.png"
-            alt=""
-            width={1024}
-            height={1024}
-            sizes="(max-width: 599px) 65vw, 360px"
+            width={968}
+            height={1624}
+            sizes="(max-width: 599px) 100vw, 430px"
             aria-hidden="true"
             unoptimized
           />

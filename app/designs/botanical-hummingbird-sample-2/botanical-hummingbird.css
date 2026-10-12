@@ -1797,50 +1797,40 @@
   justify-content: center;
 }
 
-/* Separate botanical corners frame a full-height wedding schedule. */
+/* Let the complete, taller artwork determine the schedule's natural height. */
 .botanical-sample-2-theme .s2-bh-schedule {
   padding: 0;
-  min-height: 100svh;
-  min-height: 100dvh;
+  min-height: 0;
 }
 .botanical-sample-2-theme .s2-bh-schedule-card {
-  min-height: 100svh;
-  min-height: 100dvh;
+  min-height: 0;
   aspect-ratio: auto;
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(220px, 34svh, 340px) 24px;
+  display: grid;
+  padding: 0;
   overflow: hidden;
 }
-.s2-bh-schedule-corner {
-  position: absolute;
-  width: min(68%, 360px);
-  height: min(36svh, 360px);
+.botanical-sample-2-theme .s2-bh-schedule-art {
+  position: static;
+  grid-area: 1 / 1;
+  display: block;
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  pointer-events: none;
-}
-.s2-bh-schedule-corner-top {
-  top: 0;
-  right: 0;
-  object-position: top right;
-}
-.s2-bh-schedule-corner-bottom {
-  bottom: 0;
-  left: 0;
-  object-position: bottom left;
 }
 .botanical-sample-2-theme .s2-bh-schedule-copy {
   position: relative;
   inset: auto;
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
   z-index: 1;
-  width: min(100%, 320px);
+  margin: 24px 0;
 }
 
 /* Match the schedule typography to the other invitation sections. */
 .botanical-sample-2-theme .s2-bh-schedule-copy {
-  width: min(100%, 360px);
+  width: min(calc(100% - 48px), 360px);
   gap: 16px;
 }
 .botanical-sample-2-theme .s2-bh-schedule-copy h2 {
@@ -1858,7 +1848,7 @@
   white-space: normal;
 }
 .botanical-sample-2-theme .s2-bh-schedule-description {
-  font-size: 0.98rem;
+  font-size: 0.85rem;
   line-height: 1.65;
 }
 
@@ -1882,3 +1872,10 @@ html.s2-scroll-snap {
   overflow: clip;
 }
 
+
+/* Keep the schedule description centered within 55% of the artwork width. */
+.botanical-sample-2-theme .s2-bh-schedule-copy > .s2-bh-schedule-description {
+  width: 55cqw;
+  max-width: 100%;
+  margin-inline: auto;
+}
